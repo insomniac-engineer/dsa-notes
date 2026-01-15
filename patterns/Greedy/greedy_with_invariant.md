@@ -1,9 +1,11 @@
-# Greedy Algorithm Using Invariants
+# Greedy Algorithm Using Logical Invariants
 
 Main idea is to make a **locally optimal decision at each step** that leads to a **globally optimal solution**. 
 
 Greedy algorithms **do not backtrack**.
 Once a decision is made, it is never revisited.
+
+**Logical invariant** = condition of property quaranteed
 
 ---
 
@@ -16,12 +18,15 @@ At every step:
 
 The key insight is that we are **NOT simulating actions**.
 
-Instead, we track as **invariant** that represents the best possible
-state or outcome so far.
+Instead, we track an **invariant** - a **logical property** that represents the best possible state or outcome so far and must remain true after each step.
+
+Typically each invariant has some *logical condition*.
 
 Invariant examples:
-- total gas owned (Gas Station problem)
-- total profit (Stock problem)
+- Gas Station: the current gas owned balance *must be non-negative*
+- Stock problem: the tracked profit is *optimal for the processed prefix*
+
+Invariant typically appears inside of the traversing cycles.
 
 ---
 
@@ -30,9 +35,35 @@ Invariant examples:
 Greedy solutions usually track:
  
 - minimum/maximum
-- invariant (total profit/gas owned)
+- logical invariants (total profit that is optimal for prefix/gas owned that is non-negative)
 
 ---
+
+## Algo Cheetsheet
+
+1. **Feasibility check** (only if applicable)
+
+Does solution exist at all?
+
+*usually in LC it clearly states if solution doesn't exist return -1/False -> sign to introduce feasibility check*
+
+2. **Find invariant**
+
+What property/state do we track?
+
+3. **Find logical condition of invariant**
+
+Which logical state of property guarantees that on the current iteration the result is still feasible?
+
+Important!
+
+balance -> itself it's not invariant because it's missing logical condition
+balance > 0 -> Bingo!
+
+4. **Traverse input and check on each iteration that logical invariant condition is guaranteed**
+
+---
+
 
 ## Canonical example
 
@@ -41,7 +72,7 @@ Greedy solutions usually track:
 Data we track:
 
 - we track the **minimum buy price**
-- we track the **profit** (`price today - minBuy`) -> **invariant**
+- we track the **profit** (`price today - minBuy`) that is optimal -> **logical invariant**
 
 Each iteration local decision:
 
@@ -53,7 +84,7 @@ Each iteration local decision:
 ### Best Time to Buy and Sell Stock 2 (122)
 
 Data we track:
-- **total profit** -> invariant
+- **total profit** for the proceeded prefix -> logical invariant
 
 Each iteration local decision:
 
@@ -64,71 +95,26 @@ Each iteration local decision:
 ### Gas Station (0134)
 
 **Global feasibility check**
-if sum(gas) < sum(cost): return -1
+*if sum(gas) < sum(cost): return -1*
 aka: does this task have a solution at all?
 
 Data we track:
 - **total owned gas** -> invariant
 
-Each iteration local decision:
+Each iteration:
 
-- if ownedGas is less than needed to reach next station
+- if the ownedGas (invariant) is violated (balance < 0), discard the prefix
 
 Canonical pattern:
 ```
-if sum(gas) < sum(cost): return -1 # our invariant can't be less than total cost
+*if sum(gas) < sum(cost): return -1* # global feasibility check
 
 gasOwned = 0
 start = 0
 
 for i in range(n):
-    gasOwned += gain[i] - loss[i] #we don't simulate any movements, we use invariant
-    if gasOwned < 0:
+    gasOwned += gain[i] - loss[i] # update state that represents the invariant
+    *if gasOwned < 0:* # invariant violation check
         start = i + 1
         gasOwned = 0
 ```
-
-
-<!-- ---
-
-## Greedy Invariant - Farthest Reach (Jump Game problem)
-
-Unlikely with making local optimum solution at EACH step, here we consider a boundary of reachability.
-
-### Key idea
-
-We track **how far we can reach** using **ANY** of the positions processed so far.
-
-At each step, we ask:
-
-> Given all positions in the prefix `[0..i]`,  
-> what is the farthest (max) index we can reach?
-
-**before each step check if our "farthest" value is still in range of [0...currentElement]**
-
---- -->
-
-<!-- **Jump Game (55)**
-
-- `nums[i]` represents the maximum jump length from index `i`
-- the goal is to check whether the last index is reachable
-
-We do **not** simulate jumps.
-We only verify that each index **lies within the reachable boundary**.
-
-If the boundary reaches or exceeds the last index, the answer is `true`.
-
-```
-class Solution:
-    def canJump(self, nums: List[int]) -> bool:
-        farthestPoint = 0
-
-        for i in range(len(nums)):
-            #check if farthestPoint is still included in range nums[0]...i
-            if i > farthestPoint:
-                return False
-            farthestPoint = max(farthestPoint, i + nums[i])
-            if farthestPoint >= len(nums) - 1:
-                return True
-        return False
-``` -->
