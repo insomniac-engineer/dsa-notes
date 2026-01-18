@@ -1,11 +1,31 @@
 # Greedy Algorithm Using Logical Invariants
 
-Main idea is to make a **locally optimal decision at each step** that leads to a **globally optimal solution**. 
+Main idea is to make a **locally valid decision at each step** that preserves the **global optimality invariant**.
 
 Greedy algorithms **do not backtrack**.
 Once a decision is made, it is never revisited.
 
-**Logical invariant** = condition of property quaranteed
+**Logical invariant** = a logical condition on a tracked property that must remain true throughout the algorithm.
+
+There are 2 types of greedy invariants:
+
+* **Type A (single invariant)**
+    - 1 single logical property that fully characterizes optimality
+    - invariant can be checked in 1 traversal
+    - violation of invariant discards prefix
+    - (e.g.: stocks/gas station)
+
+
+* **Type B  (multi constrant invariant)**:
+    - optimality is defined by multiple independent constraints
+    - each constraint introduces its own lower bound
+    - final solution must satisfy all constraints simultaneously
+    - greedy buils minimal bounds, then reconciles them
+
+    - (e.g.: candy/trapping rain water)
+
+
+Below there's deep dive of single invariant greedy LCs.
 
 ---
 
