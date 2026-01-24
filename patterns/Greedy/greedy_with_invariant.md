@@ -1,4 +1,4 @@
-# Greedy Algorithm Using Logical Invariants
+# Optimazing Greedy Algorithm Using Logical Invariant
 
 Main idea is to make a **locally valid decision at each step** that preserves the **global optimality invariant**.
 
