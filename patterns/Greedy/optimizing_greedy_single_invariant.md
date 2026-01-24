@@ -1,9 +1,9 @@
-# Optimazing Greedy Algorithm Using Logical Invariant
+# Optimizing Greedy Algorithm Using Logical Invariant
 
-Main idea is to make a **locally valid decision at each step** that preserves the **global optimality invariant**.
+Main idea is to make a **locally valid decision at each step** that preserves the **global optimalitßy invariant**.
 
 Greedy algorithms **do not backtrack**.
-Once a decision is made, it is never revisited.
+Once a decision is ßmade, it is never revisited.
 
 **Logical invariant** = a logical condition on a tracked property that must remain true throughout the algorithm.
 
