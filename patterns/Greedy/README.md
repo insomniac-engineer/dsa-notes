@@ -1,6 +1,6 @@
 # Deep Classification of Greedy
 
-![alt text](image.png)
+![alt text](diagrams/greedy_classification.png)
 
 ## 1. Optimizing Greedy (Global Optimality)
 
