@@ -48,6 +48,12 @@ Invariant examples:
 
 Invariant typically appears inside of the traversing cycles.
 
+----
+Note:
+Invariants are not exclusive to greedy algorithms.
+Greedy uses invariants to justify irreversible local choices,
+but many linear scans rely on invariants without any choice.
+
 ---
 
 ## Data

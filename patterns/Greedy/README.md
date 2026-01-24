@@ -8,7 +8,7 @@
 * **Invariant**: The current state is the best possible prefix outcome.
 * **Logic**: Every local step preserves global invariant logic.
 * **Examples**: Stocks, Gas Station, Jump Game.
-* **Detailed Guide**: [Intro: Optimazing Greedy Algo using Logical Invariant](greedy_with_invariant.md), [Advanced: Greedy Algo Using Multiple Invariants](greedy_with_multi_constraint.md)
+* **Detailed Guide**: [Intro: Optimazing Greedy Algo using Logical Invariant](optimizing_greedy_single_invariant.md), [Advanced: Greedy Algo Using Multiple Invariants](optimizing_greedy_dynamic_invariant.md)
 
 ## 2. Constructive / Parsing Greedy (Validity)
 
@@ -16,7 +16,7 @@
 * **Invariant**: The current prefix interpretation is logically sound and follows the rules (grammar).
  **Logic**: Every local step preserves global invariant logic.
 * **Examples**: Roman to Integer, Integer to Roman.
-* **Detailed Guide**: [Constructive Greedy Algorithm](greedy_with_invariant.md)
+* **Detailed Guide**: [Constructive Greedy Algorithm](constructive_greedy.md)
 
 ---
 
