@@ -1,29 +1,29 @@
-# Optimizing Greedy Algorithm Using Logical Invariant
+# Optimizing Greedy Algorithm
 
-Main idea is to make a **locally valid decision at each step** that preserves the **global optimalitßy invariant**.
+Main idea is to make a **locally valid decision at each step** that preserves the **global optimality invariant**.
 
 Greedy algorithms **do not backtrack**.
-Once a decision is ßmade, it is never revisited.
+Once a decision is made, it is never revisited.
 
-**Logical invariant** = a logical condition on a tracked property that must remain true throughout the algorithm.
+**Logical invariant** = a logical condition on some property that must remain true throughout the algorithm.
 
 There are 2 types of greedy invariants:
 
-* **Type A (single invariant)**
-    - 1 single logical property that fully characterizes optimality
-    - invariant can be checked in 1 traversal
-    - violation of invariant discards prefix
-    - (e.g.: stocks/gas station)
+**Type A (single invariant)**
 
+* 1 single logical invariant
+* invariant can be checked in 1 traversal
+* violation of invariant discards prefix
 
-* **Type B  (multi constrant invariant)**:
-    - optimality is defined by multiple independent constraints
-    - each constraint introduces its own lower bound
-    - final solution must satisfy all constraints simultaneously
-    - greedy buils minimal bounds, then reconciles them
+(e.g.: stocks/gas station)
 
-    - (e.g.: candy/trapping rain water)
+**Type B  (multi constrant invariant)**:
 
+* optimality is defined by multiple independent constraints
+* each constraint introduces its own lower bound
+* final solution must satisfy all constraints simultaneously
+
+(e.g.: candy/trapping rain water)
 
 Below there's deep dive of single invariant greedy LCs.
 
@@ -33,22 +33,24 @@ Below there's deep dive of single invariant greedy LCs.
 
 At every step:
 
-- make the best decision given the current state
-- without revisiting previous choices
+* make the best decision given the current state
+* without revisiting previous choices
 
 The key insight is that we are **NOT simulating actions**.
 
-Instead, we track an **invariant** - a **logical property** that represents the best possible state or outcome so far and must remain true after each step.
+Instead, we track an **invariant** - a **logical property** that represents the best possible state or outcome so far and must remain true after each iteration.
 
 Typically each invariant has some *logical condition*.
 
 Invariant examples:
-- Gas Station: the current gas owned balance *must be non-negative*
-- Stock problem: the tracked profit is *optimal for the processed prefix*
+
+* Gas Station: the current gas owned balance *must be non-negative*
+* Stock problem: the tracked profit is *optimal for the processed prefix*
 
 Invariant typically appears inside of the traversing cycles.
 
 ----
+
 Note:
 Invariants are not exclusive to greedy algorithms.
 Greedy uses invariants to justify irreversible local choices,
@@ -59,13 +61,13 @@ but many linear scans rely on invariants without any choice.
 ## Data
 
 Greedy solutions usually track:
- 
-- minimum/maximum
-- logical invariants (total profit that is optimal for prefix/gas owned that is non-negative)
+
+* minimum/maximum
+* logical invariants (totals)
 
 ---
 
-## Algo Cheetsheet
+### Algo Mechanism
 
 1. **Feasibility check** (only if applicable)
 
@@ -83,8 +85,8 @@ Which logical state of property guarantees that on the current iteration the res
 
 Important!
 
-balance -> itself it's not invariant because it's missing logical condition
-balance > 0 -> Bingo!
+`balance` itself it's not invariant because it's missing logical condition, but 
+`balance > 0` -> Bingo!
 
 4. **Traverse input and check on each iteration that logical invariant condition is guaranteed**
 
@@ -97,26 +99,26 @@ balance > 0 -> Bingo!
 
 Data we track:
 
-- we track the **minimum buy price**
-- we track the **profit** (`price today - minBuy`) that is optimal -> **logical invariant**
+* we track the **minimum buy price**
+* we track the **profit** (`price today - minBuy`) that is optimal -> **logical invariant**
 
 Each iteration local decision:
 
-- update `minBuy` if the current price is lower
-- or update `profit` if selling today is more profitable
-- or do nothing
+* update `minBuy` if the current price is lower
+* or update `profit` if selling today is more profitable
+* or do nothing
 
 
 ### Best Time to Buy and Sell Stock 2 (122)
 
 Data we track:
-- **total profit** for the proceeded prefix -> logical invariant
+* **total profit** for the proceeded prefix -> logical invariant
 
 Each iteration local decision:
 
-- we compare neighboring prices (`i` and `i - 1`)
-- if the price increased, we have a guaranteed profit
-- add this to total profit
+* we compare neighboring prices (`i` and `i - 1`)
+* if the price increased, we have a guaranteed profit
+* add this to total profit
 
 ### Gas Station (0134)
 
@@ -125,11 +127,11 @@ Each iteration local decision:
 aka: does this task have a solution at all?
 
 Data we track:
-- **total owned gas** -> invariant
+* **total owned gas** -> invariant
 
 Each iteration:
 
-- if the ownedGas (invariant) is violated (balance < 0), discard the prefix
+* if the ownedGas (invariant) is violated (balance < 0), discard the prefix
 
 Canonical pattern:
 ```
