@@ -1,4 +1,4 @@
-# Deep Classification of Greedy
+# Greedy Algorithms Types
 
 ![alt text](diagrams/greedy_classification.png)
 
@@ -10,8 +10,7 @@
 * **Examples**: Stocks, Gas Station, Jump Game.
 * **Deep dive**:
 
-  * [Optimazing Greedy Algorithm](optimizing_greedy_single_invariant.md)
-  * [Optimazing Greedy Algorithm with Multiple Invariants](optimizing_greedy_dynamic_invariant.md)
+  * [Optimizing Greedy Algorithm](optimizing_greedy_single_invariant.md)
 
 ## 2. Constructive Greedy (Parsing)
 
@@ -23,7 +22,7 @@
 
 ---
 
-### The "Look-Ahead" Rule (+1)
+#### The "Look-Ahead" Rule (+1)
 
 In many Greedy problems, the decision each iteration requires a peek at the next state to preserve the invariant:
 

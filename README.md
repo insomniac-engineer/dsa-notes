@@ -1,61 +1,158 @@
-# 🧠 LeetCode Pattern-Based Preparation
+<div align="center">
 
-Hey! I am **Yuliia (Yuchi)**, a Software Engineer working in Big Tech.
+# 🧠 **DSA Pattern Mastery**
+### *Systematic Approach to LeetCode Top 150*
 
-Over time, I realized that strong DSA performance is less about memorizing solutions and more about recognizing **patterns**, invariants, and reusable mental models behind problems.
-
-This repository documents my structured journey through the **[Top 150 LeetCode problems](https://leetcode.com/studyplan/top-interview-150/)**, with a focus on developing scalable problem-solving intuition.
-
----
-
-## 🎯 Goal
-
-The main goal of this repository is to build **clear pattern-based and inductive thinking** applicable to most algorithmic interview problems.
+[![Progress](https://img.shields.io/badge/Progress-22%2F150-brightgreen?style=for-the-badge&logo=leetcode)](https://leetcode.com/studyplan/top-interview-150/)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-Feb%202026-blue?style=for-the-badge&logo=calendar)](https://github.com/yuliiachimyrys/dsa-notes)
+[![Language](https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python)](https://python.org)
 
 ---
 
-## 🗂 Project Structure
+*"The whole is greater than the sum of its parts - just like patterns reveal structure behind individual problems."*
 
-This repository is organized into two main sections:
+</div>
 
-📁 **/patterns/**
-The core of this repository.
+---
+
+## 👋 Hi!
+
+I am Yuliia (Yuchi).
+
+Over time, I realized that strong algorithmic problem-solving is not about memorizing individual solutions, but about recognizing **patterns**, maintaining **invariants**, and developing **transferable mental models**.
+
+This repository documents my structured journey through the **[Top 150 LeetCode problems](https://leetcode.com/studyplan/top-interview-150/)** with a focus on building scalable intuition and interview-ready reasoning.
+
+---
+
+## 🎯 **Mission**
+
+Build a **systematic framework for algorithmic and inductive thinking** that enables solving unfamiliar problems through reusable reasoning patterns rather than brute-force memorization.
+
+### **Core Philosophy**
+- 🧩 Pattern Recognition over Solution Memorization  
+- 🔄 Invariant Thinking
+- 🎨 Mental Model Development for scalable understanding  
+- ⚡ Clean, Interview-Ready Implementations  
+
+---
+
+## 🏗 Repository Architecture
+
+### 📁 `/patterns/` - Strategic Layer
+The conceptual foundation behind problem solving.
 
 Contains:
-
-- What is the pattern
-- When to apply it
+- Pattern identification criteria
 - Mental models and intuition
-- Complexity analysis
-- Common pitfalls
-
-📁 **/problems/**
-Contains my individual LeetCode solutions.
-
----
-
-## 🧩 Pattern Index
-
-| Pattern | Description | Example Problems | Pattern notes|
-|----------|-------------|----------------|----------------|
-| Optimizing Greedy | Finding globally optimal solutions by maintaining an invariant at each iteration | [Gas Station](problems/0134-gas-station/), [Best Time to Buy and Sell Stock](problems/0121-best-time-to-buy-and-sell-stock/), [Best Time to Buy and Sell Stock 2](problems/0122-best-time-to-buy-and-sell-stock-ii/), [Jump Game](problems/0055-jump-game/), [Jump Game 2](problems/0045-jump-game-ii/), [Assign Cookies](problems/0455-assign-cookies/) | [Greedy 101](patterns/greedy)|
-| Constructive Greedy | Building a valid structure step-by-step while satisfying constraints | [Roman to Integer](problems/0013-roman-to-integer/), Integer to Roman |
----
-
-## 📈 Progress
-
-Solved: 22 / 150
-
-Last updated: 4 Feb 2026.
+- Algorithmic templates
+- Complexity analysis and trade-offs
+- Common pitfalls and edge cases
+- Cross-pattern relationships
 
 ---
 
-## 🛠 Tools
+### 📁 `/problems/` — Implementation Layer
+Hands-on application of patterns.
 
-Solutions are synced from LC using the **LeetHub-3.0 browser extension**.
+Contains:
+- Clean and optimal solutions
+- Time and space complexity analysis
+- Edge case handling
 
 ---
 
-## 🤝 Contributions
+## 🧩 **Pattern Taxonomy**
 
-I am always happy for the constructive feedback - feel free to ping me!
+<div align="center">
+
+### **🏆 Documented Patterns**
+
+</div>
+
+| Pattern Category | Core Principle | Signature Problems | Deep Dive |
+|:----------------|:---------------|:-------------------|:----------|
+| **🎯 Optimizing Greedy** | Maintain global optimality through local invariants | [Gas Station](problems/0134-gas-station/) • [Best Time to Buy/Sell Stock](problems/0121-best-time-to-buy-and-sell-stock/) • [Best Time to Buy/Sell Stock II](problems/0122-best-time-to-buy-and-sell-stock-ii/) • [Jump Game](problems/0055-jump-game/) • [Jump Game II](problems/0045-jump-game-ii/) • [Assign Cookies](problems/0455-assign-cookies/) | [**📚 TBD**](patterns/greedy) |
+| **🏗️ Constructive Greedy** | Build valid structures through constraint-driven parsing | [Roman to Integer](problems/0013-roman-to-integer/) • Integer to Roman | [**📚 Study Guide**](patterns/greedy) |
+| **👆 Two Pointers** | Optimize in-place operations through responsibility separation | [Merge Sorted Array](problems/0088-merge-sorted-array/) • [Remove Element](problems/0027-remove-element/) • [Remove Duplicates](problems/0026-remove-duplicates-from-sorted-array/) | [**📚 TBD**](patterns/two_pointers) |
+| **🗳️ Boyer-Moore Voting** | Find dominant elements through cancellation logic | [Majority Element](problems/0169-majority-element/) | [**📚 TBD**](patterns/boyer_moore_voting.md) |
+| **🎲 Dict + List Hybrid** | Achieve O(1) random access with O(1) modifications | [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) | [**📚 TBD**](patterns/dict_list_random_access.md) |
+
+---
+
+## 📊 **Progress Metrics**
+
+<div align="center">
+
+### **📈 Current Status**
+
+```
+██████████████████████░░░░░░░░░░░░░░░░░░ 22/150 (14.7%)
+
+🎯 Target: Top 150 LeetCode Problems
+⏱️ Timeline: Active Development  
+🔄 Update Frequency: Daily
+📅 Last Sync: Feb 5, 2026
+```
+
+</div>
+
+<table>
+<tr>
+<td align="center" width="25%">
+<strong>🟢 Easy</strong><br>
+<code>12 solved</code>
+</td>
+<td align="center" width="25%">
+<strong>🟡 Medium</strong><br>
+<code>8 solved</code>
+</td>
+<td align="center" width="25%">
+<strong>🔴 Hard</strong><br>
+<code>2 solved</code>
+</td>
+<td align="center" width="25%">
+<strong>📋 Patterns</strong><br>
+<code>5 documented</code>
+</td>
+</tr>
+</table>
+
+---
+
+## 🛠️ **Development Workflow**
+
+### **🔄 Continuous Integration**
+- **Automated Sync**: [LeetHub-3.0](https://github.com/QasimWani/LeetHub) browser extension
+- **Version Control**: Git-based solution tracking
+- **Documentation**: Pattern-first approach with detailed analysis
+- **Quality Gates**: Code review, complexity analysis, edge case validation
+
+### **📝 Documentation Standards**
+- **Pattern Templates**: Standardized format for mental model documentation
+- **Solution Quality**: Production-ready code with comprehensive comments
+- **Cross-References**: Bidirectional links between patterns and problems
+
+---
+
+## 🤝 **Contributing & Feedback**
+
+<div align="center">
+
+### **💬 Let's Connect!**
+
+**Constructive feedback and collaboration opportunities are always welcome.**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuliia-chimyrys-software-engineer001/)
+
+</div>
+
+---
+
+<div align="center">
+
+**Built with ❤️ by a Software Engineer passionate about systematic problem-solving**
+
+*Star ⭐ this repository if you find it helpful for your interview preparation!*
+
+</div>
