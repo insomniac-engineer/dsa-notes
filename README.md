@@ -38,7 +38,7 @@ Contains my individual LeetCode solutions.
 
 | Pattern | Description | Example Problems | Pattern notes|
 |----------|-------------|----------------|----------------|
-| Optimizing Greedy | Finding globally optimal solutions by maintaining an invariant at each iteration | [Gas Station](problems/0134-gas-station/), [Best Time to Buy and Sell Stock](problems/0121-best-time-to-buy-and-sell-stock/), [Jump Game](problems/0055-jump-game/), [Assign Cookies](problems/0455-assign-cookies/) |
+| Optimizing Greedy | Finding globally optimal solutions by maintaining an invariant at each iteration | [Gas Station](problems/0134-gas-station/), [Best Time to Buy and Sell Stock](problems/0121-best-time-to-buy-and-sell-stock/), [Best Time to Buy and Sell Stock 2](problems/0122-best-time-to-buy-and-sell-stock-ii/), [Jump Game](problems/0055-jump-game/), [Jump Game 2](problems/0045-jump-game-ii/), [Assign Cookies](problems/0455-assign-cookies/) | [Greedy 101](patterns/greedy)|
 | Constructive Greedy | Building a valid structure step-by-step while satisfying constraints | [Roman to Integer](problems/0013-roman-to-integer/), Integer to Roman |
 ---
 
