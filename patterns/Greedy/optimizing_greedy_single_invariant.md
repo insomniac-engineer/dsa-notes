@@ -125,11 +125,11 @@ for element in input:
 
 ---
 
-## 🎯 Canonical Examples
+## Canonical Examples
 
 ### 📈 [Best Time to Buy and Sell Stock (121)](../../problems/0121-best-time-to-buy-and-sell-stock/)
 
-**🔍 Problem Pattern:** Single-pass profit optimization
+**Problem Pattern:** Single-pass profit optimization
 
 **📊 Invariants:**
 - `minBuy` = minimum price seen so far
@@ -154,9 +154,9 @@ def maxProfit(prices):
 
 ---
 
-### 📊 [Best Time to Buy and Sell Stock II (122)](../../problems/0122-best-time-to-buy-and-sell-stock-ii/)
+### [Best Time to Buy and Sell Stock II (122)](../../problems/0122-best-time-to-buy-and-sell-stock-ii/)
 
-**🔍 Problem Pattern:** Cumulative profit collection
+**Problem Pattern:** Cumulative profit collection
 
 **📊 Invariant:**
 - `totalProfit` = accumulated profit from all beneficial transactions
@@ -180,7 +180,7 @@ def maxProfit(prices):
 
 ### ⛽ [Gas Station (134)](../../problems/0134-gas-station/)
 
-**🔍 Problem Pattern:** Circular array with feasibility constraints
+**Problem Pattern:** Circular array with feasibility constraints
 
 **🎯 Global Feasibility Check:**
 ```python

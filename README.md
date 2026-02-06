@@ -67,13 +67,13 @@ Contains:
 
 </div>
 
-| Pattern Category | Core Principle | Signature Problems | Deep Dive |
+| Pattern Category | Core Principle | Signature Problems | Notes |
 |:----------------|:---------------|:-------------------|:----------|
-| **🎯 Optimizing Greedy** | Maintain global optimality through local invariants | [Gas Station](problems/0134-gas-station/) • [Best Time to Buy/Sell Stock](problems/0121-best-time-to-buy-and-sell-stock/) • [Best Time to Buy/Sell Stock II](problems/0122-best-time-to-buy-and-sell-stock-ii/) • [Jump Game](problems/0055-jump-game/) • [Jump Game II](problems/0045-jump-game-ii/) • [Assign Cookies](problems/0455-assign-cookies/) | [**📚 TBD**](patterns/greedy) |
-| **🏗️ Constructive Greedy** | Build valid structures through constraint-driven parsing | [Roman to Integer](problems/0013-roman-to-integer/) • Integer to Roman | [**📚 Study Guide**](patterns/greedy) |
-| **👆 Two Pointers** | Optimize in-place operations through responsibility separation | [Merge Sorted Array](problems/0088-merge-sorted-array/) • [Remove Element](problems/0027-remove-element/) • [Remove Duplicates](problems/0026-remove-duplicates-from-sorted-array/) | [**📚 TBD**](patterns/two_pointers) |
+| **🎯 Optimizing Greedy** | Maintain global optimality through local invariants | [Gas Station](problems/0134-gas-station/) • [Best Time to Buy/Sell Stock](problems/0121-best-time-to-buy-and-sell-stock/) • [Best Time to Buy/Sell Stock II](problems/0122-best-time-to-buy-and-sell-stock-ii/) • [Jump Game](problems/0055-jump-game/) • [Jump Game II](problems/0045-jump-game-ii/) • [Assign Cookies](problems/0455-assign-cookies/) | [📚 Greedy 101](patterns/greedy) |
+| **🏗️ Constructive Greedy** | Build valid structures through constraint-driven parsing | [Roman to Integer](problems/0013-roman-to-integer/) • Integer to Roman | [📚 Greedy 101](patterns/greedy) |
+<!-- | **👆 Two Pointers** | Optimize in-place operations through responsibility separation | [Merge Sorted Array](problems/0088-merge-sorted-array/) • [Remove Element](problems/0027-remove-element/) • [Remove Duplicates](problems/0026-remove-duplicates-from-sorted-array/) | [**📚 TBD**](patterns/two_pointers) |
 | **🗳️ Boyer-Moore Voting** | Find dominant elements through cancellation logic | [Majority Element](problems/0169-majority-element/) | [**📚 TBD**](patterns/boyer_moore_voting.md) |
-| **🎲 Dict + List Hybrid** | Achieve O(1) random access with O(1) modifications | [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) | [**📚 TBD**](patterns/dict_list_random_access.md) |
+| **🎲 Dict + List Hybrid** | Achieve O(1) random access with O(1) modifications | [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) | [**📚 TBD**](patterns/dict_list_random_access.md) | -->
 
 ---
 
@@ -89,7 +89,7 @@ Contains:
 🎯 Target: Top 150 LeetCode Problems
 ⏱️ Timeline: Active Development  
 🔄 Update Frequency: Daily
-📅 Last Sync: Feb 5, 2026
+📅 Last Sync: Feb 6, 2026
 ```
 
 </div>
@@ -119,7 +119,7 @@ Contains:
 
 ## 🛠️ **Development Workflow**
 
-### **🔄 Learning Workflow**
+
 - **Automated Sync**: [LeetHub-3.0](https://github.com/QasimWani/LeetHub) browser extension
 - **Version Control**: Git-based solution tracking
 - **Documentation**: Pattern-first approach with detailed analysis
@@ -133,7 +133,7 @@ Contains:
 
 ### **💬 Let's Connect!**
 
-Constructive feedback and collaboration opportunities are always welcome.
+Constructive feedback and collaboration opportunities are always welcome!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuliia-chimyrys-software-engineer001/)
 
