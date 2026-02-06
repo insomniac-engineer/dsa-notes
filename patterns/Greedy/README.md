@@ -4,7 +4,7 @@
 
 ## Pattern Categories
 
-### [A. Optimizing Greedy Algorithm](optimizing_greedy_single_invariant.md)
+### [A. Optimizing Greedy Algorithm](optimizing_greedy.md)
 
 Maintain global optimality through local invariants.
 
