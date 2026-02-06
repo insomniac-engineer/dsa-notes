@@ -1,6 +1,0 @@
-Type B greedy problems plan:
-
-- Container With Most Water
-- Trapping Rain Water
-- Candy (finish)
-- Finish type B readme
