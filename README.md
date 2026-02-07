@@ -3,7 +3,7 @@
 # 🧠 **Open DSA Pattern Handbook**
 ### *Quick recall system for acing the coding interviews*
 
-[![Progress](https://img.shields.io/badge/Progress-TBD%2F150-brightgreen?style=for-the-badge&logo=leetcode)](https://leetcode.com/studyplan/top-interview-150/)
+[![Progress](https://img.shields.io/badge/Progress-23%2F150-brightgreen?style=for-the-badge&logo=leetcode)](https://leetcode.com/studyplan/top-interview-150/)
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-Feb%202026-blue?style=for-the-badge&logo=calendar)](https://github.com/yuliiachimyrys/dsa-notes)
 [![Language](https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python)](https://python.org)
 
@@ -13,48 +13,37 @@
 
 ## 👋 Hi!
 
-I'm Yuliia (Yuchi).
-
-This repository is my personal interview preparation handbook for the **[Top 150 LeetCode problems](https://leetcode.com/studyplan/top-interview-150/)**.
+I'm Yuliia (Yuchi). This repository is a **quick recall system** for the **[Top 150 LeetCode problems](https://leetcode.com/studyplan/top-interview-150/)**.
 
 Over time, I learned that strong algorithmic performance is rarely about memorizing solutions.
-It's about **inductive** thinking, recognizing **patterns**, maintaining **invariants**, and applying **repeatable mental models** under time pressure.
+The goal isn't memorization - it's **inductive thinking**. I focus on recognizing the "signals" that trigger specific **patterns** and maintaining the **invariants** required to solve them under time pressure.
 
 There are many excellent resources that provide deep theoretical understanding of algorithms.
+Instead, this repo exists as a **quick recall system** - something that can be revisited just before interviews.
 
-Instead, this repo exists as a **quick recall system** - something that can be revisited before interviews to refresh pattern recognition and solution intuition.
 
 ---
 
-## 🎯 **Mission**
+## 🎯 **Mission & Philosophy**
 
-Build a **fast pattern-based recall system** for algorithmic interviews.
-
-### **Core Philosophy**
-
-- Every problem is mapped to a reusable pattern
-- Each pattern is documented as a mental model, not an academic theory
-- Solutions focus on clarity, correctness, and interview practicality
+Build a **fast pattern-based recall system** where:
+- Every problem is mapped to a reusable **Mental Model**.
+- Solutions prioritize **Interview Practicality** over academic theory.
+- We focus on the **Invariant**: the truth that remains constant throughout the algorithm.
 
 ---
 
 ## 🏗 Repository Architecture
 
 ### 📁 `/patterns/`
-The strategic layer, contains:
-
-- pattern itself, mental model and intuition
-- algorithmic templates
-- complexity analysis and trade-offs
-- common pitfalls and edge cases
-
----
+The **Strategic Layer**. Contains the "why" and "how":
+- **The Signal**: When to use this pattern.
+- **The Template**: Reusable Python boilerplate.
+- **The Invariant**: Critical logic that must hold true.
+- **Common pitfalls**: Mistakes to avoid
 
 ### 📁 `/problems/`
-Implementation layer, contains:
-
-- clean and optimal solutions
-- edge case handling
+The **Implementation Layer**. Contains clean, optimal Python solutions mapped to their specific pattern.
 
 ---
 
@@ -64,11 +53,23 @@ This repository is designed as a pre-interview refresher, not a full algorithm t
 
 Suggested workflow:
 
-1. Review Pattern Taxonomy to refresh recognition signals
+1. Review Pattern Taxonomy & Cheat Sheet to refresh recognition signals
 2. Revisit Pattern READMEs to recall invariants and templates
-3. Skim solved problems to reinforce implementation intuition
+3. Skim solved problems
 
-Goal: rapid pattern recognition and confident solution decomposition.
+---
+
+## 🧭 **Pattern Selection Cheat Sheet**
+
+Use this table during the first minute of pattern recognition.
+
+| If the problem asks for... | Try this Pattern... | Key Intuition | Signals |
+| :--- | :--- | :--- | :--- |
+| **In-place array modification** | Read / Write Compression | One-way (Fast/Slow): One pointer scans, the other writes valid data. | Remove, Duplicates, Filter, In-place |
+| **Pair matching in sorted data** | Classic Two Pointers | Two-way (Left/Right): Pointers move toward each other to find a target. | Sorted, Target Sum, Palindrome, Pairs |
+| **Finding a majority element (Boyer-Moore)** | Voting / Cancellation | Cancel out competing values to reveal dominant candidate. | Majority, > N/2, Count |
+| **Local optimum for global best** | Greedy Optimization | Immediate Best: Take the best step now without looking back. | Max Profit, Jump, Minimum Chips |
+| **$O(1)$ lookup + $O(1)$ random** | Dict + List Hybrid | Store values in list, track indices in dictionary. | GetRandom O(1), Constant Time |
 
 ---
 
@@ -82,22 +83,19 @@ Goal: rapid pattern recognition and confident solution decomposition.
 
 | Pattern Category | Core Principle | Signature Problems | Notes |
 |:----------------|:---------------|:-------------------|:----------|
-| **Greedy – Optimization** | Make the best local choice at each step hoping it leads to the best overall result | [Gas Station](problems/0134-gas-station/) • [Best Time to Buy/Sell Stock](problems/0121-best-time-to-buy-and-sell-stock/) • [Best Time to Buy/Sell Stock II](problems/0122-best-time-to-buy-and-sell-stock-ii/) • [Jump Game](problems/0055-jump-game/) • [Jump Game II](problems/0045-jump-game-ii/) • [Assign Cookies](problems/0455-assign-cookies/) | [📚 Greedy 101](patterns/greedy/README.md) |
-| **Greedy – Construction** | Build the final answer step-by-step using simple local rules | [Roman to Integer](problems/0013-roman-to-integer/) • Integer to Roman | [📚 Greedy 101](patterns/greedy/README.md) |
-| **Read / Write Compression** | Read every element and copy only the valid ones into the front of the array | [Remove Element](problems/0027-remove-element/) • [Remove Duplicates I](problems/0026-remove-duplicates-from-sorted-array/) • [Remove Duplicates II](problems/0080-remove-duplicates-from-sorted-array-ii/) | [📚 TBD](patterns/two_pointers) |
-| **Classic Two Pointers** | Use two pointers to compare or match elements from different positions | [Two Sum II](problems/0167-two-sum-ii-input-array-is-sorted/) • [Valid Palindrome](problems/0125-valid-palindrome/) • [Container With Most Water](problems/0011-container-with-most-water/) • [Merge Sorted Array](problems/0088-merge-sorted-array/) | [📚 TBD](patterns/two_pointers) |
-| **Voting / Cancellation (Boyer-Moore)** | Find the dominant element by cancelling out different elements | [Majority Element](problems/0169-majority-element/) | [📚 TBD](patterns/boyer_moore_voting.md) |
-| **Dict + List Hybrid** | Store elements in both a hash map and list to support fast lookup and random access | [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) | [📚 Check dict/set implementation](patterns/dict_list_random_access.md) |
+| **Greedy – Optimization** | Local best choice → Global result | [Gas Station](problems/0134-gas-station/) • [Best Time to Buy/Sell Stock](problems/0121-best-time-to-buy-and-sell-stock/) • [Best Time to Buy/Sell Stock II](problems/0122-best-time-to-buy-and-sell-stock-ii/) • [Jump Game](problems/0055-jump-game/) • [Jump Game II](problems/0045-jump-game-ii/) • [Assign Cookies](problems/0455-assign-cookies/) | [📚 Greedy 101](patterns/greedy/README.md) |
+| **Greedy – Construction** | Build answer via local rules | [Roman to Integer](problems/0013-roman-to-integer/) • Integer to Roman | [📚 Greedy 101](patterns/greedy/README.md) |
+| **Read / Write Compression** | "Filter" elements in-place | [Remove Element](problems/0027-remove-element/) • [Remove Duplicates I](problems/0026-remove-duplicates-from-sorted-array/) • [Remove Duplicates II](problems/0080-remove-duplicates-from-sorted-array-ii/) | [🚧 Coming soon](patterns/two_pointers) |
+| **Classic Two Pointers** | Match elements from different ends | [Merge Sorted Array](problems/0088-merge-sorted-array/) • [Valid Palindrome](problems/0125-valid-palindrome/)| [🚧 Coming soon](patterns/two_pointers) |
+| **Voting / Cancellation (Boyer-Moore)** | Find dominant element via cancellation | [Majority Element](problems/0169-majority-element/) | [🚧 Coming soon](patterns/boyer_moore_voting.md) |
+| **Dict + List Hybrid** | Fast lookup + Random access | [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) | [📚 Check dict/set implementation](patterns/dict_list_random_access.md) |
 
----
-🧭 Pattern Selection Cheat Sheet
 
-Remove / filter elements → Read / Write Compression  
-Compare or match elements → Classic Two Pointers
-Cancel competing values → Voting / Cancellation (Boyer-Moore)
-Make best local decision → Greedy Optimization  
-Build result step-by-step → Greedy Construction
+<details>
+<summary><b>🔜 Click to view upcoming problems (Backlog)</b></summary>
 
+Rotate Array, H-Index, Product of Array Except Self, Length of Last Word, Longest Common Prefix, Reverse Words in a String, Zigzag Conversion, Find the Index of the First...
+</details>
 
 ---
 
@@ -108,37 +106,13 @@ Build result step-by-step → Greedy Construction
 ### **📈 Current Status**
 
 ```
-██████████████████████░░░░░░░░░░░░░░░░░░ 22/150 (14.7%)
+██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 23/150 (15.3%)
 
 🎯 Target: Top 150 LeetCode Problems
 ⏱️ Timeline: Active Development  
 🔄 Update Frequency: Daily
-📅 Last Sync: Feb 6, 2026
+📅 Last Sync: Feb 7, 2026
 ```
-
-</div>
-
-<table>
-<tr>
-<td align="center" width="25%">
-<strong>🟢 Easy</strong><br>
-<code>12 solved</code>
-</td>
-<td align="center" width="25%">
-<strong>🟡 Medium</strong><br>
-<code>8 solved</code>
-</td>
-<td align="center" width="25%">
-<strong>🔴 Hard</strong><br>
-<code>2 solved</code>
-</td>
-<td align="center" width="25%">
-<strong>📋 Patterns</strong><br>
-<code>5 documented</code>
-</td>
-</tr>
-</table>
-
 ---
 
 ## 🛠️ **Development Workflow**
