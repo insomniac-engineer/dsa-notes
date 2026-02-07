@@ -40,10 +40,8 @@ Build a **fast pattern-based recall system** for algorithmic interviews.
 
 ## 🏗 Repository Architecture
 
-### 📁 `/patterns/` - Strategic Layer
-The conceptual foundation behind problem solving.
-
-Contains:
+### 📁 `/patterns/`
+The strategic layer, contains:
 
 - pattern itself, mental model and intuition
 - algorithmic templates
@@ -52,10 +50,9 @@ Contains:
 
 ---
 
-### 📁 `/problems/` — Implementation Layer
-Hands-on application of patterns.
+### 📁 `/problems/`
+Implementation layer, contains:
 
-Contains:
 - clean and optimal solutions
 - edge case handling
 
