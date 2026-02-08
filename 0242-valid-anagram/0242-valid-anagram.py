@@ -1,9 +1,12 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-    #    return Counter(s) == Counter(t)
+    #    A: sort both strings, traverse through them and if s[i] != t[i] return False
+    #    B: use HashMap and compare added values
+    #       In Pythonic way: return Counter(s) == Counter(t)
+    #       Or in generalized way:
 
-        # we focus on char frequency, so we need key-value DS, where key is char and value is how frequent we meet it
-        # once we traverse through s, we can traverse through t and check:
+        # we focus on char frequency, maintaint dict, where key is char and value is its frequency
+        # once dict is filled, we traverse through t and check:
         # if t[i] is in map - substract value from map
         # if not - return false
 
@@ -17,7 +20,3 @@ class Solution:
                 return False
             frequency_char_map[i] -=1
         return True
-
-        
-
-        
