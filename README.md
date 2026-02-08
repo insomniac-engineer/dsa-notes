@@ -21,6 +21,24 @@ The goal isn't memorization - it's **inductive thinking**. I focus on recognizin
 There are many excellent resources that provide deep theoretical understanding of algorithms.
 Instead, this repo exists as a **quick recall system** - something that can be revisited just before interviews.
 
+<details>
+<summary><b>What programming language to use for DSA?</b></summary>
+Having spent years of trying mastering DSA with Java, I made a strategic move (following a "hard realization") to Python in 2025 for the technical interviews. I've found that when time is the most critical constraint, Python’s minimalist syntax acts like a multiplier rather than blocker. It allows to bypass the boilerplate and focus 100% on logic rather than syntax.
+</details>
+
+<details>
+<summary><b>Does the order of solving LC problems matter?</b></summary>
+Yes. While Top 150 LC provides raw material, main thing is to pay attention to pattern taxonomy (which I tried to come up in this repo) and solve problems not in ad-hoc way, but categorized.
+
+  My recommended workflow:
+
+  1. Identify the signal (e.g., "Sorted array" + "Find a pair").
+  2. Select the pattern (e.g., "Two Pointers").
+  3. Establish the invariant (e.g., "Left pointer only moves right").
+  4. Draft pseudocode to verify logic.
+
+Implement in Python to finalize.
+</details>
 
 ---
 
