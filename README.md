@@ -21,14 +21,20 @@ The goal isn't memorization - it's **inductive thinking**. I focus on recognizin
 There are many excellent resources that provide deep theoretical understanding of algorithms.
 Instead, this repo exists as a **quick recall system** - something that can be revisited just before interviews.
 
+FAQ:
 <details>
 <summary><b>What programming language to use for DSA?</b></summary>
-Having spent years of trying mastering DSA with Java, I made a strategic move (following a "hard realization") to Python in 2025 for the technical interviews. I've found that when time is the most critical constraint, Python’s minimalist syntax acts like a multiplier rather than blocker. It allows to bypass the boilerplate and focus 100% on logic rather than syntax.
+
+TL;DR: Python.
+
+Having spent years of trying mastering DSA with Java, I made a strategic move (following a "hard realization") to Python in 2025 for the technical interviews. I've found that when time is the most critical constraint, Python allows to bypass the boilerplate and focus 100% on logic rather than syntax.
+
 </details>
 
 <details>
 <summary><b>Does the order of solving LC problems matter?</b></summary>
-Yes. While Top 150 LC provides raw material, main thing is to pay attention to pattern taxonomy (which I tried to come up in this repo) and solve problems not in ad-hoc way, but categorized.
+
+Yes. While Top 150 LC provides raw material, main thing is to pay attention to pattern taxonomy (which I tried to come up in this repo) and stop solving problems in ad-hoc way.
 
   My recommended workflow:
 
@@ -36,8 +42,14 @@ Yes. While Top 150 LC provides raw material, main thing is to pay attention to p
   2. Select the pattern (e.g., "Two Pointers").
   3. Establish the invariant (e.g., "Left pointer only moves right").
   4. Draft pseudocode to verify logic.
+  5. Implement in Python to finalize.
 
-Implement in Python to finalize.
+</details>
+<details>
+<summary><b>How do you sync LC solutions to GitHub?</b></summary>
+
+It's auto-synced using [LeetHub-3.0](https://github.com/QasimWani/LeetHub) browser extension.
+
 </details>
 
 ---
@@ -83,7 +95,7 @@ Use this table during the first minute of pattern recognition.
 
 | If the problem asks for... | Try this Pattern... | Key Intuition | Signals |
 | :--- | :--- | :--- | :--- |
-| **In-place array modification** | Read / Write Compression | One-way (Fast/Slow): One pointer scans, the other writes valid data. Typicall scan pointer is for/while cycle itself. | Remove element, Remove duplicates, Filter, In-place |
+| **In-place array modification** | Read / Write Compression | One-way (Fast/Slow): One pointer scans, the other writes valid data. Typically scan pointer is for/while cycle itself. | Remove element, Remove duplicates, Filter, In-place |
 | **Pair matching in sorted data** | Classic Two Pointers | Two-way (Left/Right): Pointers move toward each other to find a target. | Sorted, Target Sum, Palindrome, Pairs |
 | **Finding a majority element (Boyer-Moore)** | Voting / Cancellation | Cancel out competing values to reveal dominant candidate. | Majority, > N/2, Count |
 | **Local optimum for global best** | Greedy Optimization | Immediate Best: Take the best step now without looking back. | Max Profit, Jump, Minimum Chips |
@@ -115,17 +127,6 @@ Rotate Array, H-Index, Product of Array Except Self, Length of Last Word, Longes
 </details>
 
 ---
-
-## 🛠️ **Development Workflow**
-
-**Automated Sync**: [LeetHub-3.0](https://github.com/QasimWani/LeetHub) browser extension
-**Version Control**: Git-based solution tracking
-**Documentation**: Pattern-first approach with detailed analysis
-**Quality Gates**: Code review, complexity analysis, edge case validation
-
----
-
-## 🤝 **Contributing & Feedback**
 
 <div align="center">
 
