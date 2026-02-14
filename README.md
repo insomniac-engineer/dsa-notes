@@ -3,7 +3,7 @@
 # 🧠 **Open DSA Pattern Handbook**
 ### *Quick recall system for acing the coding interviews*
 
-[![Progress](https://img.shields.io/badge/Progress-23%2F150-brightgreen?style=for-the-badge&logo=leetcode)](https://leetcode.com/studyplan/top-interview-150/)
+![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-24/150_(16%25)-orange?style=for-the-badge&logo=leetcode)
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-Feb%202026-blue?style=for-the-badge&logo=calendar)](https://github.com/yuliiachimyrys/dsa-notes)
 [![Language](https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python)](https://python.org)
 
@@ -114,21 +114,6 @@ Use this table during the first minute of pattern recognition.
 Rotate Array, H-Index, Product of Array Except Self, Length of Last Word, Longest Common Prefix, Reverse Words in a String, Zigzag Conversion, Find the Index of the First...
 </details>
 
----
-
-## 📊 **Progress Metrics**
-
-<div align="center">
-
-### **📈 Current Status**
-![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-24/150_(16%25)-orange?style=for-the-badge&logo=leetcode)
-```
-
-🎯 Target: Top 150 LeetCode Problems
-⏱️ Timeline: Active Development  
-🔄 Update Frequency: Daily
-📅 Last Sync: Feb 14, 2026
-```
 ---
 
 ## 🛠️ **Development Workflow**
