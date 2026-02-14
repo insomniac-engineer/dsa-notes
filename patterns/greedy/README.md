@@ -1,21 +1,22 @@
-# Greedy Algorithms
+# 🎯 Greedy Algorithms
 
-![Greedy Classification](diagrams/greedy_classification.png)
+<p align="center">
+  <img src="diagrams/greedy_classification.png" alt="Greedy Classification" width="600">
+</p>
 
-## Pattern Categories
+## 🧩 Pattern Categories
 
-### [Optimizing Greedy Algorithm](optimizing_greedy_single_invariant.md)
-Maintain global optimality through local invariants
-
-### [Constructive Greedy Algorithm](constructive_greedy.md)
-Build valid structures through constraint-driven parsing
+| 📈 [Optimizing Greedy](optimizing_greedy.md) | 🏗️ [Constructive Greedy](constructive_greedy.md) |
+| :--- | :--- |
+| Focus on maintaining global optimality through **local invariants**. | Focus on building valid structures through **constraint-driven parsing**. |
 
 ---
 
-## The "Look-Ahead" Rule (+1)
+> [!IMPORTANT]
+> ### 💡 The "Look-Ahead" Rule (+1)
+> A common greedy tactic where the current decision depends on the **next state** to preserve the invariant.
 
-In many Greedy problems, the decision each iteration requires a peek at the next state to preserve the invariant:
+#### 🛠️ Application in Problems:
 
-**Roman to Integer**: Peek `i + 1` to see if current is negative.
-
-**Gas Station**: We don't peek `i + 1` in the code, but the logic "forces" us to start fresh from `i + 1` if the invariant is violated.
+* **Roman to Integer** We peek at `i + 1`. If the current numeral is smaller than the next, it indicates a subtraction rule (e.g., IV, IX).
+* **Gas Station** While we don't peek in the code, the logic is "forward-resetting." If the current tank hits a deficit, the greedy choice is to skip all stations in between and restart at `i + 1`.

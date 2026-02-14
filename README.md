@@ -83,7 +83,7 @@ Use this table during the first minute of pattern recognition.
 
 | If the problem asks for... | Try this Pattern... | Key Intuition | Signals |
 | :--- | :--- | :--- | :--- |
-| **In-place array modification** | Read / Write Compression | One-way (Fast/Slow): One pointer scans, the other writes valid data. | Remove, Duplicates, Filter, In-place |
+| **In-place array modification** | Read / Write Compression | One-way (Fast/Slow): One pointer scans, the other writes valid data. Typicall scan pointer is for/while cycle itself. | Remove element, Remove duplicates, Filter, In-place |
 | **Pair matching in sorted data** | Classic Two Pointers | Two-way (Left/Right): Pointers move toward each other to find a target. | Sorted, Target Sum, Palindrome, Pairs |
 | **Finding a majority element (Boyer-Moore)** | Voting / Cancellation | Cancel out competing values to reveal dominant candidate. | Majority, > N/2, Count |
 | **Local optimum for global best** | Greedy Optimization | Immediate Best: Take the best step now without looking back. | Max Profit, Jump, Minimum Chips |
@@ -104,10 +104,9 @@ Use this table during the first minute of pattern recognition.
 | **Greedy – Optimization** | Local best choice → Global result | [Gas Station](problems/0134-gas-station/) • [Best Time to Buy/Sell Stock](problems/0121-best-time-to-buy-and-sell-stock/) • [Best Time to Buy/Sell Stock II](problems/0122-best-time-to-buy-and-sell-stock-ii/) • [Jump Game](problems/0055-jump-game/) • [Jump Game II](problems/0045-jump-game-ii/) • [Assign Cookies](problems/0455-assign-cookies/) | [📚 Greedy 101](patterns/greedy/README.md) |
 | **Greedy – Construction** | Build answer via local rules | [Roman to Integer](problems/0013-roman-to-integer/) • Integer to Roman | [📚 Greedy 101](patterns/greedy/README.md) |
 | **Read / Write Compression** | "Filter" elements in-place | [Remove Element](problems/0027-remove-element/) • [Remove Duplicates I](problems/0026-remove-duplicates-from-sorted-array/) • [Remove Duplicates II](problems/0080-remove-duplicates-from-sorted-array-ii/) | [🚧 Coming soon](patterns/two_pointers) |
-| **Classic Two Pointers** | Match elements from different ends | [Merge Sorted Array](problems/0088-merge-sorted-array/) • [Valid Palindrome](problems/0125-valid-palindrome/)| [🚧 Coming soon](patterns/two_pointers) |
+| **Classic Two Pointers** | Match elements from different ends | [Merge Sorted Array](problems/0088-merge-sorted-array/) • [Valid Palindrome](problems/0125-valid-palindrome/) • [Is Subsequence](problems/0392-is-subsequence/)| [🚧 Coming soon](patterns/two_pointers) |
 | **Voting / Cancellation (Boyer-Moore)** | Find dominant element via cancellation | [Majority Element](problems/0169-majority-element/) | [🚧 Coming soon](patterns/boyer_moore_voting.md) |
 | **Dict + List Hybrid** | Fast lookup + Random access | [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) | [📚 Check dict/set implementation](patterns/dict_list_random_access.md) |
-
 
 <details>
 <summary><b>🔜 Click to view upcoming problems (Backlog)</b></summary>
@@ -122,24 +121,22 @@ Rotate Array, H-Index, Product of Array Except Self, Length of Last Word, Longes
 <div align="center">
 
 ### **📈 Current Status**
-
+![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-24/150_(16%25)-orange?style=for-the-badge&logo=leetcode)
 ```
-██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 23/150 (15.3%)
 
 🎯 Target: Top 150 LeetCode Problems
 ⏱️ Timeline: Active Development  
 🔄 Update Frequency: Daily
-📅 Last Sync: Feb 7, 2026
+📅 Last Sync: Feb 14, 2026
 ```
 ---
 
 ## 🛠️ **Development Workflow**
 
-
-- **Automated Sync**: [LeetHub-3.0](https://github.com/QasimWani/LeetHub) browser extension
-- **Version Control**: Git-based solution tracking
-- **Documentation**: Pattern-first approach with detailed analysis
-- **Quality Gates**: Code review, complexity analysis, edge case validation
+**Automated Sync**: [LeetHub-3.0](https://github.com/QasimWani/LeetHub) browser extension
+**Version Control**: Git-based solution tracking
+**Documentation**: Pattern-first approach with detailed analysis
+**Quality Gates**: Code review, complexity analysis, edge case validation
 
 ---
 

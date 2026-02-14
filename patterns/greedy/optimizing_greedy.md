@@ -1,156 +1,65 @@
-# Optimizing Greedy Algorithm
-
-----
-
-## Intuition
-
-The main idea is to make a **locally optimal decision at each step** that preserves **global optimality**.
-
-Greedy algorithms **do not backtrack**.
-Once a decision is made, it is never revisited.
-
-The correctness of greedy algorithm relies on maintaining an invariant.
-
-----
-
-### What is Invariant?
-
-An **invariant** is a logical state on some property that must remain true throughout the algorithm.
-
-### Why Greedy works?
-
-Greedy is correct if:
-
-1. A local decision preserves the invariant
-2. The invariant guarantees global optimality
-
-----
-
-### Types of Greedy Invariants
-
-* **Greedy with a single invariant**
--> a single tracked state defines optimality
--> the invariant can be maintained during one traversal
--> if the invariant is violated, the current prefix is discarded
-
-* **Greedy with multiple invariants**
--> multiple independent constraints
--> each constraint introduces its own bound
--> the final solution must satisfy all invariants simultaneously
-
-----
-
-### Core Principle
-
-At every step:
-
-* make the best decision given the current state
-* never revisit previous choices
-
-The key insight - we are **NOT simulating actions**.
-
-Instead, we track an **invariant** - a **logical property** that represents the best possible achievable state so far.
-
-### Invariant vs Invariant Condition
-
-Invariant:
-
-```
-gasOwned = remaining gas if we start from the candidate station
-```
-
-Invariant Condition:
-```python
-gasOwned >= 0
-```
-----
-
-## 🛠️ Common Greedy Algorithm Template
-
-### 🔄 Step-by-Step Approach
-
-#### 1️⃣ **Global Feasibility Check** *(optional)*
-> 🎯 **Question:** Does a solution exist at all?
-
-- Common in LeetCode when problem states "return -1 if impossible"
-- Check global constraints before attempting local optimization
-
-```python
-# Example: Gas Station
-if sum(gas) < sum(cost):
-    return -1  # Impossible to complete circuit
-```
-
-#### 2️⃣ **Define State Variables**
-> 🎯 **Question:** What data do we need to track?
-
-Common state types:
-- `min/max` - extrema tracking
-- `balance/total` - cumulative values
-- `prefix/suffix` - partial results
-
-#### 3️⃣ **Identify Core Invariant**
-> 🎯 **Question:** What logical property must remain true?
-
-```python
-# Examples:
-gasBalance    # remaining fuel
-maxProfit     # best profit so far
-minPrice      # lowest price seen
-```
-
-#### 4️⃣ **Define Invariant Condition**
-> 🎯 **Question:** When is the invariant satisfied?
-
-```python
-# Examples:
-gasBalance >= 0     # route is feasible
-profit >= 0         # no losses allowed
-balance > threshold # constraint satisfied
-```
-
-#### 5️⃣ **Maintain Invariant During Traversal**
-> 🎯 **Question:** How do we preserve the invariant at each step?
-
-```python
-for element in input:
-    # Update state
-    state += process(element)
-    
-    # Check invariant violation
-    if not invariant_satisfied(state):
-        # Reset or adjust strategy
-        reset_state()
-```
+# 📈 Optimizing Greedy Algorithm
 
 ---
 
-## Canonical Examples
+## 💡 Intuition
 
-### 📈 [Best Time to Buy and Sell Stock (121)](../../problems/0121-best-time-to-buy-and-sell-stock/)
+The core strategy of a Greedy algorithm is to make a **locally optimal decision at each step** to preserve **global optimality**.
 
-**Problem Pattern:** Single-pass profit optimization
+> [!IMPORTANT]
+> **No Backtracking:** Once a decision is made, it is never revisited. The correctness of the algorithm relies entirely on maintaining a specific **logical invariant**.
 
-**📊 Invariants:**
-- `minBuy` = minimum price seen so far
-- `maxProfit` = best achievable profit in processed prefix
+---
 
-**⚡ Local Decisions:**
-- Update `minBuy` if current price is lower
-- Update `maxProfit` if selling today yields better profit
-- Continue scanning
+## 🔑 Key Concepts
 
-```python
-def maxProfit(prices):
-    minBuy = float('inf')
-    maxProfit = 0
-    
-    for price in prices:
-        minBuy = min(minBuy, price)
-        maxProfit = max(maxProfit, price - minBuy)
-    
-    return maxProfit
-```
+### What is an Invariant?
+An **invariant** is a logical property or state that must remain true throughout the execution of the algorithm.
+
+### Why does Greedy work?
+A Greedy approach is mathematically sound if:
+1. A **local decision** successfully preserves the invariant.
+2. The **invariant** itself guarantees the final global optimality.
+
+### 📋 Types of Greedy Invariants
+
+| Type | Logic | Behavior |
+| :--- | :--- | :--- |
+| **Single Invariant** | A single tracked state defines optimality. | Maintained during one traversal; if violated, the current prefix is discarded. |
+| **Multiple Invariants** | Multiple independent constraints or bounds. | The final solution must satisfy all invariants simultaneously. |
+
+---
+
+## 🎯 Core Principle
+
+At every step, we make the best decision based on the current state. 
+
+> [!TIP]
+> **Logic over Simulation:** We are **not** simulating actions. Instead, we track an **invariant** - a logical property representing the best possible achievable state so far.
+
+**Example: Gas Station**
+* **Invariant:** `gasOwned` (Remaining gas if we start from the candidate station).
+* **Condition:** `gasOwned >= 0`.
+
+---
+
+## Greedy Algorithm Template
+
+
+1. **Global Feasibility Check** *(Optional)*
+    * *Goal:* Quick exit if a solution is impossible (e.g., `sum(gas) < sum(cost)`).
+2. **Define State Variables**
+    * *Common types:* `min/max` (extrema), `balance/total` (cumulative values), `prefix/suffix` (partial results).
+3. **Identify Core Invariant**
+    * *Question:* What property must stay true? (e.g., `maxProfit`, `minPrice`).
+4. **Define Invariant Condition**
+    * *Question:* When is the invariant satisfied? (e.g., `balance >= 0`).
+5. **Maintain Invariant During Traversal**
+    * *Workflow:* Update state $\rightarrow$ Check for violation $\rightarrow$ Reset or adjust strategy.
+
+---
+
+## 📚 Canonical Examples
 
 ---
 
