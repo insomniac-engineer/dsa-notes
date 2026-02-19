@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - "problems/**"
-      - "scripts/sync_taxonomy.py"
+      - "scripts/update_taxonomy.py"
       - "README.md"
   workflow_dispatch:
 
