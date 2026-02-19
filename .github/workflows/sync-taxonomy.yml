@@ -24,7 +24,7 @@ jobs:
           python-version: "3.11"
 
       - name: Run sync script
-        run: python scripts/sync_taxonomy.py
+        run: python scripts/update_taxonomy.py
 
       - name: Commit changes if any
         run: |
