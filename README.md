@@ -113,6 +113,7 @@ Use this table during the first minute of pattern recognition.
 
 | Pattern Category | Core Principle | Signature Problems | Notes |
 |:----------------|:---------------|:-------------------|:----------|
+| **Sliding Window** | — | [0209 Minimum Size Subarray Sum](problems/0209-minimum-size-subarray-sum/) | [🚧 Coming soon](patterns/two_pointers) |
 | **Greedy – Optimization** | Local best choice → Global result | [Gas Station](problems/0134-gas-station/) • [Best Time to Buy/Sell Stock](problems/0121-best-time-to-buy-and-sell-stock/) • [Best Time to Buy/Sell Stock II](problems/0122-best-time-to-buy-and-sell-stock-ii/) • [Jump Game](problems/0055-jump-game/) • [Jump Game II](problems/0045-jump-game-ii/) • [Assign Cookies](problems/0455-assign-cookies/) | [📚 Greedy 101](patterns/greedy/README.md) |
 | **Greedy – Construction** | Build answer via local rules | [Roman to Integer](problems/0013-roman-to-integer/) • Integer to Roman | [📚 Greedy 101](patterns/greedy/README.md) |
 | **Read / Write Compression** | "Filter" elements in-place | [Remove Element](problems/0027-remove-element/) • [Remove Duplicates I](problems/0026-remove-duplicates-from-sorted-array/) • [Remove Duplicates II](problems/0080-remove-duplicates-from-sorted-array-ii/) | [🚧 Coming soon](patterns/two_pointers) |
