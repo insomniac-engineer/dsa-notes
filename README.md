@@ -3,7 +3,7 @@
 # 🧠 **Open DSA Pattern Handbook**
 ### *Quick recall system for acing the coding interviews*
 
-![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-24/150_(16%25)-orange?style=for-the-badge&logo=leetcode)
+![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-27/150_(18%25)-orange?style=for-the-badge&logo=leetcode)
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-Feb%202026-blue?style=for-the-badge&logo=calendar)](https://github.com/yuliiachimyrys/dsa-notes)
 [![Language](https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python)](https://python.org)
 
@@ -97,6 +97,7 @@ Use this table during the first minute of pattern recognition.
 | :--- | :--- | :--- | :--- |
 | **In-place array modification** | Read / Write Compression | One-way (Fast/Slow): One pointer scans, the other writes valid data. Typically scan pointer is in "for/while" cycle itself. | Remove element, Remove duplicates, Filter, In-place |
 | **Pair matching in sorted data** | Classic Two Pointers | Two-way (Left/Right): Pointers move toward each other to find a target. | Sorted, Target Sum, Palindrome, Pairs |
+| **Min/max in subarray** | Sliding window | Expand window to satisfy condition, **shrink** to restore validity. Maintain running state instead of recomputing. | Subarray, Substring, Longest/Shortest, At most / At least |
 | **Finding a majority element (Boyer-Moore)** | Voting / Cancellation | Cancel out competing values to reveal dominant candidate. | Majority, > N/2, Count |
 | **Local optimum for global best** | Greedy Optimization | Immediate Best: Take the best step now without looking back. | Max Profit, Jump, Minimum Chips |
 | **$O(1)$ lookup + $O(1)$ random** | Dict + List Hybrid | Store values in list, track indices in dictionary. | GetRandom O(1), Constant Time |
