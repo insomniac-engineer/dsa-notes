@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import logging
 import re
+import argparse
 from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional, Tuple
@@ -196,7 +197,7 @@ def collect_problem_entries() -> List[ProblemEntry]:
 
 
 # ===== PIPELINE =====
-def update_taxonomy() -> bool:
+def update_taxonomy(dry_run: bool = False) -> bool:
     full_md = read_text(TABLE_FILE)
     start, end = parse_table_region(full_md)
 
@@ -208,6 +209,7 @@ def update_taxonomy() -> bool:
         return False
 
     changed = False
+    changes = []
 
     for entry in entries:
         row_idx = ensure_pattern_row(table_lines, entry.pattern)
@@ -215,6 +217,9 @@ def update_taxonomy() -> bool:
 
         new_row = add_problem_link(table_lines[row_idx], link)
         if new_row != table_lines[row_idx]:
+            changes.append(
+                f"Added problem '{entry.title}' -> pattern '{entry.pattern}'"
+            )
             table_lines[row_idx] = new_row
             changed = True
 
@@ -223,16 +228,27 @@ def update_taxonomy() -> bool:
 
     new_table = join_lines(table_lines)
     updated = full_md[:start] + new_table + full_md[end:]
-    write_text(TABLE_FILE, updated)
+    if dry_run:
+        logging.info("🧪 Dry run — preview of changes:\n")
+        for c in changes:
+            logging.info(f"  + {c}")
+        return True
 
+    write_text(TABLE_FILE, updated)
     return True
 
 
 def main() -> None:
-    if update_taxonomy():
-        logging.info("Taxonomy updated")
+    parser = argparse.ArgumentParser(description="Sync taxonomy table")
+    parser.add_argument(
+        "--dry-run", action="store_true", help="Preview changes without writing"
+    )
+    args = parser.parse_args()
+
+    if update_taxonomy(dry_run=args.dry_run):
+        logging.info("✔ Changes detected")
     else:
-        logging.info("Already up to date")
+        logging.info("✔ Already up to date")
 
 
 if __name__ == "__main__":

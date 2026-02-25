@@ -128,6 +128,26 @@ Rotate Array, H-Index, Product of Array Except Self, Length of Last Word, Longes
 
 ---
 
+## 🤖 Automation
+
+This repository uses a small automation pipeline to keep the pattern taxonomy in sync.
+
+Whenever a new problem is added with `pattern:` metadata in its README,  a GitHub Action automatically updates the taxonomy table.
+
+This ensures the repository remains:
+
+- Consistent
+- Self-maintaining
+- Free from manual bookkeeping
+
+You can preview changes locally using:
+
+```bash
+python scripts/sync_taxonomy.py --dry-run
+```
+
+---
+
 <div align="center">
 
 ### **💬 Let's Connect!**
