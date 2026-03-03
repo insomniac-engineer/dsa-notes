@@ -1,33 +1,25 @@
 class Solution:
     def wordPattern(self, pattern: str, s: str) -> bool:
-        # mantain key-value pairs [char] -> string
+        #bijection problem
 
-        # Invariants:
-        # if key(char) exists in map and maps to different string -> false
-        # if value(string) exists in seen_string set and maps to different char -> false
-        
-        # [a] -> dog
-        # FALSE: [a] -> cat
-        # FALSE: [c] -> dog
+        #char-word, one-to-one
 
-        seen_set = set()
+        words = s.split()
+        if len(words) != len(pattern):
+            return False
+
         char_to_word = {}
-        i = 0
-        j = 0
-        while i < len(pattern):
-            if j >= len(s):
+        word_to_char = {}
+
+        for c, w in zip(pattern, words):
+
+            if c in char_to_word and char_to_word[c] != w:
                 return False
-            word = ""
-            while j < len(s) and s[j] != " ":
-                word += s[j]
-                j += 1
-            if word in seen_set and pattern[i] not in char_to_word:
-                return False #word was already mapped previously [c] -> dog, but we added [b] -> dog
-            if pattern[i] not in char_to_word:
-                char_to_word[pattern[i]] = word
-            elif char_to_word[pattern[i]] != word:
+
+            if w in word_to_char and word_to_char[w] != c:
                 return False
-            seen_set.add(word)
-            i += 1
-            j += 1
-        return j >= len(s)
+
+            char_to_word[c] = w
+            word_to_char[w] = c
+            
+        return True
