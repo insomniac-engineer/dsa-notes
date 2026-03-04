@@ -165,9 +165,15 @@ Constructive feedback and collaboration opportunities are always welcome!
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0242-valid-anagram](https://github.com/chilya-coder/dsa-notes/tree/main/0242-valid-anagram/) | Easy |
 | [0290-word-pattern](https://github.com/chilya-coder/dsa-notes/tree/main/0290-word-pattern/) | Easy |
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0242-valid-anagram](https://github.com/chilya-coder/dsa-notes/tree/main/0242-valid-anagram/) | Easy |
 | [0290-word-pattern](https://github.com/chilya-coder/dsa-notes/tree/main/0290-word-pattern/) | Easy |
+## Sorting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0242-valid-anagram](https://github.com/chilya-coder/dsa-notes/tree/main/0242-valid-anagram/) | Easy |
 <!---LeetCode Topics End-->
