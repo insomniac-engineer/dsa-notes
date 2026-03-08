@@ -165,6 +165,7 @@ Constructive feedback and collaboration opportunities are always welcome!
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0001-two-sum](https://github.com/chilya-coder/dsa-notes/tree/main/0001-two-sum/) | Easy |
 | [0049-group-anagrams](https://github.com/chilya-coder/dsa-notes/tree/main/0049-group-anagrams/) | Medium |
 | [0242-valid-anagram](https://github.com/chilya-coder/dsa-notes/tree/main/0242-valid-anagram/) | Easy |
 | [0290-word-pattern](https://github.com/chilya-coder/dsa-notes/tree/main/0290-word-pattern/) | Easy |
@@ -182,5 +183,6 @@ Constructive feedback and collaboration opportunities are always welcome!
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0001-two-sum](https://github.com/chilya-coder/dsa-notes/tree/main/0001-two-sum/) | Easy |
 | [0049-group-anagrams](https://github.com/chilya-coder/dsa-notes/tree/main/0049-group-anagrams/) | Medium |
 <!---LeetCode Topics End-->
