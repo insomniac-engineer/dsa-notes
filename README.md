@@ -159,3 +159,28 @@ Constructive feedback and collaboration opportunities are always welcome!
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuliia-chimyrys-software-engineer001/)
 
 </div>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Hash Table
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0049-group-anagrams](https://github.com/chilya-coder/dsa-notes/tree/main/0049-group-anagrams/) | Medium |
+| [0242-valid-anagram](https://github.com/chilya-coder/dsa-notes/tree/main/0242-valid-anagram/) | Easy |
+| [0290-word-pattern](https://github.com/chilya-coder/dsa-notes/tree/main/0290-word-pattern/) | Easy |
+## String
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0049-group-anagrams](https://github.com/chilya-coder/dsa-notes/tree/main/0049-group-anagrams/) | Medium |
+| [0242-valid-anagram](https://github.com/chilya-coder/dsa-notes/tree/main/0242-valid-anagram/) | Easy |
+| [0290-word-pattern](https://github.com/chilya-coder/dsa-notes/tree/main/0290-word-pattern/) | Easy |
+## Sorting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0049-group-anagrams](https://github.com/chilya-coder/dsa-notes/tree/main/0049-group-anagrams/) | Medium |
+| [0242-valid-anagram](https://github.com/chilya-coder/dsa-notes/tree/main/0242-valid-anagram/) | Easy |
+## Array
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0049-group-anagrams](https://github.com/chilya-coder/dsa-notes/tree/main/0049-group-anagrams/) | Medium |
+<!---LeetCode Topics End-->
