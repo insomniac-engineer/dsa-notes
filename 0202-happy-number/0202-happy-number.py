@@ -1,16 +1,18 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
-        seen = set()
-
-        while n!=1:
-            if n in seen:
+        # 19 % 10 to get 9
+        # 19 //10 to get 1
+        seen_numbers = set()
+        current_sum = 0
+        while n != 1:
+            if n in seen_numbers:
                 return False
-            seen.add(n)
-        
-            total = 0
-            while n:
-                digit = n % 10 #9
-                total += digit * digit # pow of 2 for 9
-                n //= 10 # 1
-            n = total # 82
+            seen_numbers.add(n)
+            current_sum = 0
+            while n > 0:
+                digit = n % 10
+                current_sum += digit * digit
+                n //= 10
+            n = current_sum
         return True
+        
