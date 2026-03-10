@@ -18,4 +18,13 @@ class Solution:
         #     if n != 1: return True
         # return False
 
-        return len(nums) != len(set(nums))
+        # return len(nums) != len(set(nums))
+
+        seen = set()
+
+        for num in nums:
+            if num in seen:
+                return True
+            seen.add(num)
+
+        return False
