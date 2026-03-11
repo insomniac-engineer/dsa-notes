@@ -130,12 +130,6 @@ Use this table during the first minute of pattern recognition.
 | **Voting / Cancellation (Boyer-Moore)** | Find dominant element via cancellation | [Majority Element](problems/0169-majority-element/) |  |
 | **Dict + List Hybrid** | Fast lookup + Random access | [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) | |
 
-<details>
-<summary><b>🔜 Click to view upcoming problems (Backlog)</b></summary>
-
-Rotate Array, H-Index, Product of Array Except Self, Length of Last Word, Longest Common Prefix, Reverse Words in a String, Zigzag Conversion, Find the Index of the First...
-</details>
-
 ---
 
 ## 🤖 Automation
@@ -167,50 +161,3 @@ Constructive feedback and collaboration opportunities are always welcome!
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuliia-chimyrys-software-engineer001/)
 
 </div>
-
-<!---LeetCode Topics Start-->
-# LeetCode Topics
-## Hash Table
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0001-two-sum](https://github.com/chilya-coder/dsa-notes/tree/main/0001-two-sum/) | Easy |
-| [0049-group-anagrams](https://github.com/chilya-coder/dsa-notes/tree/main/0049-group-anagrams/) | Medium |
-| [0202-happy-number](https://github.com/chilya-coder/dsa-notes/tree/main/0202-happy-number/) | Easy |
-| [0217-contains-duplicate](https://github.com/chilya-coder/dsa-notes/tree/main/0217-contains-duplicate/) | Easy |
-| [0219-contains-duplicate-ii](https://github.com/chilya-coder/dsa-notes/tree/main/0219-contains-duplicate-ii/) | Easy |
-| [0242-valid-anagram](https://github.com/chilya-coder/dsa-notes/tree/main/0242-valid-anagram/) | Easy |
-| [0290-word-pattern](https://github.com/chilya-coder/dsa-notes/tree/main/0290-word-pattern/) | Easy |
-## String
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0049-group-anagrams](https://github.com/chilya-coder/dsa-notes/tree/main/0049-group-anagrams/) | Medium |
-| [0242-valid-anagram](https://github.com/chilya-coder/dsa-notes/tree/main/0242-valid-anagram/) | Easy |
-| [0290-word-pattern](https://github.com/chilya-coder/dsa-notes/tree/main/0290-word-pattern/) | Easy |
-## Sorting
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0049-group-anagrams](https://github.com/chilya-coder/dsa-notes/tree/main/0049-group-anagrams/) | Medium |
-| [0217-contains-duplicate](https://github.com/chilya-coder/dsa-notes/tree/main/0217-contains-duplicate/) | Easy |
-| [0242-valid-anagram](https://github.com/chilya-coder/dsa-notes/tree/main/0242-valid-anagram/) | Easy |
-## Array
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0001-two-sum](https://github.com/chilya-coder/dsa-notes/tree/main/0001-two-sum/) | Easy |
-| [0026-remove-duplicates-from-sorted-array](https://github.com/chilya-coder/dsa-notes/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
-| [0049-group-anagrams](https://github.com/chilya-coder/dsa-notes/tree/main/0049-group-anagrams/) | Medium |
-| [0217-contains-duplicate](https://github.com/chilya-coder/dsa-notes/tree/main/0217-contains-duplicate/) | Easy |
-| [0219-contains-duplicate-ii](https://github.com/chilya-coder/dsa-notes/tree/main/0219-contains-duplicate-ii/) | Easy |
-## Math
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0202-happy-number](https://github.com/chilya-coder/dsa-notes/tree/main/0202-happy-number/) | Easy |
-## Two Pointers
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0026-remove-duplicates-from-sorted-array](https://github.com/chilya-coder/dsa-notes/tree/main/0026-remove-duplicates-from-sorted-array/) | Easy |
-| [0202-happy-number](https://github.com/chilya-coder/dsa-notes/tree/main/0202-happy-number/) | Easy |
-## Sliding Window
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0219-contains-duplicate-ii](https://github.com/chilya-coder/dsa-notes/tree/main/0219-contains-duplicate-ii/) | Easy |
-<!---LeetCode Topics End-->
