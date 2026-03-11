@@ -3,8 +3,8 @@
 # 🧠 **Open DSA Pattern Handbook**
 ### *Quick recall system for acing the coding interviews*
 
-![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-27/150_(18%25)-orange?style=for-the-badge&logo=leetcode)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-Feb%202026-blue?style=for-the-badge&logo=calendar)](https://github.com/yuliiachimyrys/dsa-notes)
+![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-36/150_(24%25)-orange?style=for-the-badge&logo=leetcode)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-March%202026-blue?style=for-the-badge&logo=calendar)](https://github.com/yuliiachimyrys/dsa-notes)
 [![Language](https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python)](https://python.org)
 
 </div>
@@ -15,11 +15,19 @@
 
 I'm Yuliia (Yuchi). This repository is a **quick recall system** for the **[Top 150 LeetCode problems](https://leetcode.com/studyplan/top-interview-150/)**.
 
-Over time, I learned that strong algorithmic performance is not about memorization but about **inductive thinking**.
-I focus on recognizing the "signals" that trigger specific **patterns** and maintaining the **invariants** required to solve problems under time pressure.
+Over time, I learned that strong algorithmic performance is not about memorization but about **inductive thinking**. This is an iterative process that happens throughout the entire journey of interview preparation.
 
-There are many excellent resources that provide deep theoretical understanding of algorithms.
-Instead, this repo exists as a **quick recall system** - something that can be revisited just before interviews.
+When solving problems, I focus on:
+
+- recognizing the **signals** that hint at a specific pattern
+- maintaining the correct **invariants**
+- and building an intuition for why a solution works
+
+This repository is where I collect those notes.
+
+There are many excellent resources (like Cracking the Coding Interview or MIT Algo course) that explain algorithms in depth.
+
+Instead, this repo exists as a fast recall practical system - something I can revisit right before the interview.
 
 FAQ:
 <details>
@@ -95,8 +103,8 @@ Use this table during the first minute of pattern recognition.
 
 | If the problem asks for... | Try this Pattern... | Key Intuition | Signals |
 | :--- | :--- | :--- | :--- |
-| **In-place array modification** | Read / Write Compression | **One-way (Fast/Slow)**: One pointer scans, the other writes valid data. Typically scan pointer is in "for/while" cycle itself. | Remove element, Remove duplicates, Filter, In-place |
-| **Pair matching in sorted data** | Classic Two Pointers | Two-way (Left/Right): Pointers move toward each other to find a target. | Sorted, Target Sum, Palindrome, Pairs |
+| **In-place array modification** | Read / Write Compression | **One-way (Fast/Slow)**: One pointer scans, the other writes valid data.| Remove element, Remove duplicates, Filter, In-place |
+| **Pair matching in sorted data** | Classic Two Pointers | **Two-way (Left/Right)**: Pointers move toward each other to find a target. | Sorted, Target Sum, Palindrome, Pairs |
 | **Min/max in subarray** | Sliding window | Expand window to satisfy condition, **shrink** to restore validity. Maintain running state instead of recomputing. | Subarray, Substring, Longest/Shortest, At most / At least |
 | **Finding a majority element (Boyer-Moore)** | Voting / Cancellation | Cancel out competing values to reveal dominant candidate. | Majority, > N/2, Count |
 | **Local optimum for global best** | Greedy Optimization | Immediate Best: Take the best step now without looking back. | Max Profit, Jump, Minimum Chips |
