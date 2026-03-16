@@ -168,6 +168,7 @@ Constructive feedback and collaboration opportunities are always welcome!
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/chilya-coder/dsa-notes/tree/main/0128-longest-consecutive-sequence/) | Medium |
+| [0228-summary-ranges](https://github.com/chilya-coder/dsa-notes/tree/main/0228-summary-ranges/) | Easy |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
