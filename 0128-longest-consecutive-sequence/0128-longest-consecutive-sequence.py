@@ -2,7 +2,8 @@ class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         existing_values = set(nums)
         longest_seq = 0
-
+        
+        # hint: iterate over set to avoid checking duplicates
         for i in existing_values:
             # check if it's the first element in sequence
             if i - 1 not in existing_values: #True if it's the first element
