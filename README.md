@@ -161,3 +161,19 @@ Constructive feedback and collaboration opportunities are always welcome!
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuliia-chimyrys-software-engineer001/)
 
 </div>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0128-longest-consecutive-sequence](https://github.com/chilya-coder/dsa-notes/tree/main/0128-longest-consecutive-sequence/) | Medium |
+## Hash Table
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0128-longest-consecutive-sequence](https://github.com/chilya-coder/dsa-notes/tree/main/0128-longest-consecutive-sequence/) | Medium |
+## Union-Find
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0128-longest-consecutive-sequence](https://github.com/chilya-coder/dsa-notes/tree/main/0128-longest-consecutive-sequence/) | Medium |
+<!---LeetCode Topics End-->
