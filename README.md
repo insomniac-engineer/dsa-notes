@@ -3,7 +3,7 @@
 # 🧠 **Open DSA Pattern Handbook**
 ### *Quick recall system for acing the coding interviews*
 
-![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-36/150_(24%25)-orange?style=for-the-badge&logo=leetcode)
+![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-39/150_(26%)-orange?style=for-the-badge&logo=leetcode)
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-March%202026-blue?style=for-the-badge&logo=calendar)](https://github.com/yuliiachimyrys/dsa-notes)
 [![Language](https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python)](https://python.org)
 
@@ -15,7 +15,7 @@
 
 I'm Yuliia (Yuchi). This repository is a **quick recall system** for the **[Top 150 LeetCode problems](https://leetcode.com/studyplan/top-interview-150/)**.
 
-Over time, I learned that strong algorithmic performance is not about memorization but about **inductive thinking**. This is an iterative process that happens throughout the entire journey of interview preparation.
+Over time, I learned that strong algorithmic performance is not about memorization but about **inductive thinking**. This is an iterative process that happens throughout the entire journey of being a Software Engineer.
 
 When solving problems, I focus on:
 
@@ -27,7 +27,7 @@ This repository is where I collect those notes.
 
 There are many excellent resources (like Cracking the Coding Interview or MIT Algo course) that explain algorithms in depth.
 
-Instead, this repo exists as a fast recall practical system - something I can revisit right before the interview.
+Instead, this repo exists as a fast recall practical system - something I (or anyone) can revisit right before the interview.
 
 FAQ:
 <details>
@@ -35,7 +35,7 @@ FAQ:
 
 TL;DR: Python.
 
-Since university I sticked with Java, but I made a strategic move to Python in 2025 for the technical interviews. When rime is is the most critical constraint, Python allows to bypass the boilerplate and focus 100% on logic rather than syntax.
+Since university I sticked with Java, but I made a strategic move to Python in 2025 for the technical interviews. When time is is the most critical constraint, Python allows to bypass the boilerplate and focus 100% on logic rather than syntax.
 
 </details>
 
@@ -62,19 +62,11 @@ It's auto-synced using [LeetHub-3.0](https://github.com/QasimWani/LeetHub) brows
 
 ---
 
-## 🎯 **Mission & Philosophy**
-
-Build a **fast pattern-based recall system** where:
-
-- Every problem is categorized and mapped to **reusable mental model**
-- Focus on the **invariant**: the truth that remains constant throughout the algorithm.
-
----
-
 ## 🏗 Repository Architecture
 
 ### 📁 `/patterns/`
 The **Strategic Layer**. Contains the "why" and "how":
+
 - **The Signal**: When to use this pattern.
 - **The Template**: Reusable Python boilerplate.
 - **The Invariant**: Critical logic that must hold true.
@@ -147,7 +139,7 @@ This ensures the repository remains:
 You can preview changes locally using:
 
 ```bash
-python scripts/sync_taxonomy.py --dry-run
+python3 scripts/update_taxonomy.py --dry-run
 ```
 
 ---
