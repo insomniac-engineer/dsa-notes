@@ -89,7 +89,7 @@ Suggested workflow:
 
 ---
 
-## 🧭 **Pattern Selection Cheat Sheet**
+## 🧭 **Pattern Taxonomy**
 
 Use this table during the first minute of pattern recognition.
 
@@ -104,7 +104,7 @@ Use this table during the first minute of pattern recognition.
 
 ---
 
-## 🧩 **Pattern Taxonomy**
+<!-- ## 🧩 **Pattern Taxonomy**
 
 <div align="center">
 
@@ -122,7 +122,7 @@ Use this table during the first minute of pattern recognition.
 | **Voting / Cancellation (Boyer-Moore)** | Find dominant element via cancellation | [Majority Element](problems/0169-majority-element/) |  |
 | **Dict + List Hybrid** | Fast lookup + Random access | [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) | |
 
----
+--- -->
 
 ## 🤖 Automation
 
@@ -151,30 +151,3 @@ python3 scripts/update_taxonomy.py --dry-run
 Constructive feedback and collaboration opportunities are always welcome!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuliia-chimyrys-software-engineer001/)
-
-</div>
-
-<!---LeetCode Topics Start-->
-# LeetCode Topics
-## Array
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0128-longest-consecutive-sequence](https://github.com/chilya-coder/dsa-notes/tree/main/0128-longest-consecutive-sequence/) | Medium |
-| [0228-summary-ranges](https://github.com/chilya-coder/dsa-notes/tree/main/0228-summary-ranges/) | Easy |
-## Hash Table
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0128-longest-consecutive-sequence](https://github.com/chilya-coder/dsa-notes/tree/main/0128-longest-consecutive-sequence/) | Medium |
-## Union-Find
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0128-longest-consecutive-sequence](https://github.com/chilya-coder/dsa-notes/tree/main/0128-longest-consecutive-sequence/) | Medium |
-## String
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
-## Stack
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
-<!---LeetCode Topics End-->
