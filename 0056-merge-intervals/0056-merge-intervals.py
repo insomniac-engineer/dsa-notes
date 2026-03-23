@@ -4,22 +4,16 @@ class Solution:
             return []
 
         intervals.sort(key=lambda x: x[0])
-        slow_pointer = 0
         result = []
+        start, end = intervals[0]
 
-        startPosition = intervals[slow_pointer][0]
-        current_end = intervals[slow_pointer][1]
-
-        for fast_p in range(1, len(intervals)):
-            if current_end >= intervals[fast_p][0]:
-                # расширяем текущий интервал
-                current_end = max(current_end, intervals[fast_p][1])
-                slow_pointer += 1
+        for i in range(1, len(intervals)):
+            cur_start, cur_end = intervals[i]
+            if cur_start <= end:  # overlap
+                end = max(end, cur_end)
             else:
-                result.append([startPosition, current_end])
-                startPosition = intervals[fast_p][0]
-                current_end = intervals[fast_p][1]
-                slow_pointer += 1
+                result.append([start, end])
+                start, end = cur_start, cur_end
 
-        result.append([startPosition, current_end])
+        result.append([start, end])
         return result
