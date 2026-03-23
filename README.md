@@ -169,4 +169,12 @@ Constructive feedback and collaboration opportunities are always welcome!
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/chilya-coder/dsa-notes/tree/main/0128-longest-consecutive-sequence/) | Medium |
+## String
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
+## Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
 <!---LeetCode Topics End-->
