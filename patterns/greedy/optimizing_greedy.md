@@ -14,10 +14,13 @@ The core strategy of a Greedy algorithm is to make a **locally optimal decision 
 ## 🔑 Key Concepts
 
 ### What is an Invariant?
+
 An **invariant** is a logical property or state that must remain true throughout the execution of the algorithm.
 
 ### Why does Greedy work?
+
 A Greedy approach is mathematically sound if:
+
 1. A **local decision** successfully preserves the invariant.
 2. The **invariant** itself guarantees the final global optimality.
 
@@ -32,28 +35,25 @@ A Greedy approach is mathematically sound if:
 
 ## 🎯 Core Principle
 
-At every step, we make the best decision based on the current state. 
-
-> [!TIP]
-> **Logic over Simulation:** We are **not** simulating actions. Instead, we track an **invariant** - a logical property representing the best possible achievable state so far.
+At every step, we make the best decision based on the current state.
 
 **Example: Gas Station**
-* **Invariant:** `gasOwned` (Remaining gas if we start from the candidate station).
-* **Condition:** `gasOwned >= 0`.
+
+* **invariant:** `gasOwned` (Remaining gas if we start from the candidate station).
+* **and its condition:** `gasOwned >= 0`.
 
 ---
 
 ## Greedy Algorithm Template
-
 
 1. **Global Feasibility Check** *(Optional)*
     * *Goal:* Quick exit if a solution is impossible (e.g., `sum(gas) < sum(cost)`).
 2. **Define State Variables**
     * *Common types:* `min/max` (extrema), `balance/total` (cumulative values), `prefix/suffix` (partial results).
 3. **Identify Core Invariant**
-    * *Question:* What property must stay true? (e.g., `maxProfit`, `minPrice`).
+    * *Question:* What property must stay true? (e.g., `maxProfit`, `minPrice`, `gasOwned`).
 4. **Define Invariant Condition**
-    * *Question:* When is the invariant satisfied? (e.g., `balance >= 0`).
+    * *Question:* When is the invariant satisfied? (e.g., `gasOwned >= gasNeeded`).
 5. **Maintain Invariant During Traversal**
     * *Workflow:* Update state $\rightarrow$ Check for violation $\rightarrow$ Reset or adjust strategy.
 
@@ -68,9 +68,11 @@ At every step, we make the best decision based on the current state.
 **Problem Pattern:** Cumulative profit collection
 
 **📊 Invariant:**
-- `totalProfit` = accumulated profit from all beneficial transactions
+
+- `totalProfit` = accumulated profit
 
 **⚡ Local Decision:**
+
 - If price increased from yesterday → capture the profit
 - Otherwise → skip (no transaction)
 
@@ -92,9 +94,11 @@ def maxProfit(prices):
 **Problem Pattern:** Circular array with feasibility constraints
 
 **🎯 Global Feasibility Check:**
+
 ```python
 if sum(gas) < sum(cost): return -1
 ```
+
 *If total gas < total cost, no solution exists*
 
 **📊 Invariant:**
