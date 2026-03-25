@@ -157,8 +157,13 @@ Constructive feedback and collaboration opportunities are always welcome!
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0056-merge-intervals](https://github.com/chilya-coder/dsa-notes/tree/main/0056-merge-intervals/) | Medium |
+| [0134-gas-station](https://github.com/chilya-coder/dsa-notes/tree/main/0134-gas-station/) | Medium |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0056-merge-intervals](https://github.com/chilya-coder/dsa-notes/tree/main/0056-merge-intervals/) | Medium |
+## Greedy
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0134-gas-station](https://github.com/chilya-coder/dsa-notes/tree/main/0134-gas-station/) | Medium |
 <!---LeetCode Topics End-->
