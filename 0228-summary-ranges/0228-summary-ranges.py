@@ -2,26 +2,22 @@ class Solution:
     def summaryRanges(self, nums: List[int]) -> List[str]:
         if len(nums) == 0: return []
         result = []
-        start_range = nums[0]
-        current, next = 0, 1
+        i = 0
 
-        while next < len(nums):
-            if nums[next] - nums[current] != 1:
-                if start_range == nums[current]:
-                    result.append(f"{start_range}")
-                else:
-                    result.append(f"{start_range}->{nums[current]}")
-                start_range = nums[next]
-            current += 1
-            next += 1
+        while i < len(nums):
+            start = nums[i]
 
-        if start_range == nums[-1]:
-            result.append(f"{start_range}")
-        else:
-            result.append(f"{start_range}->{nums[-1]}")
+            # all the numbers go in order + 1
+            while i + 1 < len(nums) and nums[i + 1] == nums[i] + 1:
+                i += 1
+            
+            # format string in case with start has changed or not (if there is any range)
+            if start != nums[i]:
+                result.append(f"{start}->{nums[i]}")
+            else:
+                result.append(f"{start}")
+            i+= 1
+
         return result
-
-
-
 
         
