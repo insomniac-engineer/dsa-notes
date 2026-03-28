@@ -22,7 +22,7 @@ from typing import List, Optional, Tuple
 # ===== CONFIG =====
 TABLE_FILE = Path("README.md")
 PROBLEMS_DIR = Path("problems")
-PATTERN_MARKER = "## **🏆 Documented Patterns**"
+PATTERN_MARKER = "### **Documented Patterns**"
 
 DEFAULT_CORE_PRINCIPLE = "—"
 DEFAULT_NOTES_LINK = "[🚧 Coming soon](patterns/two_pointers)"

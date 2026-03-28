@@ -1,14 +1,13 @@
 # Classic Two Pointers
 
-This pattern uses two pointers that move **toward each other** (or from the same end in reverse)
-to solve problems on sorted or symmetric data.
+This pattern uses two pointers that move **toward each other**.
 
 ---
 
 ## Core idea
 
-- **left** pointer starts at the beginning (or one boundary)
-- **right** pointer starts at the end (or another boundary)
+- **left** pointer starts at the beginning
+- **right** pointer starts at the end
 - They converge based on a condition (sum comparison, character match, etc.)
 
 Unlike Read/Write Compression, both pointers are **equal citizens** — neither is strictly a "reader" or "writer".
