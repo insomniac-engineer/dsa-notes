@@ -1,4 +1,4 @@
-# Read / Write Compression
+# Read / Write Compression (Slow / Fast Pointers)
 
 This pattern is used for **in-place filtering** of arrays where elements
 need to be kept or discarded based on a condition.

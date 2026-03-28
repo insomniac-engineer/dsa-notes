@@ -98,12 +98,13 @@ Use this table during the first minute of pattern recognition.
 
 | If the problem asks for... | Try this Pattern... | Key Intuition | Signals |
 | :--- | :--- | :--- | :--- |
-| **In-place array modification** | Read / Write Compression | **One-way (Fast/Slow)**: One pointer scans, the other writes valid data.| Remove element, Remove duplicates, Filter, In-place |
+| **In-place array modification** | Read / Write Compression | **One-way (Fast/Slow)**: One pointer scans, the other writes valid data. | Remove element, Remove duplicates, Filter, In-place |
 | **Pair matching in sorted data** | Classic Two Pointers | **Two-way (Left/Right)**: Typically **sorted** input. Pointers move toward each other to find a target. | Sorted, Target Sum, Palindrome, Pairs |
 | **Min/max in subarray** | Sliding window | Expand window to satisfy condition, **shrink** to restore validity. Maintain running state instead of recomputing. | Subarray, Substring, Longest/Shortest, At most / At least |
 | **Finding a majority element (Boyer-Moore)** | Voting / Cancellation | Cancel out competing values to reveal dominant candidate. | Majority, > N/2, Count |
 | **Local optimum for global best** | Greedy Optimization | Global feasibility check. Take the best step now without looking back. Define local invariant to preserve global one | Is solution feasible, max/min profit |
 | **$O(1)$ lookup + $O(1)$ random** | Dict + List Hybrid | Store values in list, track indices in dictionary. | GetRandom O(1), Constant Time |
+| **Summary ranges (intervals)** | Sliding index | Start at i, use sliding index while nums[i] + 1 == nums [i + 1]. Find all ranges with +1 difference. Keep track of the start of range to format output | Ranges, intervals |
 
 ---
 
@@ -119,11 +120,11 @@ I struggled a lot through my journey to understand the patterns. In the end, wha
 
 | Pattern Category | Signature Problems | Notes (if any) |
 |:----------------|:-------------------|:----------|
-| **Intervals** | — | [0228 Summary Ranges](problems/0228-summary-ranges/) | [🚧 Coming soon](patterns/two_pointers) |
+| **Intervals** | [0228 Summary Ranges](problems/0228-summary-ranges/) | [📚 WIKI: Intervals](patterns/intervals) |
 | **Sliding Window** | [0209 Minimum Size Subarray Sum](problems/0209-minimum-size-subarray-sum/) • [Longest Substring Without Repeating Characters](problems/0003-longest-substring-without-repeating-characters/) | [📚 WIKI: Sliding Window](patterns/sliding_window.md) |
 | **Greedy - Optimization** | [Gas Station](problems/0134-gas-station/) • [Best Time to Buy/Sell Stock](problems/0121-best-time-to-buy-and-sell-stock/) • [Best Time to Buy/Sell Stock II](problems/0122-best-time-to-buy-and-sell-stock-ii/) • [Jump Game](problems/0055-jump-game/) • [Jump Game II](problems/0045-jump-game-ii/) • [Assign Cookies](problems/0455-assign-cookies/) | [📚 WIKI: Greedy](patterns/greedy/README.md) |
 | **Greedy – Construction** | [Roman to Integer](problems/0013-roman-to-integer/)| [📚 WIKI: Greedy](patterns/greedy/README.md)|
-| **Fast/Slow Pointers** | [Remove Element](problems/0027-remove-element/) • [Remove Duplicates I](problems/0026-remove-duplicates-from-sorted-array/) • [Remove Duplicates II](problems/0080-remove-duplicates-from-sorted-array-ii/) | [📚 WIKI: Read/Write Compression](patterns/two_pointers/read_write_compression.md) |
+| **Fast/Slow Pointers** | [Remove Element](problems/0027-remove-element/) • [Remove Duplicates I](problems/0026-remove-duplicates-from-sorted-array/) • [Remove Duplicates II](problems/0080-remove-duplicates-from-sorted-array-ii/) | [📚 WIKI: Read/Write Compression (Fast/Slow Pointers)](patterns/two_pointers/read_write_compression.md) |
 | **Classic Two Pointers** | [Merge Sorted Array](problems/0088-merge-sorted-array/) • [Valid Palindrome](problems/0125-valid-palindrome/) • [Is Subsequence](problems/0392-is-subsequence/) • [Two Sum II](problems/0167-two-sum-ii-input-array-is-sorted/) • [0015 3Sum](problems/0015-3sum/) | [📚 WIKI: Classic Two Pointers](patterns/two_pointers/classic_two_pointers.md) |
 | **Voting / Cancellation (Boyer-Moore)** | [Majority Element](problems/0169-majority-element/) | [📚 WIKI: Boyer-Moore Voting](patterns/boyer_moore_voting.md) |
 | **Dict + List Hybrid** | [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) | [📚 WIKI: Dict + List](patterns/dict_list_random_access.md) |
