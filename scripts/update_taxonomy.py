@@ -24,7 +24,6 @@ TABLE_FILE = Path("README.md")
 PROBLEMS_DIR = Path("problems")
 PATTERN_MARKER = "### **Documented Patterns**"
 
-DEFAULT_CORE_PRINCIPLE = "—"
 DEFAULT_NOTES_LINK = "[🚧 Coming soon](patterns/two_pointers)"
 
 logging.basicConfig(level=logging.INFO, format="%(message)s")
@@ -140,7 +139,6 @@ def ensure_pattern_row(lines: List[str], pattern: str) -> int:
     new_row = format_row(
         [
             f"**{pattern}**",
-            DEFAULT_CORE_PRINCIPLE,
             "",
             DEFAULT_NOTES_LINK,
         ]
@@ -153,14 +151,14 @@ def ensure_pattern_row(lines: List[str], pattern: str) -> int:
 
 def add_problem_link(row: str, link: str) -> str:
     cells = parse_cells(row)
-    if len(cells) < 4:
+    if len(cells) < 3:
         return row
 
-    signature = cells[2]
+    signature = cells[1]
     if link in signature:
         return row
 
-    cells[2] = link if not signature else signature + " • " + link
+    cells[1] = link if not signature else signature + " • " + link
     return format_row(cells)
 
 

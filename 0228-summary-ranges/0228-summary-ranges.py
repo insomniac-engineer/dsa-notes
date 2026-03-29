@@ -1,6 +1,3 @@
-pattern: Intervals
-
-
 class Solution:
     def summaryRanges(self, nums: List[int]) -> List[str]:
         if len(nums) == 0:
