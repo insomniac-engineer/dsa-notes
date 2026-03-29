@@ -1,16 +1,27 @@
 # Intervals
 
-Problems with intervals mostly require ransforming or merging ranges based on specific conditions.
+Problems with intervals mostly require transforming or merging ranges based on specific conditions.
+
+Typical probles: meetings rooms, calendar schedule, task overlap, non-overlapping intervals
+
+Overview: https://www.hellointerview.com/learn/code/intervals/overview
+
+## Sorting
+
+Intervals ALWAYS require **sorting**.
+
+* sort by **start** to detect overlaps
+* sort by **end** to maximize *non-overlapping* intervals
 
 ---
 
-## 228. Merge Intervals
+### 228. Summary Ranges (sorted by start)
 
 Link: <https://leetcode.com/problems/summary-ranges/>
 Time Complexity: O(n)
 Space Complexity: O(n)
 
-Input: a sorted unique array nums
+Input: a sorted (ascending) unique array nums
 Output: sorted list of ranges that cover all number in an array
 
 E.g. nums = [0, 1, 2, 4, 5, 7]
