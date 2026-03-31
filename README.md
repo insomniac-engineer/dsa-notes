@@ -167,8 +167,14 @@ Constructive feedback and collaboration opportunities are always welcome!
 | ------- | ------- |
 | [0056-merge-intervals](https://github.com/chilya-coder/dsa-notes/tree/main/0056-merge-intervals/) | Medium |
 | [0057-insert-interval](https://github.com/chilya-coder/dsa-notes/tree/main/0057-insert-interval/) | Medium |
+| [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/chilya-coder/dsa-notes/tree/main/0452-minimum-number-of-arrows-to-burst-balloons/) | Medium |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0056-merge-intervals](https://github.com/chilya-coder/dsa-notes/tree/main/0056-merge-intervals/) | Medium |
+| [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/chilya-coder/dsa-notes/tree/main/0452-minimum-number-of-arrows-to-burst-balloons/) | Medium |
+## Greedy
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/chilya-coder/dsa-notes/tree/main/0452-minimum-number-of-arrows-to-burst-balloons/) | Medium |
 <!---LeetCode Topics End-->
