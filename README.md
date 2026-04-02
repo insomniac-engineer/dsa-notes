@@ -3,8 +3,8 @@
 # 🧠 **Open DSA Pattern Handbook**
 ### *Quick recall system for acing the coding interviews*
 
-![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-40%2F150_%2827%25%29-orange?style=for-the-badge&logo=leetcode)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-March%202026-blue?style=for-the-badge&logo=calendar)](https://github.com/yuliiachimyrys/dsa-notes)
+![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-42%2F150_%2828%25%29-orange?style=for-the-badge&logo=leetcode)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-April%202026-blue?style=for-the-badge&logo=calendar)](https://github.com/yuliiachimyrys/dsa-notes)
 [![Language](https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python)](https://python.org)
 
 </div>
@@ -106,6 +106,7 @@ Use this table during the first minute of pattern recognition.
 | **$O(1)$ lookup + $O(1)$ random** | Dict + List Hybrid | Store values in list, track indices in dictionary. | GetRandom O(1), Constant Time |
 | **Consecutive numbers** | Sliding index | Start at i, use sliding index while nums[i] + 1 == nums [i + 1]. Find all ranges with +1 difference. Keep track of the start of range to format output | Ranges, intervals |
 | **Intervals Overlaps** | Sort intervals by start | Compare current start with previus end | Overlap, Meetings, Intervals, Merge |
+| **Non-overlapping intervals** | Sort intervals by end | Longer interval has wider range, therefore we can't get rid off smaller intervals by picking an arrow number | Min number of arrows to burst balloons |
 
 ---
 

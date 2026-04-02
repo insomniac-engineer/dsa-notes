@@ -1,6 +1,6 @@
-# Python notes
+# Dict notes
 
-## Dict
+---
 
 Get value from dict without ```KeyError```:
 

@@ -89,3 +89,26 @@ Explanation: The meetings (1,5) and (3,9) overlap.
             return True
 ```
 
+### 452. Minimum number of arrows to burst ballons (sort by end)
+
+    [------- Balloon А (Longest) -------]        [1, 8]
+        [ B ]                                [3, 4]
+                [ C ]                        [5, 6]
+
+If we **sort by end**, we would just need 2 arrows:
+
+B destroys A and itself
+C destroys itself
+
+If we sort by start, we need 3:
+
+A is the longest one, but doesn't destroy smaller B and C
+B destroys itself
+C destroys itself
+
+To sort by end:
+
+```python
+points.sort(key=lambda x:x[1])
+
+```
