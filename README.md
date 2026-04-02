@@ -170,3 +170,14 @@ python3 scripts/update_taxonomy.py --dry-run
 Constructive feedback and collaboration opportunities are always welcome!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuliia-chimyrys-software-engineer001/)
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Hash Table
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0205-isomorphic-strings](https://github.com/chilya-coder/dsa-notes/tree/main/0205-isomorphic-strings/) | Easy |
+## String
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0205-isomorphic-strings](https://github.com/chilya-coder/dsa-notes/tree/main/0205-isomorphic-strings/) | Easy |
+<!---LeetCode Topics End-->
