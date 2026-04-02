@@ -25,7 +25,7 @@ When solving problems, I focus on:
 
 This repository is where I collect those notes.
 
-There are many excellent resources (like Cracking the Coding Interview or MIT Algo course) that explain algorithms in depth.
+There are many excellent resources that explain algorithms in depth.
 
 Instead, this repo exists as a fast recall practical system - something I (or anyone) can revisit right before the interview.
 
@@ -60,6 +60,15 @@ Yes. I pay attention to pattern taxonomy first.
 <summary><b>How do you sync LC solutions to GitHub?</b></summary>
 
 It's auto-synced using [LeetHub-3.0](https://github.com/QasimWani/LeetHub) browser extension.
+
+</details>
+<details>
+<summary><b>How do you automate your pattern taxonomy?</b></summary>
+As most of the developers, I hate CTRL+C and CTRL+V all same data between notes and folders. If anything is done twice - I stick to automate it. Check the automate section below or just run script locally:
+
+```pyhon3
+python3 scripts/update_taxonomy.py --dry-run
+```
 
 </details>
 
@@ -161,21 +170,3 @@ python3 scripts/update_taxonomy.py --dry-run
 Constructive feedback and collaboration opportunities are always welcome!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuliia-chimyrys-software-engineer001/)
-<!---LeetCode Topics Start-->
-# LeetCode Topics
-## Array
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0056-merge-intervals](https://github.com/chilya-coder/dsa-notes/tree/main/0056-merge-intervals/) | Medium |
-| [0057-insert-interval](https://github.com/chilya-coder/dsa-notes/tree/main/0057-insert-interval/) | Medium |
-| [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/chilya-coder/dsa-notes/tree/main/0452-minimum-number-of-arrows-to-burst-balloons/) | Medium |
-## Sorting
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0056-merge-intervals](https://github.com/chilya-coder/dsa-notes/tree/main/0056-merge-intervals/) | Medium |
-| [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/chilya-coder/dsa-notes/tree/main/0452-minimum-number-of-arrows-to-burst-balloons/) | Medium |
-## Greedy
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/chilya-coder/dsa-notes/tree/main/0452-minimum-number-of-arrows-to-burst-balloons/) | Medium |
-<!---LeetCode Topics End-->
