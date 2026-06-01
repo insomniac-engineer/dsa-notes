@@ -140,7 +140,7 @@ I struggled a lot through my journey to understand the patterns. In the end, wha
 | **Fast/Slow Pointers** | [Remove Element](problems/0027-remove-element/) • [Remove Duplicates I](problems/0026-remove-duplicates-from-sorted-array/) • [Remove Duplicates II](problems/0080-remove-duplicates-from-sorted-array-ii/) | [📚 WIKI: Read/Write Compression (Fast/Slow Pointers)](patterns/two_pointers/read_write_compression.md) |
 | **Classic Two Pointers** | [Merge Sorted Array](problems/0088-merge-sorted-array/) • [Valid Palindrome](problems/0125-valid-palindrome/) • [Is Subsequence](problems/0392-is-subsequence/) • [Two Sum II](problems/0167-two-sum-ii-input-array-is-sorted/) • [0015 3Sum](problems/0015-3sum/) | [📚 WIKI: Classic Two Pointers](patterns/two_pointers/classic_two_pointers.md) |
 | **Voting / Cancellation (Boyer-Moore)** | [Majority Element](problems/0169-majority-element/) | [📚 WIKI: Boyer-Moore Voting](patterns/boyer_moore_voting.md) |
-| **Dict + List Hybrid** | [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) | [📚 WIKI: Dict + List](patterns/dict_list_random_access.md) |
+| **Design** | [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) | [📚 WIKI: Dict + List](patterns/dict_list_random_access.md) |
 | **In-Place Swap** | [Rotate Array](problems/0189-rotate-array/) | [📚 WIKI: In-Place Swap](patterns/in_place_swap.md) |
 
 ---
