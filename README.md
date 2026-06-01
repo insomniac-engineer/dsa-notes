@@ -122,7 +122,8 @@ Use this table during the first minute of pattern recognition.
 | **Min/max in subarray** | Sliding window | Expand window to satisfy condition, **shrink** to restore validity. Maintain running state instead of recomputing. | Subarray, Substring, Longest/Shortest, At most / At least |
 | **Finding a majority element (Boyer-Moore)** | Voting / Cancellation | Cancel out competing values to reveal dominant candidate. | Majority, > N/2, Count |
 | **Local optimum for global best** | Greedy Optimization | Global feasibility check. Take the best step now without looking back. Define local invariant to preserve global one | Is solution feasible, max/min profit |
-| **$O(1)$ lookup + $O(1)$ random** | Dict + List Hybrid | Store values in list, track indices in dictionary. | GetRandom O(1), Constant Time |
+| **Design Dict: $O(1)$ lookup + $O(1)$ random** | Use dict + list for random synchronously | Store values in list, track indices in dictionary. Sync them. | GetRandom O(1), Constant Time, Design Dict |
+| **Design Stack: $O(1)$ get min** | Use list + list for min synchronously | Use additional list for storing min values. Sync them. | GetMin O(1), Constant Time, Design Stack |
 | **Consecutive numbers** | Sliding index | Start at i, use sliding index while nums[i] + 1 == nums [i + 1]. Find all ranges with +1 difference. Keep track of the start of range to format output | Ranges, intervals |
 | **Intervals Overlaps** | Sort intervals by start | Compare current start with previus end | Overlap, Meetings, Intervals, Merge |
 | **Non-overlapping intervals** | Sort intervals by end | Longer interval has wider range, therefore we can't get rid off smaller intervals by picking an arrow number | Min number of arrows to burst balloons |
