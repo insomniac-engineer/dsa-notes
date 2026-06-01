@@ -3,8 +3,8 @@
 # 🧠 **Open DSA Pattern Handbook**
 ### *Quick recall system for acing the coding interviews*
 
-![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-42%2F150_%2828%25%29-orange?style=for-the-badge&logo=leetcode)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-April%202026-blue?style=for-the-badge&logo=calendar)](https://github.com/yuliiachimyrys/dsa-notes)
+![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-43%2F150_%2828%25%29-orange?style=for-the-badge&logo=leetcode)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-June%202026-blue?style=for-the-badge&logo=calendar)](https://github.com/yuliiachimyrys/dsa-notes)
 [![Language](https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python)](https://python.org)
 
 </div>
@@ -13,9 +13,11 @@
 
 ## 👋 Hi!
 
-I'm Yuliia (Yuchi). This repository is a **quick recall system** for the **[Top 150 LeetCode problems](https://leetcode.com/studyplan/top-interview-150/)**.
+I'm Yuliia (yuchi). This repository is a **quick recall system** for the **[Top 150 LeetCode problems](https://leetcode.com/studyplan/top-interview-150/)**.
 
-Over time, I learned that strong algorithmic performance is not about memorization but about **inductive thinking**. This is an iterative process that happens throughout the entire journey of being a Software Engineer.
+As most of the developers, I seek for growth opportunities in my career. That said, I have to keep my Leetcode skills on a decent level to ace the algo interview.
+
+Over time, I learnt that strong algorithmic performance is not about memorization but about **inductive thinking**. This is an iterative process that happens throughout the entire journey of interview prepping.
 
 When solving problems, I focus on:
 
@@ -38,7 +40,7 @@ TL;DR: Python.
 Since university I sticked with Java, but I made a strategic move to Python in 2025 for the technical interviews. When time is is the most critical constraint, Python allows to bypass the boilerplate and focus 100% on logic rather than syntax.
 
 UPD: I started to collect some syntax pitfalls into python_notes file in the repo.
-Rabbit hole of syntax is endless!
+Rabbit hole of turning human language into programming one is endless! (I still google most of the stuff)
 
 </details>
 
@@ -71,7 +73,15 @@ python3 scripts/update_taxonomy.py --dry-run
 ```
 
 </details>
+<details>
 
+<summary><b>Books references</b></summary>
+
+1. Python Distilled by David M. Beazley
+
+While you can google most of the stuff when it comes to syntax, I do enjoy to see all the data in one single paper edition, so I can re-visit it.
+
+</details>
 ---
 
 ## 🏗 Repository Architecture
@@ -148,14 +158,9 @@ I struggled a lot through my journey to understand the patterns. In the end, wha
 ## 🤖 Automation
 
 This repository uses a small automation pipeline to keep the pattern taxonomy in sync.
+When a new problem is added with `pattern:` metadata in its README,  a GitHub Action automatically updates the taxonomy table.
 
-Whenever a new problem is added with `pattern:` metadata in its README,  a GitHub Action automatically updates the taxonomy table.
-
-This ensures the repository remains:
-
-- Consistent
-- Self-maintaining
-- Free from manual bookkeeping
+This ensures the repository remains consistent and free from manual bookkeeping.
 
 You can preview changes locally using:
 
