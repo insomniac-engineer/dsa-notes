@@ -195,9 +195,18 @@ Constructive feedback and collaboration opportunities are always welcome!
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
 | [0071-simplify-path](https://github.com/chilya-coder/dsa-notes/tree/main/0071-simplify-path/) | Medium |
+| [0150-evaluate-reverse-polish-notation](https://github.com/chilya-coder/dsa-notes/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 | [0155-min-stack](https://github.com/chilya-coder/dsa-notes/tree/main/0155-min-stack/) | Medium |
 ## Design
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0155-min-stack](https://github.com/chilya-coder/dsa-notes/tree/main/0155-min-stack/) | Medium |
+## Array
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0150-evaluate-reverse-polish-notation](https://github.com/chilya-coder/dsa-notes/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
+## Math
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0150-evaluate-reverse-polish-notation](https://github.com/chilya-coder/dsa-notes/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 <!---LeetCode Topics End-->
