@@ -1,9 +1,10 @@
 <div align="center">
 
-# 🧠 **Open DSA Pattern Handbook**
-### *Quick recall system for acing the coding interviews*
+# 🧠 Open DSA Pattern Handbook
 
-![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-43%2F150_%2828%25%29-orange?style=for-the-badge&logo=leetcode)
+*Quick recall system for acing the coding interviews*
+
+![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-44%2F150_%2829%25%29-orange?style=for-the-badge&logo=leetcode)
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-June%202026-blue?style=for-the-badge&logo=calendar)](https://github.com/yuliiachimyrys/dsa-notes)
 [![Language](https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python)](https://python.org)
 
@@ -11,7 +12,7 @@
 
 ---
 
-## 👋 Hi!
+## 👋 Hi
 
 I'm Yuliia (yuchi). This repository is a **quick recall system** for the **[Top 150 LeetCode problems](https://leetcode.com/studyplan/top-interview-150/)**.
 
@@ -25,11 +26,7 @@ When solving problems, I focus on:
 - maintaining the correct **invariants**
 - and building an intuition for why a solution works
 
-This repository is where I collect those notes.
-
-There are many excellent resources that explain algorithms in depth.
-
-Instead, this repo exists as a fast recall practical system - something I (or anyone) can revisit right before the interview.
+This repository is where I collect those notes - something I (or anyone) can revisit right before the interview.
 
 FAQ:
 <details>
@@ -37,7 +34,7 @@ FAQ:
 
 TL;DR: Python.
 
-Since university I sticked with Java, but I made a strategic move to Python in 2025 for the technical interviews. When time is is the most critical constraint, Python allows to bypass the boilerplate and focus 100% on logic rather than syntax.
+Since university I used Java, but I made a strategic move to Python in 2025 for the technical interviews. When time is the most critical constraint, Python allows to bypass the boilerplate and focus 100% on logic rather than syntax.
 
 UPD: I started to collect some syntax pitfalls into python_notes file in the repo.
 Rabbit hole of turning human language into programming one is endless! (I still google most of the stuff)
@@ -45,6 +42,7 @@ Rabbit hole of turning human language into programming one is endless! (I still 
 </details>
 
 <details>
+
 <summary><b>Does the order of solving LC problems matter?</b></summary>
 
 Yes. I pay attention to pattern taxonomy first.
@@ -66,16 +64,16 @@ It's auto-synced using [LeetHub-3.0](https://github.com/QasimWani/LeetHub) brows
 </details>
 <details>
 <summary><b>How do you automate your pattern taxonomy?</b></summary>
-As most of the developers, I hate CTRL+C and CTRL+V all same data between notes and folders. If anything is done twice - I stick to automate it. Check the automate section below or just run script locally:
+As most of the developers, I hate to CTRL+C and CTRL+V all the same data between notes and folders. My personal belief, if anything is done twice - I automate it. Check the automate section below or just run script locally:
 
-```pyhon3
+```python3
 python3 scripts/update_taxonomy.py --dry-run
 ```
 
 </details>
 <details>
 
-<summary><b>Books references</b></summary>
+<summary><b>Other references</b></summary>
 
 1. Python Distilled by David M. Beazley
 
@@ -86,7 +84,8 @@ While you can google most of the stuff when it comes to syntax, I do enjoy to se
 
 ## 🏗 Repository Architecture
 
-### 📁 `/patterns/`
+## 📁 `/patterns/`
+
 The **Strategic Layer**. Contains the "why" and "how":
 
 - **The Signal**: When to use this pattern.
@@ -94,7 +93,8 @@ The **Strategic Layer**. Contains the "why" and "how":
 - **The Invariant**: Critical logic that must hold true.
 - **Common pitfalls**: Mistakes to avoid
 
-### 📁 `/problems/`
+## 📁 `/problems/`
+
 The **Implementation Layer**. Contains clean, optimal Python solutions mapped to their specific pattern.
 
 ---
@@ -125,7 +125,7 @@ Use this table during the first minute of pattern recognition.
 | **Design Dict: $O(1)$ lookup + $O(1)$ random** | Use dict + list for random synchronously | Store values in list, track indices in dictionary. Sync them. | GetRandom O(1), Constant Time, Design Dict |
 | **Design Stack: $O(1)$ get min** | Use list + list for min synchronously | Use additional list for storing min values. Sync them. | GetMin O(1), Constant Time, Design Stack |
 | **Consecutive numbers** | Sliding index | Start at i, use sliding index while nums[i] + 1 == nums [i + 1]. Find all ranges with +1 difference. Keep track of the start of range to format output | Ranges, intervals |
-| **Intervals Overlaps** | Sort intervals by start | Compare current start with previus end | Overlap, Meetings, Intervals, Merge |
+| **Intervals Overlaps** | Sort intervals by start | Compare current start with previous end | Overlap, Meetings, Intervals, Merge |
 | **Non-overlapping intervals** | Sort intervals by end | Longer interval has wider range, therefore we can't get rid off smaller intervals by picking an arrow number | Min number of arrows to burst balloons |
 | **Stack + String** | Split string and use stack for O(1) del/adding elements | **path.split("/")** for splitting; to return string with delimeter back **"/" + "/".join(stack)**| Simplify Path |
 
@@ -135,14 +135,10 @@ Use this table during the first minute of pattern recognition.
 
 I struggled a lot through my journey to understand the patterns. In the end, what helped me is to creat my own short WIKIs - happy to share them here.
 
-<div align="center">
-
-### **Documented Patterns**
-
-</div>
+### Documented Patterns
 
 | Pattern Category | Signature Problems | Notes (if any) |
-|:----------------|:-------------------|:----------|
+|:-----------------|:-------------------|:----------|
 | **Stack + String** | [0071 Simplify Path](problems/0071-simplify-path/) | [🚧 Coming soon](patterns/two_pointers) |
 | **Intervals** | [0228 Summary Ranges](problems/0228-summary-ranges/) • [0252 Meeting Rooms](problems/0252-meeting-rooms/) • [0057 Insert Interval](problems/0057-insert-interval/) • [0452 Minimum Number Of Arrows To Burst Balloons](problems/0452-minimum-number-of-arrows-to-burst-balloons/) | [📚 WIKI: Intervals](patterns/intervals) |
 | **Sliding Window** | [0209 Minimum Size Subarray Sum](problems/0209-minimum-size-subarray-sum/) • [Longest Substring Without Repeating Characters](problems/0003-longest-substring-without-repeating-characters/) | [📚 WIKI: Sliding Window](patterns/sliding_window.md) |
@@ -151,7 +147,7 @@ I struggled a lot through my journey to understand the patterns. In the end, wha
 | **Fast/Slow Pointers** | [Remove Element](problems/0027-remove-element/) • [Remove Duplicates I](problems/0026-remove-duplicates-from-sorted-array/) • [Remove Duplicates II](problems/0080-remove-duplicates-from-sorted-array-ii/) | [📚 WIKI: Read/Write Compression (Fast/Slow Pointers)](patterns/two_pointers/read_write_compression.md) |
 | **Classic Two Pointers** | [Merge Sorted Array](problems/0088-merge-sorted-array/) • [Valid Palindrome](problems/0125-valid-palindrome/) • [Is Subsequence](problems/0392-is-subsequence/) • [Two Sum II](problems/0167-two-sum-ii-input-array-is-sorted/) • [0015 3Sum](problems/0015-3sum/) | [📚 WIKI: Classic Two Pointers](patterns/two_pointers/classic_two_pointers.md) |
 | **Voting / Cancellation (Boyer-Moore)** | [Majority Element](problems/0169-majority-element/) | [📚 WIKI: Boyer-Moore Voting](patterns/boyer_moore_voting.md) |
-| **Design** | [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) • [0155 Min Stack](problems/0155-min-stack/) | [📚 WIKI: Dict + List](patterns/dict_list_random_access.md) |
+| **Design** | [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) • [0155 Min Stack](problems/0155-min-stack/) | [📚 WIKI: Dict + List](patterns/design_problems.md) |
 | **In-Place Swap** | [Rotate Array](problems/0189-rotate-array/) | [📚 WIKI: In-Place Swap](patterns/in_place_swap.md) |
 
 ---
@@ -178,34 +174,49 @@ python3 scripts/update_taxonomy.py --dry-run
 Constructive feedback and collaboration opportunities are always welcome!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuliia-chimyrys-software-engineer001/)
+
+</div>
+
 <!---LeetCode Topics Start-->
 # LeetCode Topics
+
 ## Hash Table
+
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0205-isomorphic-strings](https://github.com/chilya-coder/dsa-notes/tree/main/0205-isomorphic-strings/) | Easy |
+
 ## String
+
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
 | [0071-simplify-path](https://github.com/chilya-coder/dsa-notes/tree/main/0071-simplify-path/) | Medium |
 | [0205-isomorphic-strings](https://github.com/chilya-coder/dsa-notes/tree/main/0205-isomorphic-strings/) | Easy |
+
 ## Stack
+
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
 | [0071-simplify-path](https://github.com/chilya-coder/dsa-notes/tree/main/0071-simplify-path/) | Medium |
 | [0150-evaluate-reverse-polish-notation](https://github.com/chilya-coder/dsa-notes/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 | [0155-min-stack](https://github.com/chilya-coder/dsa-notes/tree/main/0155-min-stack/) | Medium |
+
 ## Design
+
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0155-min-stack](https://github.com/chilya-coder/dsa-notes/tree/main/0155-min-stack/) | Medium |
+
 ## Array
+
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0150-evaluate-reverse-polish-notation](https://github.com/chilya-coder/dsa-notes/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
+
 ## Math
+
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0150-evaluate-reverse-polish-notation](https://github.com/chilya-coder/dsa-notes/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
