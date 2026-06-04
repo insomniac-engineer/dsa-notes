@@ -150,6 +150,7 @@ I struggled a lot through my journey to understand the patterns. In the end, wha
 | **Voting / Cancellation (Boyer-Moore)** | [Majority Element](problems/0169-majority-element/) | [📚 WIKI: Boyer-Moore Voting](patterns/boyer_moore_voting.md) |
 | **Design** | 👥 [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) • [0155 Min Stack](problems/0155-min-stack/) | [📚 WIKI: Design DS Problems](patterns/design_problems.md) |
 | **In-Place Swap** | [Rotate Array](problems/0189-rotate-array/) | [📚 WIKI: In-Place Swap](patterns/in_place_swap.md) |
+| **Array / String** | [Rotate Array](problems/0014-longest-common-prefix/) | - |
 
 ---
 
