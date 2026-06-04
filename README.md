@@ -4,7 +4,7 @@
 
 *Quick recall system for acing the coding interviews*
 
-![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-44%2F150_%2829%25%29-orange?style=for-the-badge&logo=leetcode)
+![LeetCode Progress](https://img.shields.io/badge/LeetCode_Progress-46%2F150_%2830%25%29-orange?style=for-the-badge&logo=leetcode)
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-June%202026-blue?style=for-the-badge&logo=calendar)](https://github.com/yuliiachimyrys/dsa-notes)
 [![Language](https://img.shields.io/badge/Language-Python-yellow?style=for-the-badge&logo=python)](https://python.org)
 
