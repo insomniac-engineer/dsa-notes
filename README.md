@@ -16,7 +16,7 @@
 
 I'm Yuliia (yuchi). This repository is a **quick recall system** for the **[Top 150 LeetCode problems](https://leetcode.com/studyplan/top-interview-150/)**.
 
-As most of the developers, I seek for growth opportunities in my career. That said, I have to keep my Leetcode skills on a decent level to ace the algo interview.
+Like most developers, I seek growth opportunities in my career. That said, I have to keep my Leetcode skills on a decent level to ace the algo interview.
 
 Over time, I learnt that strong algorithmic performance is not about memorization but about **inductive thinking**. This is an iterative process that happens throughout the entire journey of interview prepping.
 
@@ -126,8 +126,8 @@ Use this table during the first minute of pattern recognition.
 | **Design Stack: $O(1)$ get min** | Use list + list for min synchronously | Use additional list for storing min values. Sync them. | GetMin O(1), Constant Time, Design Stack |
 | **Consecutive numbers** | Sliding index | Start at i, use sliding index while nums[i] + 1 == nums [i + 1]. Find all ranges with +1 difference. Keep track of the start of range to format output | Ranges, intervals |
 | **Intervals Overlaps** | Sort intervals by start | Compare current start with previous end | Overlap, Meetings, Intervals, Merge |
-| **Non-overlapping intervals** | Sort intervals by end | Longer interval has wider range, therefore we can't get rid off smaller intervals by picking an arrow number | Min number of arrows to burst balloons |
-| **Stack + String** | Split string and use stack for O(1) del/adding elements | **path.split("/")** for splitting; to return string with delimeter back **"/" + "/".join(stack)**| Simplify Path |
+| **Non-overlapping intervals** | Sort intervals by end | Longer interval has wider range, therefore we can't get rid of smaller intervals by picking an arrow number | Min number of arrows to burst balloons |
+| **Stack + String** | Split string and use stack for O(1) del/adding elements | **path.split("/")** for splitting; to return string with delimiter back **"/" + "/".join(stack)**| Simplify Path |
 
 ---
 
@@ -135,11 +135,12 @@ Use this table during the first minute of pattern recognition.
 
 I struggled a lot through my journey to understand the patterns. In the end, what helped me is to creat my own short WIKIs - happy to share them here.
 
-### Documented Patterns
+### **Documented Patterns**
 
 | Pattern Category | Signature Problems | Notes (if any) |
 |:-----------------|:-------------------|:----------|
-| **Stack + String** | [0071 Simplify Path](problems/0071-simplify-path/) | [🚧 Coming soon](patterns/two_pointers) |
+| **Stack** | [0150 Evaluate Reverse Polish Notation](problems/0150-evaluate-reverse-polish-notation/) • [0224 Basic Calculator](problems/0224-basic-calculator/) | [🚧 Coming soon](patterns/stack) |
+| **Stack + String** | [0071 Simplify Path](problems/0071-simplify-path/) | [🚧 Coming soon](patterns/stack_string) |
 | **Intervals** | [0228 Summary Ranges](problems/0228-summary-ranges/) • [0252 Meeting Rooms](problems/0252-meeting-rooms/) • [0057 Insert Interval](problems/0057-insert-interval/) • [0452 Minimum Number Of Arrows To Burst Balloons](problems/0452-minimum-number-of-arrows-to-burst-balloons/) | [📚 WIKI: Intervals](patterns/intervals) |
 | **Sliding Window** | [0209 Minimum Size Subarray Sum](problems/0209-minimum-size-subarray-sum/) • [Longest Substring Without Repeating Characters](problems/0003-longest-substring-without-repeating-characters/) | [📚 WIKI: Sliding Window](patterns/sliding_window.md) |
 | **Greedy - Optimization** | [Gas Station](problems/0134-gas-station/) • [Best Time to Buy/Sell Stock](problems/0121-best-time-to-buy-and-sell-stock/) • [Best Time to Buy/Sell Stock II](problems/0122-best-time-to-buy-and-sell-stock-ii/) • [Jump Game](problems/0055-jump-game/) • [Jump Game II](problems/0045-jump-game-ii/) • [Assign Cookies](problems/0455-assign-cookies/) | [📚 WIKI: Greedy](patterns/greedy/README.md) |
@@ -147,7 +148,7 @@ I struggled a lot through my journey to understand the patterns. In the end, wha
 | **Fast/Slow Pointers** | [Remove Element](problems/0027-remove-element/) • [Remove Duplicates I](problems/0026-remove-duplicates-from-sorted-array/) • [Remove Duplicates II](problems/0080-remove-duplicates-from-sorted-array-ii/) | [📚 WIKI: Read/Write Compression (Fast/Slow Pointers)](patterns/two_pointers/read_write_compression.md) |
 | **Classic Two Pointers** | [Merge Sorted Array](problems/0088-merge-sorted-array/) • [Valid Palindrome](problems/0125-valid-palindrome/) • [Is Subsequence](problems/0392-is-subsequence/) • [Two Sum II](problems/0167-two-sum-ii-input-array-is-sorted/) • [0015 3Sum](problems/0015-3sum/) | [📚 WIKI: Classic Two Pointers](patterns/two_pointers/classic_two_pointers.md) |
 | **Voting / Cancellation (Boyer-Moore)** | [Majority Element](problems/0169-majority-element/) | [📚 WIKI: Boyer-Moore Voting](patterns/boyer_moore_voting.md) |
-| **Design** | [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) • [0155 Min Stack](problems/0155-min-stack/) | [📚 WIKI: Dict + List](patterns/design_problems.md) |
+| **Design** | 👥 [Insert Delete GetRandom O(1)](problems/0380-insert-delete-getrandom-o1/) • [0155 Min Stack](problems/0155-min-stack/) | [📚 WIKI: Design DS Problems](patterns/design_problems.md) |
 | **In-Place Swap** | [Rotate Array](problems/0189-rotate-array/) | [📚 WIKI: In-Place Swap](patterns/in_place_swap.md) |
 
 ---
