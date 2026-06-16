@@ -141,6 +141,7 @@ I struggled a lot through my journey to understand the patterns. In the end, wha
 
 | Pattern Category | Signature Problems | Notes (if any) |
 |:-----------------|:-------------------|:----------|
+| **Arrays & Hashing** | [0217 Contains Duplicate](problems/0217-contains-duplicate/) | [🚧 Coming soon](patterns/two_pointers) |
 | **Stack** | 👥 [0150 Evaluate Reverse Polish Notation](problems/0150-evaluate-reverse-polish-notation/) • 👥 [0224 Basic Calculator](problems/0224-basic-calculator/) • [0020 Valid Parentheses](problems/0020-valid-parentheses/) • [0071 Simplify Path](problems/0071-simplify-path/) | [📚 WIKI: Stack](https://www.hellointerview.com/learn/code/stack/overview) • [📚 WIKI: Monotonic Stack](https://www.hellointerview.com/learn/code/stack/monotonic-stack) |
 | **Intervals** | [0228 Summary Ranges](problems/0228-summary-ranges/) • [0252 Meeting Rooms](problems/0252-meeting-rooms/) • [0057 Insert Interval](problems/0057-insert-interval/) • [0452 Minimum Number Of Arrows To Burst Balloons](problems/0452-minimum-number-of-arrows-to-burst-balloons/) | [📚 WIKI: Intervals](patterns/intervals) |
 | **Sliding Window** | [0209 Minimum Size Subarray Sum](problems/0209-minimum-size-subarray-sum/) • [Longest Substring Without Repeating Characters](problems/0003-longest-substring-without-repeating-characters/) | [📚 WIKI: Sliding Window](patterns/sliding_window.md) |
