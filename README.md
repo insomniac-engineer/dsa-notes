@@ -129,6 +129,7 @@ Use this table during the first minute of pattern recognition.
 | **Non-overlapping intervals** | Sort intervals by end | Longer interval has wider range, therefore we can't get rid of smaller intervals by picking an arrow number | Min number of arrows to burst balloons |
 | **Simplify Path** | Split string and use stack for O(1) del/adding elements | **path.split("/")** for splitting; to return string with delimiter back **"/" + "/".join(stack)** | Simplify Path, UNIX-style file system |
 | **Valid Parentheses** | Use stack | Use stack for adding enclosing characters. E.g. '{' would match to '}' in stack. | Open/closing brackets, parentheses, matching |
+| **Valid Anagram** | Dict for chars counters | Pythonic way: Counter(s) == Counter(t) | Rearranging letters, permutation |
 
 ---
 

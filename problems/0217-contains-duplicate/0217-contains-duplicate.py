@@ -1,13 +1,23 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        # A: sort (elements become adjacent) and compare neighbours elements
-        # B: create set and compare length of nums and new set (extra memory)
-        # C: create dict and check if value is added only 1 time (contains)
+        # Sort approach
 
-        #A
-        nums.sort()
+        # nums.sort()
+        # i = 0
 
-        for i in range(len(nums) - 1):
-            if nums[i] == nums[i+1]:
-                return True
+        # while i < len(nums):
+        #     if i + 1 != len(nums):
+        #         if nums[i] == nums[i+1]: 
+        #             return True
+        #     i += 1
+        # return False
+        
+        # Set
+
+        my_set = set()
+
+        for i in nums:
+            if i in my_set: return True
+            else:
+                my_set.add(i)
         return False
