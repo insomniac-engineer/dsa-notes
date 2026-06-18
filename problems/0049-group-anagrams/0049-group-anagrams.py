@@ -1,12 +1,13 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        # ["bat"] -> ["bat"]
-        # ["tea"] -> ["tea", "ate", "nat"]
-        # ...
-        key_to_words = {}
+        # if i ask for a key that doesn't exist - return []
+        my_dict = defaultdict(list)
 
         for s in strs:
-            sorted_s = "".join(sorted(s))
-            key_to_words.setdefault(sorted_s, []).append(s)
-        print(list(key_to_words.values()))
-        return list(key_to_words.values())
+            # we cant use sorted(s) because it returns list (mutable)
+            # list can't be stored as key in dict
+            # extra memory allocation
+            #sorted_s = ('').join(sorted(s))
+            sorted_s = tuple(sorted(s))
+            my_dict[sorted_s].append(s)
+        return list (my_dict.values())

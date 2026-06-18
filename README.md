@@ -130,6 +130,7 @@ Use this table during the first minute of pattern recognition.
 | **Simplify Path** | Split string and use stack for O(1) del/adding elements | **path.split("/")** for splitting; to return string with delimiter back **"/" + "/".join(stack)** | Simplify Path, UNIX-style file system |
 | **Valid Parentheses** | Use stack | Use stack for adding enclosing characters. E.g. '{' would match to '}' in stack. | Open/closing brackets, parentheses, matching |
 | **Valid Anagram** | Dict for chars counters | Pythonic way: Counter(s) == Counter(t) | Rearranging letters, permutation |
+| **Top k elements** | Min heap for O(nlogk) | Pythonic way: heapq.heappush/pop() | Top K elements |
 
 ---
 
