@@ -1,8 +1,11 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        key_value = {}
-        for idx, n in enumerate(nums):
-            if target - n in key_value:
-                return [idx, key_value[target - n]]
-            key_value[n] = idx
+        # Space Complexity: O(n)
+        # Time Complexity: O(n)
+        
+        val_index = dict()
+        for idx, val in enumerate(nums):
+            if (target - val) in val_index:
+                return [idx, val_index[target - val]]
+            val_index[val] = idx
         return []
