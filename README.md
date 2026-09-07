@@ -155,6 +155,7 @@ Constructive feedback and collaboration opportunities are always welcome!
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
 | [0143-reorder-list](https://github.com/chilya-coder/dsa-notes/tree/main/0143-reorder-list/) | Medium |
+| [0155-min-stack](https://github.com/chilya-coder/dsa-notes/tree/main/0155-min-stack/) | Medium |
 ## Recursion
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -176,4 +177,8 @@ Constructive feedback and collaboration opportunities are always welcome!
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
+## Design
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0155-min-stack](https://github.com/chilya-coder/dsa-notes/tree/main/0155-min-stack/) | Medium |
 <!---LeetCode Topics End-->
