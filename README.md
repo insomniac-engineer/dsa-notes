@@ -157,6 +157,7 @@ Constructive feedback and collaboration opportunities are always welcome!
 | [0143-reorder-list](https://github.com/chilya-coder/dsa-notes/tree/main/0143-reorder-list/) | Medium |
 | [0150-evaluate-reverse-polish-notation](https://github.com/chilya-coder/dsa-notes/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 | [0155-min-stack](https://github.com/chilya-coder/dsa-notes/tree/main/0155-min-stack/) | Medium |
+| [0739-daily-temperatures](https://github.com/chilya-coder/dsa-notes/tree/main/0739-daily-temperatures/) | Medium |
 ## Recursion
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -187,4 +188,9 @@ Constructive feedback and collaboration opportunities are always welcome!
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0150-evaluate-reverse-polish-notation](https://github.com/chilya-coder/dsa-notes/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
+| [0739-daily-temperatures](https://github.com/chilya-coder/dsa-notes/tree/main/0739-daily-temperatures/) | Medium |
+## Monotonic Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0739-daily-temperatures](https://github.com/chilya-coder/dsa-notes/tree/main/0739-daily-temperatures/) | Medium |
 <!---LeetCode Topics End-->
