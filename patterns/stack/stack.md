@@ -33,3 +33,17 @@ Solution: one list for pop/push/top, another - updating min for each iteration. 
 4. Result is stack[-1] last element
 
 [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+
+1. Monotonic stack problem - use stack for storing **indexes**
+2. Pre-fill answer list with 0 for temperatures that doesn't have any higher one
+```python
+res = [0] * len(temperatures)
+```
+3. If we have element higher than top stack one - we pop it and update result
+```python
+        for t_idx, t in enumerate(temperatures):
+            while stack and temperatures[stack[-1]] < t:
+                prev_idx = stack.pop()
+                ans[prev_idx] = t_idx - prev_idx
+            stack.append(t_idx)
+```
