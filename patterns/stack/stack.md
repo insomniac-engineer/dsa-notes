@@ -47,3 +47,8 @@ res = [0] * len(temperatures)
                 ans[prev_idx] = t_idx - prev_idx
             stack.append(t_idx)
 ```
+
+[853. Car Fleet](../../problems/0853-car-fleet)
+
+1. cars = sorted(zip(position, speed), reverse=True) sort input by position from the end
+2. if max_time < current_time left - it's a fleet
