@@ -32,20 +32,19 @@ All solutions are implemented using python3 here.
 <details>
 <summary><b>How do you sync LC solutions to GitHub?</b></summary>
 
-Auto-synced using [LeetHub-3.0](https://github.com/QasimWani/LeetHub).
+Raw accepted submissions are auto-synced by [LeetHub-3.0](https://github.com/QasimWani/LeetHub) into a separate dump repo: **[leetcode-dump](https://github.com/insomniac-engineer/leetcode-dump)**.
+
+This repository stays curated notes only. After a solve, copy the solution into `problems/<id>-<slug>/`, keep one clean implementation, and add `pattern:` metadata to the problem README. Do not point LeetHub at this repo.
 
 </details>
 <details>
 <summary><b>How do you automate your pattern taxonomy?</b></summary>
 
-The taxonomy table below is automatically updated via a CI/CD pipeline. 
-A custom Python script parses the `pattern:` metadata from individual problem READMEs to prevent manual bookkeeping.
-
-To preview the taxonomy changes locally, run:
+There is no CI auto-sync on this repo. A local script parses `pattern:` metadata from problem READMEs and updates the table.
 
 ```bash
-
 python3 scripts/update_taxonomy.py --dry-run
+python3 scripts/update_taxonomy.py
 ```
 
 </details>
@@ -60,6 +59,8 @@ The **Strategic Layer**. Source of WIKIs. Contains the "when" and "why". Distrib
 ## 📁 `/problems/`
 
 The **Implementation Layer**. Contains clean, optimal Python solutions mapped to their specific pattern. Time and Space Complexity incl.
+
+Raw LeetHub submissions do **not** land here. They go to [leetcode-dump](https://github.com/insomniac-engineer/leetcode-dump) first.
 
 ## 📁 `/python_notes/`
 
@@ -101,7 +102,7 @@ Use this table during the first minute of pattern recognition.
 |:-----------------|:-------------------|:----------|
 | **Arrays & Hashing** | [0217 Contains Duplicate](problems/0217-contains-duplicate/) • [0242 Valid Anagram](problems/0242-valid-anagram/) • [0001 Two Sum](problems/0001-two-sum/) • [0049 Group Anagrams](problems/0049-group-anagrams/) • [0347 Top K Frequent Elements](problems/0347-top-k-frequent-elements/) • [Premium Encode Decode Strings](problems/premium-encode-decode-strings/) • [0238 Product Of Array Except Self](problems/0238-product-of-array-except-self/) • [0036 Valid Sudoku](problems/0036-valid-sudoku/) • [0125 Valid Palindrome](problems/0125-valid-palindrome/) • [0128 Longest Consecutive Sequence](problems/0128-longest-consecutive-sequence/) • [1422 Maximum Score After Splitting A String](problems/1422-maximum-score-after-splitting-a-string/) | [📚 Arrays & Hashing](patterns/arrays_and_hashing/README.md) |
 | **Two Pointers** | **Fast/Slow Pointers:**<br>[Remove Element](problems/0027-remove-element/) • [Remove Duplicates I](problems/0026-remove-duplicates-from-sorted-array/) • [Remove Duplicates II](problems/0080-remove-duplicates-from-sorted-array-ii/)<br><br>**Classic (Opposite Directions):**<br>[Merge Sorted Array](problems/0088-merge-sorted-array/) • [Valid Palindrome](problems/0125-valid-palindrome/) • [Is Subsequence](problems/0392-is-subsequence/) • [Two Sum II](problems/0167-two-sum-ii-input-array-is-sorted/) • [0015 3Sum](problems/0015-3sum/) • [0011 Container With Most Water](problems/0011-container-with-most-water/) | [📚 Fast/Slow Pointers](patterns/two_pointers/fast_slow_pointers.md)<br><br>[📚 Classic Two Pointers](patterns/two_pointers/classic_two_pointers.md) |
-| **Stack** | [0020 Valid Parentheses](problems/0020-valid-parentheses/)• [0155 Min Stack](problems/0155-min-stack/) • [0150 Evaluate Reverse Polish Notation](problems/0150-evaluate-reverse-polish-notation/) • [0739 Daily Temperatures](problems/0739-daily-temperatures/) • [0224 Basic Calculator](problems/0224-basic-calculator/) • [0071 Simplify Path](problems/0071-simplify-path/) • [0853 Car Fleet](problems/0853-car-fleet/) (it's not really a stack problem in the end, check readme) |<br><br>[📚 Stack](patterns/stack.md) |
+| **Stack** | [0020 Valid Parentheses](problems/0020-valid-parentheses/)• [0155 Min Stack](problems/0155-min-stack/) • [0150 Evaluate Reverse Polish Notation](problems/0150-evaluate-reverse-polish-notation/) • [0739 Daily Temperatures](problems/0739-daily-temperatures/) • [0224 Basic Calculator](problems/0224-basic-calculator/) • [0071 Simplify Path](problems/0071-simplify-path/) • [0853 Car Fleet](problems/0853-car-fleet/)|<br><br>[📚 Stack](patterns/stack/stack.md) |
 | **Sliding Window** | [0209 Minimum Size Subarray Sum](problems/0209-minimum-size-subarray-sum/) • [0003 Longest Substring Without Repeating Characters](problems/0003-longest-substring-without-repeating-characters/) • [0424 Longest Repeating Character Replacement](problems/0424-longest-repeating-character-replacement/) • [0567 Permutation In String](problems/0567-permutation-in-string/) | [📚 WIKI: Sliding Window](patterns/sliding_window.md) |
 | **Linked List** | [0141 Linked List Cycle](problems/0141-linked-list-cycle/) • [0021 Merge Two Sorted Lists](problems/0021-merge-two-sorted-lists/) • [0206 Reverse Linked List](problems/0206-reverse-linked-list/) | [🚧 Coming soon](patterns/two_pointers) |
 | **Intervals** | [0228 Summary Ranges](problems/0228-summary-ranges/) • [0252 Meeting Rooms](problems/0252-meeting-rooms/) • [0057 Insert Interval](problems/0057-insert-interval/) • [0452 Minimum Number Of Arrows To Burst Balloons](problems/0452-minimum-number-of-arrows-to-burst-balloons/) | [📚 WIKI: Intervals](patterns/intervals) |
@@ -116,14 +117,11 @@ Use this table during the first minute of pattern recognition.
 
 ## 🤖 Automation
 
-This repository uses a small automation pipeline to keep the pattern taxonomy in sync and consistent.
-When a new problem is added with `pattern:` metadata in its README,  a GitHub Action automatically updates the taxonomy table.
-
-
-You can preview changes locally using:
+Taxonomy updates are **manual**. After adding `pattern:` metadata to a problem README, run:
 
 ```bash
 python3 scripts/update_taxonomy.py --dry-run
+python3 scripts/update_taxonomy.py
 ```
 
 ---
@@ -137,48 +135,3 @@ Constructive feedback and collaboration opportunities are always welcome!
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuliia-chimyrys-software-engineer001/)
 
 </div>
-
-<!---LeetCode Topics Start-->
-# LeetCode Topics
-## Linked List
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0002-add-two-numbers](https://github.com/chilya-coder/dsa-notes/tree/main/0002-add-two-numbers/) | Medium |
-| [0138-copy-list-with-random-pointer](https://github.com/chilya-coder/dsa-notes/tree/main/0138-copy-list-with-random-pointer/) | Medium |
-| [0143-reorder-list](https://github.com/chilya-coder/dsa-notes/tree/main/0143-reorder-list/) | Medium |
-## Two Pointers
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0143-reorder-list](https://github.com/chilya-coder/dsa-notes/tree/main/0143-reorder-list/) | Medium |
-## Stack
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
-| [0143-reorder-list](https://github.com/chilya-coder/dsa-notes/tree/main/0143-reorder-list/) | Medium |
-| [0155-min-stack](https://github.com/chilya-coder/dsa-notes/tree/main/0155-min-stack/) | Medium |
-## Recursion
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0002-add-two-numbers](https://github.com/chilya-coder/dsa-notes/tree/main/0002-add-two-numbers/) | Medium |
-| [0143-reorder-list](https://github.com/chilya-coder/dsa-notes/tree/main/0143-reorder-list/) | Medium |
-## Hash Table
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0138-copy-list-with-random-pointer](https://github.com/chilya-coder/dsa-notes/tree/main/0138-copy-list-with-random-pointer/) | Medium |
-## Math
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0002-add-two-numbers](https://github.com/chilya-coder/dsa-notes/tree/main/0002-add-two-numbers/) | Medium |
-## String
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
-## Bracket Sequences
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
-## Design
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0155-min-stack](https://github.com/chilya-coder/dsa-notes/tree/main/0155-min-stack/) | Medium |
-<!---LeetCode Topics End-->
