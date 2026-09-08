@@ -59,8 +59,6 @@ The **Syntax Pitfalls**. My own collection of Python syntax pitfalls.
 
 ## 🧭 **Pattern Signals**
 
-Use this table during the first minute of pattern recognition.
-
 | If the problem asks for... | Try this Pattern... | Key Intuition | Signals |
 | :--- | :--- | :--- | :--- |
 | **In-place array modification** | Read / Write Compression | **One-way (Fast/Slow)**: One pointer scans, the other writes valid data. | Remove element, Remove duplicates, Filter, In-place |
@@ -79,7 +77,7 @@ Use this table during the first minute of pattern recognition.
 | **Top k elements** | Use (min) heap for sort | Pythonic way: heapq.heappush(heap, (freq, key)); heapq.heappop(heap) | Top K elements |
 | **Longest sequence** | Set for filtering duplicates | Filter duplicates. Start element is the one that doesn't have precessor (x-1). Traverse using FOR loop (input order is chaotic) | Count sequence |
 | **Next Greater** | Monotonic Stack | Prefill empty array. Monotonic stack holds indices of smaller values; pop when top element in stack is smaller than incoming one | Daily temperatures |
-| **Car Fleet** | Reverse Sorting | cars_sorted = sorted(zip(position, speed), reverse = True). Fleet appears when time > max_time | 853. Car Fleet |
+| **Car Fleet** | Reverse Sorting | cars_sorted = sorted(zip(position, speed), reverse = True). Fleet happens when time > max_time | 853. Car Fleet |
 
 ---
 
@@ -105,8 +103,8 @@ Use this table during the first minute of pattern recognition.
 ---
 
 ## 🤖 Automation
-
-Taxonomy updates are **manual**. After adding `pattern:` metadata to a problem README, run:
+Runs automatically on repo pipeline.
+Use dry run locally.
 
 ```bash
 python3 scripts/update_taxonomy.py --dry-run
