@@ -16,7 +16,7 @@
 
 This repository is a **quick recall system** for the **[Neetcode 150 LC](https://leetcode.com/problem-list/plakya4j//)**.
 
-I struggled A LOT when it came to DSA interviews. My first approach was memorization of solution, but after a couple of days I couldn't re-project what've done any longer. That's what led me to realization -  strong algorithmic performance is not about memorization, but **inductive thinking**, ability to recognize **patterns**, **signals** and state clear **invariants**.
+I struggled A LOT when it came to DSA interviews. My first approach was to memorize the solution, but after a couple of days I couldn't re-write solution any longer. That's what led me to realization -  strong algorithmic performance is not about memorization, but **inductive thinking**, ability to recognize signals to **patterns** and state clear **invariants**.
 
 This repository is where I collect those notes - something I (or anyone) can revisit right before the interview.
 
@@ -24,14 +24,14 @@ FAQ:
 <details>
 <summary><b>What programming language to use for DSA?</b></summary>
 
-Python. It allows to bypass the boilerplate and focus 100% on logic rather than syntax. 
-All solutions are implemented using python3 here.
+Python. It allows to bypass the boilerplate and focus 100% on logic rather than syntax.
 
 </details>
 
 <details>
 <summary><b>How do you sync LC solutions to GitHub?</b></summary>
 
+Auto-synced using [LeetHub-3.0](https://github.com/QasimWani/LeetHub) to dump repo, then copied manually here.
 Raw accepted submissions are auto-synced by [LeetHub-3.0](https://github.com/QasimWani/LeetHub) into a separate dump repo: **[leetcode-dump](https://github.com/insomniac-engineer/leetcode-dump)**.
 
 This repository stays curated notes only. After a solve, copy the solution into `problems/<id>-<slug>/`, keep one clean implementation, and add `pattern:` metadata to the problem README. Do not point LeetHub at this repo.
