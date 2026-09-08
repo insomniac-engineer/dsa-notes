@@ -10,15 +10,10 @@
 
 </div>
 
----
+----
+This repository is a **quick recall system** for the **[Neetcode 150 LC](https://leetcode.com/problem-list/plakya4j//)** - something I (or anyone) can revisit right before the interview.
 
-## 👋 Hey, LC-fellow
-
-This repository is a **quick recall system** for the **[Neetcode 150 LC](https://leetcode.com/problem-list/plakya4j//)**.
-
-I struggled A LOT when it came to DSA interviews. My first approach was to memorize the solution, but after a couple of days I couldn't re-write solution any longer. That's what led me to realization -  strong algorithmic performance is not about memorization, but **inductive thinking**, ability to recognize signals to **patterns** and state clear **invariants**.
-
-This repository is where I collect those notes - something I (or anyone) can revisit right before the interview.
+I struggled A LOT when it came to DSA interviews. My first approach was to memorize the solution, but after a couple of days I couldn't re-write it. That's what led me to realization - strong algorithmic performance is not about memorization, but **inductive thinking**, ability to recognize signals to **patterns** and state clear **invariants**.
 
 FAQ:
 <details>
@@ -31,16 +26,12 @@ Python. It allows to bypass the boilerplate and focus 100% on logic rather than 
 <details>
 <summary><b>How do you sync LC solutions to GitHub?</b></summary>
 
-Auto-synced using [LeetHub-3.0](https://github.com/QasimWani/LeetHub) to dump repo, then copied manually here.
-Raw accepted submissions are auto-synced by [LeetHub-3.0](https://github.com/QasimWani/LeetHub) into a separate dump repo: **[leetcode-dump](https://github.com/insomniac-engineer/leetcode-dump)**.
-
-This repository stays curated notes only. After a solve, copy the solution into `problems/<id>-<slug>/`, keep one clean implementation, and add `pattern:` metadata to the problem README. Do not point LeetHub at this repo.
+Auto-synced using [LeetHub-3.0](https://github.com/QasimWani/LeetHub) to dump repo, then copied manually here to avoid sync noise.
 
 </details>
 <details>
 <summary><b>How do you automate your pattern taxonomy?</b></summary>
-
-There is no CI auto-sync on this repo. A local script parses `pattern:` metadata from problem READMEs and updates the table.
+Pipeline automation
 
 ```bash
 python3 scripts/update_taxonomy.py --dry-run
@@ -54,17 +45,15 @@ python3 scripts/update_taxonomy.py
 
 ## 📁 `/patterns/`
 
-The **Strategic Layer**. Source of WIKIs. Contains the "when" and "why". Distributed into dedicated folders by topics.
+The **Strategic Layer**. Source of WIKIs. Contains all the "what"s and "why"s.
 
 ## 📁 `/problems/`
 
-The **Implementation Layer**. Contains clean, optimal Python solutions mapped to their specific pattern. Time and Space Complexity incl.
-
-Raw LeetHub submissions do **not** land here. They go to [leetcode-dump](https://github.com/insomniac-engineer/leetcode-dump) first.
+The **Implementation Layer**. Clean, optimal Python solutions with time/space complexity.
 
 ## 📁 `/python_notes/`
 
-The **Syntax Pitfalls**. Contains my own collection of Python syntax traps.
+The **Syntax Pitfalls**. My own collection of Python syntax pitfalls.
 
 ----
 
