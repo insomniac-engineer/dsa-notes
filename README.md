@@ -16,7 +16,7 @@
 
 This repository is a **quick recall system** for the **[Neetcode 150 LC](https://leetcode.com/problem-list/plakya4j//)**.
 
-I struggled A LOT when it came to DSA interviews. My first approach was memorization of solution, but after a couple of days I couldn't re-project what've done any longer. That's what led me to realization -  strong algorithmic performance is not about memorization, but **inductive thinking**, ability to recognize **patterns**, **signals** and state clear **invariants**.
+I struggled A LOT when it came to DSA interviews. My first approach was to memorize the solution, but after a couple of days I couldn't re-write solution any longer. That's what led me to realization -  strong algorithmic performance is not about memorization, but **inductive thinking**, ability to recognize signals to **patterns** and state clear **invariants**.
 
 This repository is where I collect those notes - something I (or anyone) can revisit right before the interview.
 
@@ -24,15 +24,14 @@ FAQ:
 <details>
 <summary><b>What programming language to use for DSA?</b></summary>
 
-Python. It allows to bypass the boilerplate and focus 100% on logic rather than syntax. 
-All solutions are implemented using python3 here.
+Python. It allows to bypass the boilerplate and focus 100% on logic rather than syntax.
 
 </details>
 
 <details>
 <summary><b>How do you sync LC solutions to GitHub?</b></summary>
 
-Auto-synced using [LeetHub-3.0](https://github.com/QasimWani/LeetHub).
+Auto-synced using [LeetHub-3.0](https://github.com/QasimWani/LeetHub) to dump repo, then copied manually here.
 
 </details>
 <details>
@@ -137,60 +136,3 @@ Constructive feedback and collaboration opportunities are always welcome!
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuliia-chimyrys-software-engineer001/)
 
 </div>
-
-<!---LeetCode Topics Start-->
-# LeetCode Topics
-## Linked List
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0002-add-two-numbers](https://github.com/chilya-coder/dsa-notes/tree/main/0002-add-two-numbers/) | Medium |
-| [0138-copy-list-with-random-pointer](https://github.com/chilya-coder/dsa-notes/tree/main/0138-copy-list-with-random-pointer/) | Medium |
-| [0143-reorder-list](https://github.com/chilya-coder/dsa-notes/tree/main/0143-reorder-list/) | Medium |
-## Two Pointers
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0143-reorder-list](https://github.com/chilya-coder/dsa-notes/tree/main/0143-reorder-list/) | Medium |
-## Stack
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
-| [0143-reorder-list](https://github.com/chilya-coder/dsa-notes/tree/main/0143-reorder-list/) | Medium |
-| [0150-evaluate-reverse-polish-notation](https://github.com/chilya-coder/dsa-notes/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
-| [0155-min-stack](https://github.com/chilya-coder/dsa-notes/tree/main/0155-min-stack/) | Medium |
-| [0739-daily-temperatures](https://github.com/chilya-coder/dsa-notes/tree/main/0739-daily-temperatures/) | Medium |
-## Recursion
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0002-add-two-numbers](https://github.com/chilya-coder/dsa-notes/tree/main/0002-add-two-numbers/) | Medium |
-| [0143-reorder-list](https://github.com/chilya-coder/dsa-notes/tree/main/0143-reorder-list/) | Medium |
-## Hash Table
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0138-copy-list-with-random-pointer](https://github.com/chilya-coder/dsa-notes/tree/main/0138-copy-list-with-random-pointer/) | Medium |
-## Math
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0002-add-two-numbers](https://github.com/chilya-coder/dsa-notes/tree/main/0002-add-two-numbers/) | Medium |
-| [0150-evaluate-reverse-polish-notation](https://github.com/chilya-coder/dsa-notes/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
-## String
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
-## Bracket Sequences
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0020-valid-parentheses](https://github.com/chilya-coder/dsa-notes/tree/main/0020-valid-parentheses/) | Easy |
-## Design
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0155-min-stack](https://github.com/chilya-coder/dsa-notes/tree/main/0155-min-stack/) | Medium |
-## Array
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0150-evaluate-reverse-polish-notation](https://github.com/chilya-coder/dsa-notes/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
-| [0739-daily-temperatures](https://github.com/chilya-coder/dsa-notes/tree/main/0739-daily-temperatures/) | Medium |
-## Monotonic Stack
-| Problem Name | Difficulty |
-| ------- | ------- |
-| [0739-daily-temperatures](https://github.com/chilya-coder/dsa-notes/tree/main/0739-daily-temperatures/) | Medium |
-<!---LeetCode Topics End-->
