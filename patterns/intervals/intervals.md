@@ -18,9 +18,7 @@ Intervals ALWAYS require **sorting**.
 
 ---
 
-### 228. Summary Ranges (sorted by start)
-
-Link: <https://leetcode.com/problems/summary-ranges/>
+### [228. Summary Ranges](../../problems/0228-summary-ranges/) (sorted by start)
 Time Complexity: O(n)
 Space Complexity: O(n)
 
@@ -61,9 +59,9 @@ class Solution:
         return result
 ```
 
-### 252. Meeting Rooms (sorted by start)
+### [252. Meeting Rooms](../../problems/0252-meeting-rooms/) (sorted by start)
 
-Link: https://www.hellointerview.com/learn/code/intervals/can-attend-meetings (LC needs premium)
+[HelloInterview: Can Attend Meetings](https://www.hellointerview.com/learn/code/intervals/can-attend-meetings)
 
 Task:
 
@@ -89,7 +87,7 @@ Explanation: The meetings (1,5) and (3,9) overlap.
             return True
 ```
 
-### 452. Minimum number of arrows to burst ballons (sort by end)
+### [452. Minimum number of arrows to burst ballons](../../problems/0452-minimum-number-of-arrows-to-burst-balloons/) (sort by end)
 
     [------- Balloon А (Longest) -------]        [1, 8]
         [ B ]                                [3, 4]

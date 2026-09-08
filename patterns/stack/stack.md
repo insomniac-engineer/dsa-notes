@@ -5,7 +5,7 @@ Refs:
 
 ----
 
- [88. Valid Paretheses](https://leetcode.com/problems/valid-parentheses)
+ [20. Valid Paretheses](../../problems/0020-valid-parentheses/)
 
 ![alt text](image-1.png)
 
@@ -13,7 +13,7 @@ Refs:
 2. If stack is empty - it means that the parenthesis is broken (no corresponding closing bracket)
 3. Optionally - we can add all brackets to map and add values to stack
 
-[155. Min Stack](https://leetcode.com/problems/min-stack/description/)
+[155. Min Stack](../../problems/0155-min-stack/)
 
 1. Pop/push/top - O(1) for list
 2. getMin requires actual traversing which is O(n)
@@ -25,14 +25,14 @@ Solution: one list for pop/push/top, another - updating min for each iteration. 
     # 1 2 2 sync_stack
 ```
 
-[150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/description/)
+[150. Evaluate Reverse Polish Notation](../../problems/0150-evaluate-reverse-polish-notation/)
 
 1. Result is a **SUM** of all operations done
 2. .lstrip("-").isdigit() to check negative values
 3. Order is important for - and /
 4. Result is stack[-1] last element
 
-[739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+[739. Daily Temperatures](../../problems/0739-daily-temperatures)
 
 1. Monotonic stack problem - use stack for storing **indexes**
 2. Pre-fill answer list with 0 for temperatures that doesn't have any higher one
