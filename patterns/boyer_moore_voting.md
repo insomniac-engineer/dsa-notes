@@ -21,7 +21,7 @@ A majority element cannot be fully canceled by minority elements.
 - Space: O(1)
 
 ## Classic problems
-- Majority Element (LeetCode 169)
+- [Majority Element](../problems/0169-majority-element/)
 
 ## Canonical implementation
 ```python

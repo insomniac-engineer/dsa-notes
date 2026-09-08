@@ -47,7 +47,7 @@ return nums
 
 ## Problems
 
-### [27. Remove Element](https://leetcode.com/problems/remove-element/)
+### [27. Remove Element](../../problems/0027-remove-element/)
 
 One pointer for traversing input, second to fill final list (by the condition `currentValue != val`).
 
@@ -56,7 +56,7 @@ One pointer for traversing input, second to fill final list (by the condition `c
 [2,2,_,_]
 ```
 
-### [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+### [26. Remove Duplicates from Sorted Array](../../problems/0026-remove-duplicates-from-sorted-array/)
 
 `i` - write pointer
 `j` - read pointer (one step ahead of write)
@@ -81,7 +81,7 @@ return i + 1
 [0,1,2,3,4,_,_,_,_,_]
 ```
 
-### [80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)
+### [80. Remove Duplicates from Sorted Array II](../../problems/0080-remove-duplicates-from-sorted-array-ii/)
 
 Variation: allow up to `k` duplicates (here `k = 2`).
 We only need to check whether the current element equals the element `k` positions before (`nums[write - 2]`).

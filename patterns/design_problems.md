@@ -2,15 +2,15 @@
 
 Most of the design problems, such as:
 
-* Min Stack (https://leetcode.com/problems/min-stack/?envType=study-plan-v2&envId=top-interview-150)
-* Insert Delete GetRandom O(1) (https://leetcode.com/problems/insert-delete-getrandom-o1/description/?envType=study-plan-v2&envId=top-interview-150)
+* [Min Stack](../problems/0155-min-stack/)
+* [Insert Delete GetRandom O(1)](../problems/0380-insert-delete-getrandom-o1/)
 
 Require maintaining 2 data structures with different responsibilities in order to solve problems in O(1) time.
 The important part is - we have to update both of them during each iteration.
 
 ## Insert Delete GetRandom O(1)
 
-LC link: https://leetcode.com/problems/insert-delete-getrandom-o1/
+[Insert Delete GetRandom O(1)](../problems/0380-insert-delete-getrandom-o1/)
 
 TL;DR: Design a set-like data structure where:
 
