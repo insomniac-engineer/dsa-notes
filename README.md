@@ -19,7 +19,12 @@ FAQ:
 <details>
 <summary><b>What programming language to use for DSA?</b></summary>
 
-Python. It allows to bypass the boilerplate and focus 100% on logic rather than syntax.
+TL;DR: Python.
+
+Before 2025 I was using Java for interviews, and switching to Python improved my efficiency drastically.
+It allows us to bypass boilerplate and focus 100% on algorithmic logic rather than syntax.
+
+Also, unlike other lower-level C-style languages, we don't manage memory manually (e.g., resizing arrays in C/C++) - dynamic data structures are available out of the box.
 
 </details>
 
