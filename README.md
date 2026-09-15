@@ -66,12 +66,12 @@ The **Syntax Pitfalls**. My own collection of Python syntax pitfalls.
 
 | If the problem asks for... | Try this Pattern... | Key Intuition | Signals |
 | :--- | :--- | :--- | :--- |
-| **In-place array modification** | Read / Write Compression | **One-way (Fast/Slow)**: One pointer scans, the other writes valid data. | Remove element, Remove duplicates, Filter, In-place |
+| **In-place array modification** | Read / Write Compression | **One-way (Fast/Slow)**: One pointer reads, the other writes. | Remove element, Remove duplicates, Filter, In-place |
 | **Pair matching in sorted data** | Classic Two Pointers | **Two-way (Left/Right)**: Typically **sorted** input. Pointers move toward each other to find a target. | Sorted, Target Sum, Palindrome, Pairs |
-| **Min/max in subarray** | Sliding window | Expand window unconditionally with r pointer. While condition is breaking - **shrink** with left. Pythonic way:  for r in range(len(s)): | Subarray, Substring, Longest/Shortest, At most / At least, k |
+| **Min/max in subarray** | Sliding window | Traverse with r pointer (for loop), **shrink** with left (while).  | Subarray, Substring, Longest/Shortest, At most / At least, k, Permutation in String |
 | **Finding a majority element (Boyer-Moore)** | Voting / Cancellation | Cancel out competing values to reveal dominant candidate. | Majority, > N/2, Count |
-| **Local optimum for global best** | Greedy Optimization | Global feasibility check. Take the best step now without looking back. Define local invariant to preserve global one | Is solution feasible, max/min profit |
-| **Design Dict: $O(1)$ lookup + $O(1)$ random** | Use dict + list for random synchronously | Store values in list, track indices in dictionary. Sync them. | GetRandom O(1), Constant Time, Design Dict |
+| **Local optimum for global best** | Greedy Optimization | **Global feasibility if check**. Take the best step now without looking back. Define local invariant to preserve global one | Is solution feasible, max/min profit |
+| **Design Dict: $O(1)$ lookup + $O(1)$ random** | Use dict + list (for O(1) random) synchronously | Store values in list, track indices in dictionary. Sync them. | GetRandom O(1), Constant Time, Design Dict |
 | **Design Stack: $O(1)$ get min** | Use list + list for min synchronously | Use additional list for storing min values. Sync them. | GetMin O(1), Constant Time, Design Stack |
 | **Consecutive numbers** | Sliding index | Start at i, use sliding index while nums[i] + 1 == nums [i + 1]. Find all ranges with +1 difference. Keep track of the start of range to format output | Ranges, intervals |
 | **Intervals Overlaps** | Sort intervals by start | Compare current start with previous end | Overlap, Meetings, Intervals, Merge |
