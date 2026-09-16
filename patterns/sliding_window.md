@@ -1,13 +1,15 @@
-# Sliding Window General
-1. Keep naming simple
+# Notes
+1. Keep naming as simple as possible
 
 ```
-sliding_window -> too long
-seen -> good
+sliding_window -> too long, too general
+seen -> good, defines purpose
+have, need -> good, same
 ```
-2. ```for r in range(len(s))``` canonical loop
+2. ```for r in range(len(s))``` canonical loop for r
 3. ```while r - l + 1 > k``` canonical invariant for shrinking
-4. We typically move only l+=1 if window exceeds. r is incremented (scans) automatically.
+4. We typically move only ```l += 1``` when shrinking
+5. To optimize dicts compare use extra variables (e.g. ```need, have```) instead of directly '==' (takes extra time).
 ---
 ## LC examples
 [121. Best Time to Buy and Sell Stock](../problems/0121-best-time-to-buy-and-sell-stock/)
@@ -46,9 +48,9 @@ Naive brute force approach:
 
 Since it's permutation - we care about frequences, use defaultdict(int).
 
-1) Dict for pattern s1, dict for seen
-2) Traverse through s2, compare pattern and seen (takes O(26*n))
-3) Shrink when seen window is bigger than pattern one, decrease dict value, if it equals 0 - remove it
+1) Dict for pattern (s1) and seen
+2) Traverse through s2, compare pattern and seen dicts
+3) Shrink when seen window is bigger than pattern one, decrease dict l value, if it equals 0 - remove it
 
 ```python
     while (r - l + 1) > len(s1):
@@ -59,7 +61,7 @@ Since it's permutation - we care about frequences, use defaultdict(int).
         l += 1
 ```
 
-Dict comparison of English lowercase takes O(n * 26)
+IMPORTANT: **Dict comparison of English lowercase takes $O(n 26)$**
 
 ```python
             # This comparison takes 26 chars to compare
@@ -68,7 +70,7 @@ Dict comparison of English lowercase takes O(n * 26)
 ```
 
 **Optimized approach:**
-Time Complexity: O(n)
+Time Complexity: $O(n)$
 
 Instead of comparing 2 dicts - maintain 2 variables **need and have**.
 
@@ -91,4 +93,4 @@ need, have = len(s1), 0
         have -= 1
 ```
 
-3. Now compare not both dicts, but *have and seen* (int values), so we achieve O(n) as the best possible time complexity.
+3. Now compare not both dicts, but *have and seen* (int values), so we achieve $O(n)$ as the best possible time complexity.
