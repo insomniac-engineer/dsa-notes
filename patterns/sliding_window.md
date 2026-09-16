@@ -44,9 +44,11 @@ seen -> good
 
 Naive brute force approach:
 
+Since it's permutation - we care about frequences, use defaultdict(int).
+
 1) Dict for pattern s1, dict for seen
-2) Traverse through s2, compare pattern and seen
-3) When seen is longer than pattern one, decrease dict value, if it's 0 - remove it
+2) Traverse through s2, compare pattern and seen (takes O(26*n))
+3) Shrink when seen window is bigger than pattern one, decrease dict value, if it equals 0 - remove it
 
 ```python
     while (r - l + 1) > len(s1):
@@ -57,10 +59,36 @@ Naive brute force approach:
         l += 1
 ```
 
-Since comparison takes 26 chars to compare n times, time complexity is O(n * 26)
+Dict comparison of English lowercase takes O(n * 26)
 
 ```python
             # This comparison takes 26 chars to compare
             if pattern == seen:
                 return True
 ```
+
+**Optimized approach:**
+Time Complexity: O(n)
+
+Instead of comparing 2 dicts - maintain 2 variables **need and have**.
+
+```python
+need, have = len(s1), 0
+```
+
+1. Increase have only when the **frequencies** are matching
+
+```python
+    if pattern[s2[r]] == seen[s2[r]]:
+        have += 1
+```
+
+2. When shrinking window - decrease *have* only if frequency is met (if not - the previous equality check won't work anyways, we don't care)
+
+```python
+ while r - l + 1 > len_s1:
+    if pattern[s2[l]] == seen[s2[l]]:
+        have -= 1
+```
+
+3. Now compare not both dicts, but *have and seen* (int values), so we achieve O(n) as the best possible time complexity.
