@@ -1,12 +1,9 @@
-# General Notes
+# Notes
 
-1. **Python Syntax vs Logic:**
-2. **Is data sorted?**
-3. **Visualization:**
-4. **Lookup Time Complexity:**
-    * `list`: $O(n)$
-    * `set`, `dict`: $O(1)$
-5. **Distance = right_p - left_p + 1**
+0. Beginner advice - separate Python syntax from task logic first (aka pseudocode first).
+1. Is data **sorted?** -> (commonly 2 pointers)
+2. Distance between r and l pointers: **r - l + 1**
+3. Dict keys are **HASHABLE** (tuple/string)
 
 ---
 
@@ -25,14 +22,14 @@
 ## [2. Valid Anagram](../../problems/0242-valid-anagram/0242-valid-anagram.py)
 
 1. Edge Case: `if len(s) != len(t): return False`. Anagrams MUST have the same length.
-2. Anagram is a **permutation** of characters (all characters must be present in any order).
+2. Anagram is a **permutation** of characters (char frequencies must be the same).
 3. Pythonic way to count:
 
     ```python
     Counter(s) == Counter(t)
     ```
 
-4. Invariant: char must be always present in dict and the quantity of these chars must be > 0
+4. Invariant: char must be always present in dict and its frequency > 0
 
 ```python
             if char_t not in s_map or s_map[char_t] == 0:
@@ -51,11 +48,11 @@
 ## [4. Group Anagrams](../../problems/0049-group-anagrams/README.md)
 
 1. Create a `{word_pattern -> list(strs)}` dict and group anagrams together.
-2. The word pattern (dict key) must be sorted.
+2. The word_pattern (dict key) must be sorted.
 3. `sorted(str)` returns a sorted **list**. 
 4. Dict keys MUST be **hashable** (immutable). We CANNOT use lists as keys.
-    * *Fix 1 (Tuple):* `tuple(sorted(s))`
-    * *Fix 2 (String):* `''.join(sorted(s))`
+    * *Approach 1 (Tuple):* `tuple(sorted(s))`
+    * *Approach 2 (String):* `''.join(sorted(s))`
 
 5. Advanced Optimization ($O(L)$ instead of $O(L \log L)$):
 
@@ -80,20 +77,22 @@
 
 ## [5. Top K Frequent Elements](../../problems/0347-top-k-frequent-elements/0347-top-k-frequent-elements.py)
 
-1. Calculate elements frequency
-2. Keep only top k elements by using heap (balanced binary tree)
-3. Time Complexity: O(n log k), where k is how many elements are processed in heap
-4. Space Complexity O(n + k), n - elements in dict, k - in heap
+1. Dict for calculating frequencies
+2. Traverse through dict, add to heap (balanced binary tree)
+3. Invariant - len of heap must be less than k, if it's more - pop
+4. Time Complexity: $O(n log k)$, where k is how many elements are processed in heap
+5. Space Complexity $O(n + k)$, n - elements in dict, k - in heap
 
 ```python
         my_dict = Counter(nums)
         heap = []
 
         for val, freq in my_dict.items():
+            # pushing by frequencies
             heapq.heappush(heap, (freq, val))
             if len(heap) > k:
                 heapq.heappop(heap)
-
+        # return values using list comprehension
         return [val for _, val in heap]
 ```
 
