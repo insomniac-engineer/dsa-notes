@@ -1,20 +1,24 @@
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
+        # Time Complexity: O(n)
+        # Space Complexity: O(n)
         stack = []
+        res = 0
         for t in tokens:
-            if t == '+' or t == '-' or t == '/' or t == '*': # it's a digit
-                a = stack.pop()
-                b = stack.pop()
-                if t == '+':
-                    stack.append(a + b)
-                elif t == '-':
-                    stack.append(b - a)
-                elif t == '*':
-                    stack.append(a * b)
-                elif t == '/':
-                    stack.append(int(b / a))
+            # IMPORTANT: -3 is not a digit in python, 3 is
+            if t.lstrip("-").isdigit():
+                stack.append(int(t))
             else:
-                 stack.append(int(t))
-        if len(stack) != 0:
-            return stack.pop()
-        return None
+                if t == "+":
+                    res = stack.pop() + stack.pop()
+                # IMPORTANT: for - and / order plays role
+                elif t == "-":
+                    temp = stack.pop()
+                    res = stack.pop() - temp
+                elif t == "*":
+                    res = stack.pop() * stack.pop()
+                elif t == "/":
+                    temp = stack.pop()
+                    res = stack.pop() / temp
+                stack.append(int(res))
+        return stack[-1]
