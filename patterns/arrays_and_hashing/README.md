@@ -1,13 +1,9 @@
-# General Notes
+# Notes
 
 0. Beginner advice - separate Python syntax from task logic first (aka pseudocode first).
-1. **Is data sorted?**
-2. **Visualization:**
-3. **Lookup Time Complexity:**
-    * `list`: $O(n)$
-    * `set`, `dict`: $O(1)$
-4. **Distance = r - l + 1**
-5. Dict keys **HASHABLE** (tuple/string)
+1. Is data **sorted?** -> (commonly 2 pointers)
+2. Distance between r and l pointers: **r - l + 1**
+3. Dict keys are **HASHABLE** (tuple/string)
 
 ---
 
