@@ -1,16 +1,38 @@
 # Notes
-1. Keep naming as simple as possible
+
+0. **Is it monotonic? (aka if I move r - frequency increases, if I move left - decreases; no negative values)** - use sliding window
+If not - use prefix sum + hash map
 
 ```
+                       Input monotonic?
+                      /             \
+                   YES                 NO
+                  /                     \
+       [ Sliding Window ]       [ Prefix Sum + Hash Map ]
+  • values >= 0                 • values < 0 
+  • Freq / Uniq chars           • sum
+  • Max/Min.                    • ALL combinations
+```
+
+1. Keep naming as simple as possible
+
+```python
 sliding_window -> too long, too general
 seen -> good, defines purpose
 have, need -> good, same
 ```
+
 2. ```for r in range(len(s))``` canonical loop for r
-3. ```while r - l + 1 > k``` canonical invariant for shrinking
-4. We typically move only ```l += 1``` when shrinking
-5. To optimize dicts compare use extra variables (e.g. ```need, have```) instead of directly '==' (takes extra time).
+
+3. ```while r - l + 1 > k``` canonical invariant for shrinking; move ```l += 1```
+
+4. To optimize dicts compare use extra variables (e.g. ```need, have```) instead of directly '==' (takes extra time).
+
+5. Potential Senior Follow ups: optimize slicing/len checking on each iteration to improve space/time complexityю
+Use ```best_l```, ```best_r```, ```min_len = float("inf")``` instead
+
 ---
+
 ## LC examples
 [121. Best Time to Buy and Sell Stock](../problems/0121-best-time-to-buy-and-sell-stock/)
 
@@ -94,3 +116,18 @@ need, have = len(s1), 0
 ```
 
 3. Now compare not both dicts, but *have and seen* (int values), so we achieve $O(n)$ as the best possible time complexity.
+
+
+[0076. Minimum Window Substring](../problems/0076-minimum-window-substring) LC HARD
+
+Same logic as in [567. Permutation in String](../problems/0567-permutation-in-string/)
+
+Follow-ups:
+
+1) Slicing on each iteration to check min len allocates extra memory - keep variables of ```best_l``` and ```best_r``` instead
+2) len(current_window) check on each iteration is not optimized as well - keep ```curr_len = r-l+1``` inside loop and ```min_len = float("inf")``` globally
+
+---
+Important! There's a catch with monotonic input.
+This is NOT sliding window, it's prefix sum + dict:
+[560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
