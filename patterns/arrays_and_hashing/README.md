@@ -1,9 +1,15 @@
-# Notes
+# Arrays Notes
 
 0. Beginner advice - separate Python syntax from task logic first (aka pseudocode first).
 1. Is data **sorted?** -> (commonly 2 pointers)
 2. Distance between r and l pointers: **r - l + 1**
-3. Dict keys are **HASHABLE** (tuple/string)
+3. Dict keys are **HASHABLE** (tuple/str/int/frozenset)
+4. range(0, len(nums)) -> last element is EXCLUSIVE [0, len(nums))
+5. sort() will change permanently in-place, sorted() will return
+6. If we have 2d array:
+   - it's an array of arrays
+   - to traverse rows -> go through 0 to end len(nums) in outer loop, check each value (by index) with inner
+   - to traverse columns -> outer loop to set 0 index till end (len(nums[0])), inner loop to traverse nums[index]
 
 ---
 
@@ -161,3 +167,12 @@ class Solution:
 2. Start element is when ```i - 1``` in nums_set doesn't exist
 3. Maintain streak variable to find max streak
 // 3. To return distance -> substract j - i -> end_point - start_point - optional, IMO can be easily messed up during interview to count i/j.
+
+## [10. Missing Number](../../problems/0268-missing-number/0268-missing-number.py)
+Instead of sorting O(nlogn) and comparing index == cur_val, simply return expected_sum - actual O(n)
+
+```python
+        expected_sum = sum(range(len(nums) + 1))
+        actual_sum = sum(nums)
+        return expected_sum - actual_sum
+```
