@@ -31,7 +31,9 @@ It allowed me to bypass boilerplate and focus 100% on algorithmic logic rather t
 
 Auto-synced using [LeetHub-3.0](https://github.com/QasimWani/LeetHub) to leetcode-dump repo which is linked as submodule to avoid sync noise.
 
-To updated dump repo run manually:
+The taxonomy workflow moves the dump bookmark to the latest `main` commit every hour, then updates the pattern table in the same run.
+
+To pull it locally:
 
 ```
 git submodule update --recursive --remote

@@ -21,7 +21,9 @@ from typing import List, Optional, Tuple
 
 # ===== CONFIG =====
 TABLE_FILE = Path("README.md")
-PROBLEMS_DIR = Path("problems")
+# Deprecated, was replaced with the dump submodule to avoid sync noise
+# PROBLEMS_DIR = Path("problems")
+DUMP_DIR = Path("leetcode-dump")
 PATTERN_MARKER = "### **Documented Patterns**"
 
 DEFAULT_NOTES_LINK = "[🚧 Coming soon](patterns/two_pointers)"
@@ -166,10 +168,10 @@ def add_problem_link(row: str, link: str) -> str:
 def collect_problem_entries() -> List[ProblemEntry]:
     entries: List[ProblemEntry] = []
 
-    if not PROBLEMS_DIR.exists():
+    if not DUMP_DIR.exists():
         return entries
 
-    for folder in sorted(PROBLEMS_DIR.iterdir()):
+    for folder in sorted(DUMP_DIR.iterdir()):
         if not folder.is_dir():
             continue
 

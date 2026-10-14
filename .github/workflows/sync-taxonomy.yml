@@ -1,9 +1,14 @@
 name: Sync taxonomy
 
 on:
+  schedule:
+    - cron: "0 * * * *"
   push:
     paths:
-      - "problems/**"
+      # dump is submodule of LC tasks; this path is the bookmark, not files inside it
+      - "leetcode-dump"
+      # taxonomy script no longer reads problems/
+      # - "problems/**"
       - "scripts/update_taxonomy.py"
       - "README.md"
   workflow_dispatch:
@@ -11,12 +16,23 @@ on:
 permissions:
   contents: write
 
+# A push made with GITHUB_TOKEN does not start another workflow.
+# Submodule update and the taxonomy commit have to happen in this same job.
+concurrency:
+  group: sync-taxonomy
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Move bookmark to latest dump commit
+        run: git submodule update --remote --recursive leetcode-dump
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -26,10 +42,10 @@ jobs:
       - name: Run sync script
         run: python scripts/update_taxonomy.py
 
-      - name: Commit changes if any
+      - name: Commit bookmark and taxonomy
         run: |
           git config user.name "taxonomy-bot"
           git config user.email "taxonomy-bot@users.noreply.github.com"
-          git add README.md
-          git diff --cached --quiet || git commit -m "chore: auto-sync taxonomy"
+          git add leetcode-dump README.md
+          git diff --cached --quiet || git commit -m "chore: sync leetcode-dump taxonomy"
           git push
