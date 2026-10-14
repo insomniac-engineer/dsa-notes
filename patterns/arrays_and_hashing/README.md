@@ -10,6 +10,7 @@
    - it's an array of arrays
    - to traverse rows -> go through 0 to end len(nums) in outer loop, check each value (by index) with inner
    - to traverse columns -> outer loop to set 0 index till end (len(nums[0])), inner loop to traverse nums[index]
+7. Couple of solutions are possible for each task, for e.g. https://leetcode.com/problems/contains-duplicate-ii/description/ could be solved in O(N) by using dict [val] -> index or sliding window to shrink to k.The "right" answer is the one that works optimally
 
 ---
 
