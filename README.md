@@ -88,7 +88,8 @@ The **Syntax Pitfalls**. My own collection of Python syntax pitfalls (useful if 
 | **Top k elements** | Use (min) heap for sort | Pythonic way: heapq.heappush(heap, (freq, key)); heapq.heappop(heap) | Top K elements |
 | **Longest sequence** | Set for filtering duplicates | Filter duplicates. Start element is the one that doesn't have precessor (x-1). Traverse using FOR loop (input order is chaotic) | Count sequence |
 | **Next Greater** | Monotonic Stack | Prefill empty array. Monotonic stack holds indices of smaller values; pop when top element in stack is smaller than incoming one | Daily temperatures |
-| **Car Fleet** | Reverse Sorting | cars_sorted = sorted(zip(position, speed), reverse = True). Fleet happens when time > max_time | 853. Car Fleet |
+| **Car Fleet** | Reverse Sorting | cars_sorted = sorted(zip(position, speed), reverse = True). Fleet happens when time > max_time | Car Fleet |
+| **Missing number** | Expected sum - actual sum| Elegant way instead of index subtraction, e.g. ```for [0:n] range(0, len(nums) + 1 - range(len(nums)```| Missing value |
 
 ---
 
