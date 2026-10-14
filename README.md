@@ -29,7 +29,14 @@ It allowed me to bypass boilerplate and focus 100% on algorithmic logic rather t
 <details>
 <summary><b>How do you sync LC solutions to GitHub?</b></summary>
 
-Auto-synced using [LeetHub-3.0](https://github.com/QasimWani/LeetHub) to dump repo, then copied manually here to avoid sync noise.
+Auto-synced using [LeetHub-3.0](https://github.com/QasimWani/LeetHub) to leetcode-dump repo which is linked as submodule to avoid sync noise.
+
+To updated dump repo run manually:
+
+```
+git submodule update --recursive --remote
+```
+
 
 </details>
 <details>
@@ -42,7 +49,8 @@ python3 scripts/update_taxonomy.py
 ```
 
 </details>
-----
+
+---
 
 ## 🏗 Repository Architecture
 
@@ -58,7 +66,7 @@ The **Implementation Layer**. Clean, optimal Python solutions with time/space co
 
 The **Syntax Pitfalls**. My own collection of Python syntax pitfalls (useful if you're switching).
 
-----
+---
 
 ## 🧭 **Pattern Signals**
 
