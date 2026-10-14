@@ -24,6 +24,9 @@ TABLE_FILE = Path("README.md")
 # Deprecated, was replaced with the dump submodule to avoid sync noise
 # PROBLEMS_DIR = Path("problems")
 DUMP_DIR = Path("leetcode-dump")
+# GitHub cannot open files through the parent repo path; the submodule is only a bookmark.
+DUMP_REPO_URL = "https://github.com/insomniac-engineer/leetcode-dump"
+DUMP_BRANCH = "main"
 PATTERN_MARKER = "### **Documented Patterns**"
 
 DEFAULT_NOTES_LINK = "[🚧 Coming soon](patterns/two_pointers)"
@@ -64,6 +67,11 @@ def extract_title(folder_name: str, md: str) -> str:
 
 
 def build_link(title: str, rel_path: str) -> str:
+    prefix = f"{DUMP_DIR.as_posix()}/"
+    if rel_path.startswith(prefix):
+        slug = rel_path[len(prefix):]
+        url = f"{DUMP_REPO_URL}/tree/{DUMP_BRANCH}/{slug}"
+        return f"[{title}]({url})"
     return f"[{title}]({rel_path}/)"
 
 
