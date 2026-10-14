@@ -168,7 +168,7 @@ class Solution:
 3. Maintain streak variable to find max streak
 // 3. To return distance -> substract j - i -> end_point - start_point - optional, IMO can be easily messed up during interview to count i/j.
 
-## [10. Missing Number](../../problems/0268-missing-number/0268-missing-number.py)
+## [10. Missing Number](https://github.com/insomniac-engineer/leetcode-dump/blob/main/0268-missing-number/0268-missing-number.py)
 Instead of sorting O(nlogn) and comparing index == cur_val, simply return expected_sum - actual O(n)
 
 ```python
