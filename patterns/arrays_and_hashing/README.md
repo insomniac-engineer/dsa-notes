@@ -1,16 +1,21 @@
 # Arrays Notes
 
 0. Beginner advice - separate Python syntax from task logic first (aka pseudocode first).
-1. Is data **sorted?** -> (commonly 2 pointers)
-2. Distance between r and l pointers: **r - l + 1**
-3. Dict keys are **HASHABLE** (tuple/str/int/frozenset)
-4. range(0, len(nums)) -> last element is EXCLUSIVE [0, len(nums))
-5. sort() will change permanently in-place, sorted() will return
-6. If we have 2d array:
+1. Variables readability, ```seen``` is better than ```temp```
+2. Is data **sorted?** -> (commonly 2 pointers)
+3. Distance between r and l pointers: **r - l + 1**
+4. Dict keys are **HASHABLE** (tuple/str/int/frozenset)
+5. range(0, len(nums)) -> last element is EXCLUSIVE [0, len(nums))
+6. sort() will change permanently in-place, sorted() will return
+7. If we have 2d array:
    - it's an array of arrays
    - to traverse rows -> go through 0 to end len(nums) in outer loop, check each value (by index) with inner
    - to traverse columns -> outer loop to set 0 index till end (len(nums[0])), inner loop to traverse nums[index]
-7. Couple of solutions are possible for each task, for e.g. https://leetcode.com/problems/contains-duplicate-ii/description/ could be solved in O(N) by using dict [val] -> index or sliding window to shrink to k.The "right" answer is the one that works optimally
+8. Couple of solutions are possible for each task. The "right" answer is the one that works optimally. For e.g. [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/) could be solved in O(N) by
+- using dict [val] -> index
+- sliding window to shrink to k
+
+8. Scalability: Check if we could convert input to set. If the input is big and indices don't really play a role - we can skip duplicates first to reduce TC, for e.g. [9. Longest Consecutive Sequence](../../problems/0128-longest-consecutive-sequence/0128-longest-consecutive-sequence.py)
 
 ---
 
@@ -164,7 +169,7 @@ class Solution:
 ## [9. Longest Consecutive Sequence](../../problems/0128-longest-consecutive-sequence/0128-longest-consecutive-sequence.py)
 
 0. Use for loop since the input order is chaotic (idx doesn't matter)
-1. IMPORTANT! We could have 2GB input full of duplicates, so first **convert input to set**. Traverse this set.
+1. **IMPORTANT! We could have 2GB input full of duplicates**, so first **convert input to set**. Traverse this set.
 2. Start element is when ```i - 1``` in nums_set doesn't exist
 3. Maintain streak variable to find max streak
 // 3. To return distance -> substract j - i -> end_point - start_point - optional, IMO can be easily messed up during interview to count i/j.
