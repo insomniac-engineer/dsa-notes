@@ -62,11 +62,11 @@ The **Strategic Layer**. Source of WIKIs. Contains all the "what"s and "why"s.
 
 ## 📁 `/problems/`
 
-The **Implementation Layer**. Clean, optimal Python solutions with time/space complexity.
+The **Implementation Layer**. Clean, *alsmost* optimal Python solutions with time/space complexity.
 
 ## 📁 `/python_notes/`
 
-The **Syntax Pitfalls**. My own collection of Python syntax pitfalls (useful if you're switching).
+The **Syntax Pitfalls**. My own collection of Python syntax pitfalls (useful if you're switching from other language).
 
 ---
 
@@ -74,8 +74,9 @@ The **Syntax Pitfalls**. My own collection of Python syntax pitfalls (useful if 
 
 | If the problem asks for... | Try this Pattern... | Key Intuition | Signals |
 | :--- | :--- | :--- | :--- |
-| **In-place array modification** | Read / Write Compression | **One-way (Fast/Slow)**: One pointer reads, the other writes. | Remove element, Remove duplicates, Filter, In-place |
-| **Pair matching in sorted data** | Classic Two Pointers | **Two-way (Left/Right)**: Typically **sorted** input. Pointers move toward each other to find a target. | Sorted, Target Sum, Palindrome, Pairs |
+| **In place list modification** | Fast/Slow Pointers | **One-way (Read/Write)**: One pointer reads, the other writes. | Remove element, Remove duplicates, Filter, In-place |
+| **Pair matching in sorted data** | Classic Two Pointers | **Two-way (Left/Right)**: Typically **sorted** input. Pointers move toward each other (based on conditions) to find a target. | Sorted, Target Sum, Palindrome, Pairs |
+| **Nodes Cycle Detection/Find middle** | Fast/Slow Pointers (Floyd's) | Fast pointer moves twice faster than slow one | Linked list cycle, Middle of linked list |
 | **Min/max in subarray** | Sliding window | **Monotonic inputs** Traverse for r in range(len(n)); **shrink** with left (while). | Subarray, Substring, Longest/Shortest, At most / At least, k, Permutation in String |
 | **Finding a majority element (Boyer-Moore)** | Voting / Cancellation | Cancel out competing values to reveal dominant candidate. | Majority, > N/2, Count |
 | **Local optimum for global best** | Greedy Optimization | **Global feasibility if check**. Take the best step now without looking back. Define local invariant to preserve global one | Is solution feasible, max/min profit |
