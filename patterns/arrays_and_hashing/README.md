@@ -1,29 +1,56 @@
-# Arrays Notes
+# General Notes
 
-0. Beginner advice - separate Python syntax from task logic first (aka pseudocode first).
-1. Variables readability, ```seen``` is better than ```temp```
-2. Is data **sorted?** -> (commonly 2 pointers)
-3. Distance between r and l pointers: **r - l + 1**
-4. Dict keys are **HASHABLE** (tuple/str/int/frozenset)
-5. range(0, len(nums)) -> last element is EXCLUSIVE [0, len(nums))
-6. sort() will change permanently in-place, sorted() will return
-7. If we have 2d array:
+0. Python basics first, otherwise it's a rabit hole of both syntax + task logic
+1. Big O (Time/Space Complexity) and define it each time for each problem
+2. Focus on 4 built-in types and know when to use each: lists, tuples, sets and dicts
+3. Always ask "why"?
+
+## Arrays (Lists) Notes
+
+1. Array is a contiguous block of memory.
+2. 2 pointers pattern is often used; dict/set/heap are often used as DS
+3. Variables readability, ```seen``` is better than ```temp```
+4. Is data **sorted?** -> (commonly 2 pointers)
+5. Distance between r and l pointers: ```r - l + 1```
+6. Dict keys are always **HASHABLE** (tuple/str/int/frozenset). It means you have to transform non-hashable DS into hashable one in order to store it in dict.
+7. ```range(0, len(nums))``` -> last element is EXCLUSIVE [0, len(nums))
+8. ```sort(nums)``` changes permanently in-place, ```sorted()``` will return
+9. If we have 2d array:
    - it's an array of arrays
-   - to traverse rows -> go through 0 to end len(nums) in outer loop, check each value (by index) with inner
-   - to traverse columns -> outer loop to set 0 index till end (len(nums[0])), inner loop to traverse nums[index]
-8. Couple of solutions are possible for each task. The "right" answer is the one that works optimally. For e.g. [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/) could be solved in O(N) by
-- using dict [val] -> index
-- sliding window to shrink to k
+   - to traverse rows -> outer loop sets the row, inner loop traverses elements in it
+   - to traverse columns -> outer loop sets the column ```range(0, len(nums))```, inner loop to traverses rows with that column
+10. Typically there are couple of solutions per each task. The "right" answer is the one that works optimally. 
+    For e.g. [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/) could be solved in $O(N$)$ by
+    - using dict [val] -> index
+    - sliding window to shrink to k
 
-8. Scalability: Check if we could convert input to set. If the input is big and indices don't really play a role - we can skip duplicates first to reduce TC, for e.g. [9. Longest Consecutive Sequence](../../problems/0128-longest-consecutive-sequence/0128-longest-consecutive-sequence.py)
+11. Scalability: Check if we could convert input to set. If the input is big and indices don't really play a role - we can skip duplicates first to reduce TC, for e.g. [9. Longest Consecutive Sequence](../../problems/0128-longest-consecutive-sequence/0128-longest-consecutive-sequence.py)
 
 ---
 
-## [1. Contains Duplicate](../../problems/0217-contains-duplicate/0217-contains-duplicate.py)
+## Set Notes
 
-1. We use a `set` to filter duplicates, taking $O(n)$ time to traverse all elements.
-2. If Sorted: we could use the **2 pointers** approach and optimize Space Complexity to $O(1)$.
-3. Pythonic way:
+1. S = {20, 'Jessa', 35.75}
+2. s = set()
+3. Mutable itself
+4. Unordered
+5. Unique
+6. Contains immutable (hashable) data types
+
+---
+
+# Dict Notes
+
+1. defauldict() - creates key-val pair automatically instead of throwing KeyError
+2. {}, dict() - throws KeyError if key is not present
+
+---
+
+
+### [1. Contains Duplicate](../../problems/0217-contains-duplicate/0217-contains-duplicate.py)
+
+0. Intuition: Set can't contain duplicates
+1. Short Pythonic way:
 
 ```python
     return len(nums) != len(set(nums))
@@ -31,99 +58,100 @@
 
 ---
 
-## [2. Valid Anagram](../../problems/0242-valid-anagram/0242-valid-anagram.py)
+### [2. Valid Anagram](../../problems/0242-valid-anagram/0242-valid-anagram.py)
 
+0. Intution: Anagram is a **permutation** of characters. To check if words are anagrams, all their chars frequencies must be the same. We use dict to calculate chars frequencies.
 1. Edge Case: `if len(s) != len(t): return False`. Anagrams MUST have the same length.
-2. Anagram is a **permutation** of characters (char frequencies must be the same).
-3. Pythonic way to count:
+2. Short Pythonic way (can mention on interview, but they will ask to implement exact aglo)
 
     ```python
     Counter(s) == Counter(t)
     ```
 
-4. Invariant: char must be always present in dict and its frequency > 0
+4. Invariant:
 
 ```python
-            if char_t not in s_map or s_map[char_t] == 0:
+            if char_t not in s_map or s_map[char_t] < 0:
                 return False
 ```
 
+5. Delete key-value from dict when there is no more char occurance
+
+```python
+            if dict_s[char_t] == 0:
+                del dict_s[char_t]
+```
 ---
 
-## [3. Two Sum](../../problems/0001-two-sum/0001-two-sum.py)
+### [3. Two Sum](../../problems/0001-two-sum/0001-two-sum.py)
 
-1. Create a `dict` (`val -> index`) and check if the complementary value (`target - val`) exists on each iteration. Time: $O(n)$.
-2. If Sorted: we could use the **2 pointers** approach and optimize Space Complexity to $O(1)$.
+0. Intution: value1 + (target - value1) = sum
+1. Create a ```dict[val] -> index``` and check if the complementary value (`target - val`) already exists in dict on each iteration.
+2. If Sorted: we could use the **2 pointers** approach and optimize Space Complexity to O(1)
 
 ---
 
-## [4. Group Anagrams](../../problems/0049-group-anagrams/README.md)
+### [4. Group Anagrams](../../problems/0049-group-anagrams/0049-group-anagrams.py)
 
-1. Create a `{word_pattern -> list(strs)}` dict and group anagrams together.
-2. The word_pattern (dict key) must be sorted.
-3. `sorted(str)` returns a sorted **list**. 
-4. Dict keys MUST be **hashable** (immutable). We CANNOT use lists as keys.
+0. Intution: words should grouped by same pattern - frequencies of all chars must be the same.
+
+**Approach #1: by sorting $O(n logn)$**
+
+1. Create dict `{word_pattern -> word1, word2}`
+2. Add sorted word to dict
+Caveat:
+`sorted(str)` returns a sorted **list**. 
+Dict keys MUST be **hashable** (immutable). We CANNOT use lists as keys.
     * *Approach 1 (Tuple):* `tuple(sorted(s))`
     * *Approach 2 (String):* `''.join(sorted(s))`
 
-5. Advanced Optimization ($O(L)$ instead of $O(L \log L)$):
+**Approach #2: counter for each character position O(N)** (most intuitive and optimized)
 
-    We can replace word sorting with a fixed-size frequency array.
+```python
+    freq_counter = [0] * 26
+    pattern_words = defaultdict(list)
+    for s in strs:
+        freq_counter = [0] * 26
+        for ch in s:
+            freq_counter[ord(ch) - ord('a')] += 1 # key must be hashable
+        pattern_words[tuple(freq_counter)].append(s)
+    return list(pattern_words.values())
+```
 
-    ```python
-    # Creates a list of 26 zeros: [0, 0, ..., 0]
-    count = [0] * 26 
-    
-    for char in word:
-        # Maps character ASCII code to index 0-25
-        count[ord(char) - ord('a')] += 1
-        
-    key = tuple(count) # Tuples are hashable!
-    ```
+### [5. Top K Frequent Elements](../../problems/0347-top-k-frequent-elements/0347-top-k-frequent-elements.py)
 
-    > **How it works:** 
-    > There are 26 lowercase English characters. `ord()` returns the ASCII code.
-    > * `ord('a')` $\rightarrow$ 97
-    > * `ord('b')` $\rightarrow$ 98
-    > * `'d'`: `ord('d') - ord('a')` $\rightarrow$ $100 - 97 = 3$
+0. Intuition: We have val-frequencies pairs and we need to limit to k results. So we use min heap (balanced binary tree). This tree has always min value as the root. On each iteration, we push value and check if the length of tree is more than k - then element with loweset frequency (root) is pushed out.
 
-## [5. Top K Frequent Elements](../../problems/0347-top-k-frequent-elements/0347-top-k-frequent-elements.py)
-
-1. Dict for calculating frequencies
-2. Traverse through dict, add to heap (balanced binary tree)
-3. Invariant - len of heap must be less than k, if it's more - pop
-4. Time Complexity: $O(n log k)$, where k is how many elements are processed in heap
-5. Space Complexity $O(n + k)$, n - elements in dict, k - in heap
+1. Initalize val_freq dict
+2. Intialize min_heap
+3. Push (freq, val) to min_heap
+4. Invariant - result len must be always k
+5. Time Complexity: $O(N log k)$, where k is how many elements are processed in heap
+6. Space Complexity $O(N + k)$, n - elements in dict, k - in heap
 
 ```python
         my_dict = Counter(nums)
         heap = []
 
         for val, freq in my_dict.items():
-            # pushing by frequencies
+            # first push, otherwise wrong freq could be popped
             heapq.heappush(heap, (freq, val))
             if len(heap) > k:
-                heapq.heappop(heap)
+                heapq.heappush(heap)
         # return values using list comprehension
         return [val for _, val in heap]
 ```
 
-## [6. Encode and Decode Strings](../../problems/premium-encode-decode-strings/encode-decode-strings.py)
+### [6. Encode and Decode Strings](../../problems/premium-encode-decode-strings/encode-decode-strings.py)
 
-1. Pattern: ```25#Hello2#Hi```, use ```counter#``` as the delimeter (for 2+ digits values)
-2. To decode digit:
+0. Intuition: since any character can appear inside of each word, we seperate each by counter of word and "#".
+Important: think ahead how we parsevalue, "5#" is much easier to parse then "#5".
 
-```python
-    digit = 0
-    while s[i] != '#':
-        digit *= 10 
-        digit += int(s[i])
-        i += 1
-```
-
-3. Pythonic way: ```word = s[i : i + end_pos]``` instead of a while loop to get the word from start pos to the end one
+Pattern: ```25#Hello2#Hi```
 
 ## [7. Products of Array Except Self](../../problems/0238-product-of-array-except-self/0238-product-of-array-except-self.py)
+
+0. Intuition: prefix/postfix approach (imo unintuitive problem at all)
 
 ```python
 class Solution:
@@ -147,7 +175,7 @@ class Solution:
         return res
 ```
 
-## [8. Valid Sudoku](../../problems/0036-valid-sudoku/0036-valid-sudoku.py)
+### [8. Valid Sudoku](../../problems/0036-valid-sudoku/0036-valid-sudoku.py)
 
 1. Keep defaultdicts (auto handle KeyError) for col, row and sub-boxes uniqueness
 
@@ -166,7 +194,7 @@ class Solution:
 
 3. For checking boxes (3x3) use ```boxes[(idx_r // 3, idx_c // 3)]```
 
-## [9. Longest Consecutive Sequence](../../problems/0128-longest-consecutive-sequence/0128-longest-consecutive-sequence.py)
+### [9. Longest Consecutive Sequence](../../problems/0128-longest-consecutive-sequence/0128-longest-consecutive-sequence.py)
 
 0. Use for loop since the input order is chaotic (idx doesn't matter)
 1. **IMPORTANT! We could have 2GB input full of duplicates**, so first **convert input to set**. Traverse this set.
@@ -174,11 +202,19 @@ class Solution:
 3. Maintain streak variable to find max streak
 // 3. To return distance -> substract j - i -> end_point - start_point - optional, IMO can be easily messed up during interview to count i/j.
 
-## [10. Missing Number](https://github.com/insomniac-engineer/leetcode-dump/blob/main/0268-missing-number/0268-missing-number.py)
-Instead of sorting O(nlogn) and comparing index == cur_val, simply return expected_sum - actual O(n)
+### [10. Missing Number](https://github.com/insomniac-engineer/leetcode-dump/blob/main/0268-missing-number/0268-missing-number.py)
+
+Instead of sorting $O(nlogn)$ and comparing index == cur_val, simply return expected_sum - actual $O(n)$
 
 ```python
         expected_sum = sum(range(len(nums) + 1))
         actual_sum = sum(nums)
         return expected_sum - actual_sum
 ```
+
+### [15. 3Sum](https://leetcode.com/problems/3sum/description/)
+
+0. Intuition: it's the same 2 pointers problem with tweak.
+e.g. [-1,0,1,2,-1,-4]
+[ -4 -1 -1 0 1 2] - sorted list
+      l.       r

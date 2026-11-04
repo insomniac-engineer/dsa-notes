@@ -1,39 +1,35 @@
-from typing import List
-
 class Solution:
-    # Time Complexity: O(n), where n is all symbols in s
-    # Space Complexity: O(n), where n is all symbols in s
+    # TC: O(N)
+    # SC: O(N + M)
+    # Important! pattern : 5#Hello; digit before #, otherwise parsing would be hell
+
+    # TC: O(N)
     def encode(self, strs: List[str]) -> str:
-        # ["Hello", "world"]
-        # "5#Hello5#world
-        # chars_counter# -> delimeter
-        result = ""
+        parts = []
+
+        # for s in strs:
+        #     encoded_string += str(len(s)) + "#"  + s
+        # Important! += creates new string
+
         for s in strs:
-            result += str(len(s)) + "#" + s
-        return result
+            parts.append(str(len(s)))
+            parts.append("#")
+            parts.append(s)
+        # 51#Hello5#World
+        return "".join(parts)
 
     def decode(self, s: str) -> List[str]:
-        # "5#Hellow5#World"
-        # Parse each n# and add " " between
-        decoded_list = []
-        i = 0
+        res = []
+        i, j = 0, 0
+
         while i < len(s):
-            word_len = 0
-            while s[i] != '#':
-                word_len *= 10
-                word_len += int(s[i])
-                i += 1
-            i += 1 # skip delimeter
+            while s[j] != "#":
+                j += 1
+            step = int(s[i:j])
+            j += 1
+            word = s[j : j + step]
+            j = j + step
+            i = j
+            res.append(word)
 
-            word = s[i:i + word_len]
-            i += word_len
-            decoded_list.append(word)
-        return decoded_list
-
-if __name__ == "__main__":
-    solution = Solution()
-    test_strs = ["Hello", "World", "This", "is", "a", "test"]
-    encoded = solution.encode(test_strs)
-    print(f"Encoded: {encoded}")
-    decoded = solution.decode(encoded)
-    print(f"Decoded: {decoded}")
+        return res
