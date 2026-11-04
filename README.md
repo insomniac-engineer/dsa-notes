@@ -75,7 +75,7 @@ The **Syntax Pitfalls**. My own collection of Python syntax pitfalls (useful if 
 | If the problem asks for... | Try this Pattern... | Key Intuition | Signals |
 | :--- | :--- | :--- | :--- |
 | **In place list modification** | Fast/Slow Pointers | **One-way (Read/Write)**: One pointer reads, the other writes. | Remove element, Remove duplicates, Filter, In-place |
-| **Pair matching in sorted data** | Classic Two Pointers | **Two-way (Left/Right)**: Typically **sorted** input. Pointers move toward each other (based on conditions) to find a target. | Sorted, Target Sum, Palindrome, Pairs |
+| **Pair matching in sorted data** | Classic Two Pointers | **Two-way (Left/Right)**: Typically **sorted** input. Pointers move toward each other (based on conditions) to find a target. | Sorted, Target Sum, Palindrome, Pairs, 3Sum |
 | **Nodes Cycle Detection/Find middle** | Fast/Slow Pointers (Floyd's) | Fast pointer moves twice faster than slow one | Linked list cycle, Middle of linked list |
 | **Min/max in subarray** | Sliding window | **Monotonic inputs** Traverse for r in range(len(n)); **shrink** with left (while). | Subarray, Substring, Longest/Shortest, At most / At least, k, Permutation in String |
 | **Finding a majority element (Boyer-Moore)** | Voting / Cancellation | Cancel out competing values to reveal dominant candidate. | Majority, > N/2, Count |
