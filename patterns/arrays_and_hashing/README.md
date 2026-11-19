@@ -17,8 +17,8 @@
 8. ```sort(nums)``` changes permanently in-place, ```sorted()``` will return
 9. If we have 2d array:
    - it's an array of arrays
-   - to traverse rows -> outer loop sets the row, inner loop traverses elements in it
-   - to traverse columns -> outer loop sets the column ```range(0, len(nums))```, inner loop to traverses rows with that column
+   - to traverse rows -> outer loop to set the row, inner loop to traverse it
+   - to traverse columns -> outer loop to set the column ```range(len(nums))```, inner loop to traverses nums[idx_r][idx_c]
 10. Typically there are couple of solutions per each task. The "right" answer is the one that works optimally. 
     For e.g. [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/) could be solved in $O(N$)$ by
     - using dict [val] -> index
@@ -196,11 +196,10 @@ class Solution:
 
 ### [9. Longest Consecutive Sequence](../../problems/0128-longest-consecutive-sequence/0128-longest-consecutive-sequence.py)
 
-0. Use for loop since the input order is chaotic (idx doesn't matter)
 1. **IMPORTANT! We could have 2GB input full of duplicates**, so first **convert input to set**. Traverse this set.
 2. Start element is when ```i - 1``` in nums_set doesn't exist
-3. Maintain streak variable to find max streak
-// 3. To return distance -> substract j - i -> end_point - start_point - optional, IMO can be easily messed up during interview to count i/j.
+<img width="672" height="501" alt="image" src="https://github.com/user-attachments/assets/7b5d0ec1-b9ab-47b9-9dac-29f9d0072f3a" />
+
 
 ### [10. Missing Number](https://github.com/insomniac-engineer/leetcode-dump/blob/main/0268-missing-number/0268-missing-number.py)
 
