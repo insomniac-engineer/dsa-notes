@@ -1,27 +1,17 @@
 # Dict notes
 
----
-
-Get value from dict without ```KeyError```:
-
 ```python
-dict.get(char,0)
+dict.get(char,0) # avoid ```KeyError```
 ```
 
-Create dict with character counts (from list):
-
 ```python
-freq_map = Counter(char)
+freq_map = Counter(char) # count all elements
 ```
 
-If key doesn't exist - set [] value, else return existing value
-
 ```python
-key_to_words.setdefault(sorted_s, [])
+key_to_words.setdefault(sorted_s, []) # if key doesn't exist - set [] value, else return existing value
 ```
 
-However, it's more common to use this to avoid KeyError
-
 ```python
-test_dict = defaultdict(list)
+test_dict = defaultdict(list) # or simply create defeaultdict, automatically sets [] /no extra check
 ```
