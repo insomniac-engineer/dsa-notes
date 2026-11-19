@@ -1,5 +1,7 @@
 # Dict notes
 
+Each dict key MUST be **HASHABLE/immutable**.
+
 ```python
 dict.get(char,0) # avoid ```KeyError```
 ```
