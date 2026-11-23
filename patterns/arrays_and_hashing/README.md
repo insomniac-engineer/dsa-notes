@@ -5,6 +5,9 @@
 2. Focus on 4 built-in types and know when to use each: lists, tuples, sets and dicts
 3. Always ask "why"?
 
+## String Notes
+1. If multiple strings concat is needed, use list and return "".join(list) to optimize SC
+   
 ## Arrays (Lists) Notes
 
 1. Array is a contiguous block of memory.
@@ -39,7 +42,7 @@
 
 ---
 
-# Dict Notes
+## Dict Notes
 
 1. defauldict() - creates key-val pair automatically instead of throwing KeyError
 2. {}, dict() - throws KeyError if key is not present
@@ -108,7 +111,7 @@ Dict keys MUST be **hashable** (immutable). We CANNOT use lists as keys.
 **Approach #2: counter for each character position O(N)** (most intuitive and optimized)
 
 ```python
-    freq_counter = [0] * 26
+    freq_counter = [0] * 26f
     pattern_words = defaultdict(list)
     for s in strs:
         freq_counter = [0] * 26
@@ -146,6 +149,21 @@ Dict keys MUST be **hashable** (immutable). We CANNOT use lists as keys.
 
 0. Intuition: since any character can appear inside of each word, we seperate each by counter of word and "#".
 Important: think ahead how we parsevalue, "5#" is much easier to parse then "#5".
+1. Instead of adding multiple strings to the string - use [] and then return "".join(list)
+   ```python
+      # Allocates extra memory
+      s = ""
+      s += "t"
+      s += "ma"
+
+      # Optimal
+
+      concat_list = []
+      concat_list.append("t")
+      concat_list.append("ma")
+
+      return "".join(concat_list)
+   ```
 
 Pattern: ```25#Hello2#Hi```
 
